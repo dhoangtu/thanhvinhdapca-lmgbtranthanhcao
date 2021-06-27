@@ -1,0 +1,77 @@
+Find and replace
+    \override Score.BarNumber.break-visibility = ##(#f #f #f)
+    \override Score.BarNumber.break-visibility = ##(#f #f #f)\r    \override Score.SpacingSpanner.uniform-stretching = ##t
+
+
+- sua loi not nhac
+- table of content
+
+
+
+
+/home/dhtu/bin/lilypond  --output=/home/dhtu/Desktop/CATH/thanhcalilypond/cadoanhienlinh-thanhvinhdapca/107-theo-anh-sao.pdf -dno-point-and-click --pdf /home/dhtu/Desktop/CATH/thanhcalilypond/cadoanhienlinh-thanhvinhdapca/107-theo-anh-sao.ly
+
+/home/dhtu/bin/lilypond  --output=/home/dhtu/Desktop/CATH/thanhcalilypond/cadoanhienlinh-thanhvinhdapca/017-chua-hien-linh.pdf -dno-point-and-click --pdf /home/dhtu/Desktop/CATH/thanhcalilypond/cadoanhienlinh-thanhvinhdapca/017-chua-hien-linh.ly
+
+/home/dhtu/Desktop/CATH/Software/cpdf-binaries-master/Linux-Intel-64bit/cpdf ./bia-truoc.pdf ./blank-a4.pdf song-odd-even.pdf ./blank-a4.pdf ./bia-sau.pdf -o song-book.pdf
+
+
+/home/dhtu/bin/lilypond --output=bia-sau-me-van-yeu-thuong -dno-point-and-click -fpng -dresolution=1024 -dpixmap-format=pngalpha bia-sau-me-van-yeu-thuong.ly
+
+s
+/home/dhtu/bin/lilypond --output=bia-sau-me-van-yeu-thuong -dno-point-and-click --pdf bia-sau-me-van-yeu-thuong.ly
+
+
+#!/bin/bash
+
+for i in `ls *.pdf`; do convert "$i" -density 90x90 -crop 1024x768+0+0\! +repage -transparent white "$i".png;
+
+rm *.ly~
+done
+
+
+
+
+
+---CRITERIA
+1. copyright: ". For non-commercial use"
+    copyright text size
+2. Top margin
+3. Bottom margin
+4. Left margin
+5. Right margin
+6. Page number Size
+7. Page number position
+8. Distance between Title and notes (when no composer)
+9. No ident
+10. System-spacing: prefer 3, not prefer 5
+11. table of content
+12. Introduction/Preface/Acknowledgement
+13. Compare beam-up vs auto-beam
+14. TRANSPOSE if necessary
+
+//*** manually default system-distance = 3 padding = 3
+* table of content
+* Introduction/Preface/Acknowledgement
+
+- generate lilypond
+    ./gen-lilypond.sh
+
+- resize page
+    included in ./gen-lilypond.sh
+    
+    ~/Desktop/software/pdfScale.sh -v -r a5 -s 0.90 "Bring Flowers Of The Rarest@Mary E. Walsh.pdf" "./resized/Bring Flowers Of The Rarest@Mary E. Walsh.pdf"
+
+- merge PDF files with Table Of Contents
+  ~/Desktop/software/cpdf "./resized-90/Ave Verum Corpus@W.A. Mozart.pdf" "./resized-90/If Ye Love Me@Thomas Tallis.pdf" -o out.pdf
+  ~/Desktop/software/cpdf  "./resized-90/Ave Verum Corpus@W.A. Mozart.pdf" "./resized-90/If Ye Love Me@Thomas Tallis.pdf"  -o out.pdf
+
+- adjust even-odd page
+    pdfjam --twoside --paper a5paper --offset '0.5cm 0cm' merge-07.pdf
+    FAILED pdfjam --twoside --pagesize '{14.5cm,20.5cm}' --offset '0.5cm 0cm' merge-06.pdf
+
+- add page number
+    pdflatex song-odd-even.tex
+
+- pdf page size
+    pdfinfo song-odd-even.pdf | grep "Page size" | grep -Eo '[-+]?[0-9]*\.?[0-9]+' | awk -v x=0.3528 '{print $1*x}'

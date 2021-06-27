@@ -55,7 +55,9 @@ nhacDiepKhuc = \relative c'' {
 nhacPhienKhucMot = \relative c'' {
   \partial 4 c8 g |
   g2 |
-  g8 g e \afterGrace d (e8) |
+  g8 g e
+  #(define afterGraceFraction (cons 1 3))
+  \afterGrace d (e8) |
   d2 |
   r8 e c e |
   f4 d8 f |
@@ -85,7 +87,9 @@ nhacPhienKhucHai = \relative c'' {
   d2 |
   r8 d b d |
   g,4. c8 |
-  e4 \afterGrace d (c8) |
+  e4
+  #(define afterGraceFraction (cons 1 3))
+  \afterGrace d (c8) |
   c2 ( |
   c4) r4 \bar "||"
 }
@@ -113,7 +117,7 @@ loiPhienKhucMot = \lyricmode {
   \set stanza = #"1."
   Vui chừng nào khi thiên hạ bảo tôi:
   Ta cùng trẩy lên Đền Thánh Chúa.
-  Và giờ đây Giê -- ru -- sa -- lem hỡi
+  Và giờ đây "Giê -" "ru -" "sa -" lem hỡi
   Cửa nội thành, ta đã dừng chân.
 }
 
@@ -170,7 +174,7 @@ loiPhienKhucBa = \lyricmode {
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2.5
-    \override Lyrics.LyricSpace.minimum-distance = #1.5
+    \override Lyrics.LyricSpace.minimum-distance = #2.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
@@ -191,7 +195,7 @@ loiPhienKhucBa = \lyricmode {
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2.5
-    \override Lyrics.LyricSpace.minimum-distance = #1.5
+    \override Lyrics.LyricSpace.minimum-distance = #2.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
@@ -212,7 +216,7 @@ loiPhienKhucBa = \lyricmode {
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2.5
-    \override Lyrics.LyricSpace.minimum-distance = #1.5
+    \override Lyrics.LyricSpace.minimum-distance = #2.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }

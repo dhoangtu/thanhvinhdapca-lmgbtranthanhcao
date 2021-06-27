@@ -1,5 +1,5 @@
 % Cài đặt chung
-\version "2.20.0"
+\version "2.22.1"
 \include "english.ly"
 
 \header {
@@ -138,7 +138,7 @@ loiPhienKhucBa = \lyricmode {
   \new ChoirStaff <<
     \new Staff \with {
         \consists "Merge_rests_engraver"
-        \magnifyStaff #(magstep +1)
+        %\magnifyStaff #(magstep +1)
       }
       <<
       \new Voice = beSop {
@@ -148,7 +148,7 @@ loiPhienKhucBa = \lyricmode {
     >>
     \new Staff \with {
         \consists "Merge_rests_engraver"
-        \magnifyStaff #(magstep +1)
+        %\magnifyStaff #(magstep +1)
       }
       <<
       \new Voice = beBas {
@@ -169,7 +169,7 @@ loiPhienKhucBa = \lyricmode {
 \score {
   \new ChoirStaff <<
     \new Staff = phienKhuc \with {
-        \magnifyStaff #(magstep +1)
+        %\magnifyStaff #(magstep +1)
       }
       <<
       \new Voice = beSop {
@@ -192,7 +192,7 @@ loiPhienKhucBa = \lyricmode {
 \score {
   \new ChoirStaff <<
     \new Staff = phienKhuc \with {
-        \magnifyStaff #(magstep +1)
+        %\magnifyStaff #(magstep +1)
       }
       <<
       \new Voice = beSop {
@@ -216,7 +216,7 @@ loiPhienKhucBa = \lyricmode {
 \score {
   \new ChoirStaff <<
     \new Staff = phienKhuc \with {
-        \magnifyStaff #(magstep +1)
+        %\magnifyStaff #(magstep +1)
       }
       <<
       \new Voice = beSop {

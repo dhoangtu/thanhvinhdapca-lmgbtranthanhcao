@@ -117,7 +117,7 @@ loiPhienKhucBa = \lyricmode {
   \new ChoirStaff <<
     \new Staff = diepKhuc \with {
         \consists "Merge_rests_engraver"
-        \magnifyStaff #(magstep +1)
+        %\magnifyStaff #(magstep +1)
       }
       <<
       \new Voice = beSop {
@@ -131,7 +131,7 @@ loiPhienKhucBa = \lyricmode {
   >>
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
-    \override Lyrics.LyricText.font-size = #+3
+    \override Lyrics.LyricText.font-size = #+2.5
     \override Lyrics.LyricSpace.minimum-distance = #4.0
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t

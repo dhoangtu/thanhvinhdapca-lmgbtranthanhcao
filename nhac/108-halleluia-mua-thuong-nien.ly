@@ -1,5 +1,5 @@
 % Cài đặt chung
-\version "2.20.0"
+\version "2.22.1"
 \include "english.ly"
 
 \header {
@@ -63,7 +63,7 @@ loiPhienKhucMot = \lyricmode {
 \score {
   \new ChoirStaff <<
     \new Staff = phienKhuc \with {
-        \magnifyStaff #(magstep +1)
+        %\magnifyStaff #(magstep +1)
       }
       <<
       \new Voice = beSop {
@@ -73,7 +73,7 @@ loiPhienKhucMot = \lyricmode {
     \new Lyrics \lyricsto beSop \loiPhienKhucMot
   >>
   \layout {
-    \override Lyrics.LyricText.font-size = #+3
+    \override Lyrics.LyricText.font-size = #+2.5
     \override Lyrics.LyricSpace.minimum-distance = #1.4
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t

@@ -62,7 +62,7 @@ loiDiepKhuc = \lyricmode {
   \new ChoirStaff <<
     \new Staff = diepKhuc \with {
         %\consists "Merge_rests_engraver"
-        \magnifyStaff #(magstep +1)
+        %\magnifyStaff #(magstep +1)
       }
       <<
       \new Voice = beSop {

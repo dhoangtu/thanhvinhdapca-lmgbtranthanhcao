@@ -1,5 +1,5 @@
 % Cài đặt chung
-\version "2.20.0"
+\version "2.22.1"
 \include "english.ly"
 
 \header {
@@ -117,7 +117,7 @@ loiPhienKhucBa = \lyricmode {
   \new ChoirStaff <<
     \new Staff = diepKhuc \with {
         \consists "Merge_rests_engraver"
-        \magnifyStaff #(magstep +1)
+        %\magnifyStaff #(magstep +1)
       }
       <<
       \new Voice = beSop {
@@ -132,7 +132,7 @@ loiPhienKhucBa = \lyricmode {
   >>
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
-    \override Lyrics.LyricText.font-size = #+3
+    \override Lyrics.LyricText.font-size = #+2.5
     \override Lyrics.LyricSpace.minimum-distance = #1.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
@@ -142,7 +142,7 @@ loiPhienKhucBa = \lyricmode {
 \score {
   \new ChoirStaff <<
     \new Staff = phienKhuc \with {
-        \magnifyStaff #(magstep +1)
+        %\magnifyStaff #(magstep +1)
       }
       <<
       \new Voice = beSop {
@@ -153,7 +153,7 @@ loiPhienKhucBa = \lyricmode {
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricText.font-size = #+3
+    \override Lyrics.LyricText.font-size = #+2.5
     \override Lyrics.LyricSpace.minimum-distance = #2.0
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
@@ -165,7 +165,7 @@ loiPhienKhucBa = \lyricmode {
 \score {
   \new ChoirStaff <<
     \new Staff = phienKhuc \with {
-        \magnifyStaff #(magstep +1)
+        %\magnifyStaff #(magstep +1)
       }
       <<
       \new Voice = beSop {
@@ -176,7 +176,7 @@ loiPhienKhucBa = \lyricmode {
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricText.font-size = #+3
+    \override Lyrics.LyricText.font-size = #+2.5
     \override Lyrics.LyricSpace.minimum-distance = #2.2
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
@@ -188,7 +188,7 @@ loiPhienKhucBa = \lyricmode {
 \score {
   \new ChoirStaff <<
     \new Staff = phienKhuc \with {
-        \magnifyStaff #(magstep +1)
+        %\magnifyStaff #(magstep +1)
       }
       <<
       \new Voice = beSop {
@@ -199,7 +199,7 @@ loiPhienKhucBa = \lyricmode {
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricText.font-size = #+3
+    \override Lyrics.LyricText.font-size = #+2.5
     \override Lyrics.LyricSpace.minimum-distance = #2.0
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t

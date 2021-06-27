@@ -1,5 +1,5 @@
 % Cài đặt chung
-\version "2.20.0"
+\version "2.22.1"
 \include "english.ly"
 
 \header {
@@ -115,7 +115,7 @@ loiDiepKhucBas = \lyricmode {
 \score {
   \new ChoirStaff <<
     \new Staff = phienKhuc \with {
-        \magnifyStaff #(magstep +1)
+        %\magnifyStaff #(magstep +1)
       }
       <<
       \new Voice = beSop {
@@ -125,7 +125,7 @@ loiDiepKhucBas = \lyricmode {
     \new Lyrics \lyricsto beSop \loiPhienKhucMot
   >>
   \layout {
-    \override Lyrics.LyricText.font-size = #+3
+    \override Lyrics.LyricText.font-size = #+2.5
     \override Lyrics.LyricSpace.minimum-distance = #2.0
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
@@ -135,7 +135,7 @@ loiDiepKhucBas = \lyricmode {
 \score {
   \new ChoirStaff <<
     \new Staff = diepKhucSop \with {
-        \magnifyStaff #(magstep +1)
+        %\magnifyStaff #(magstep +1)
       }
       <<
       \new Voice = beSop {
@@ -144,7 +144,7 @@ loiDiepKhucBas = \lyricmode {
       \new Lyrics \lyricsto beSop \loiDiepKhucSop
     >>
      \new Staff = diepKhucBas \with {
-        \magnifyStaff #(magstep +1)
+        %\magnifyStaff #(magstep +1)
       }
       <<
       \new Voice = beBas {
@@ -155,7 +155,7 @@ loiDiepKhucBas = \lyricmode {
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricText.font-size = #+3
+    \override Lyrics.LyricText.font-size = #+2.5
     \override Lyrics.LyricSpace.minimum-distance = #1.0
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
@@ -165,7 +165,7 @@ loiDiepKhucBas = \lyricmode {
 \score {
   \new ChoirStaff <<
     \new Staff = phienKhuc \with {
-        \magnifyStaff #(magstep +1)
+        %\magnifyStaff #(magstep +1)
       }
       <<
       \new Voice = beSop {
@@ -176,7 +176,7 @@ loiDiepKhucBas = \lyricmode {
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricText.font-size = #+3
+    \override Lyrics.LyricText.font-size = #+2.5
     \override Lyrics.LyricSpace.minimum-distance = #2.0
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t

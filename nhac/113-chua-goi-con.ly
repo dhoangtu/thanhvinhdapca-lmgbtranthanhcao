@@ -1,5 +1,5 @@
 % Cài đặt chung
-\version "2.20.0"
+\version "2.22.1"
 \include "english.ly"
 
 \header {
@@ -217,7 +217,7 @@ loiPhienKhucBaBas = \lyricmode {
 \score {
   \new ChoirStaff <<
     \new Staff \with {
-        \magnifyStaff #(magstep +1)
+        %\magnifyStaff #(magstep +1)
       }
       <<
         \clef "treble"
@@ -227,7 +227,7 @@ loiPhienKhucBaBas = \lyricmode {
         \new Lyrics \lyricsto beSop \loiDiepKhucSop
     >>
     \new Staff \with {
-        \magnifyStaff #(magstep +1)
+        %\magnifyStaff #(magstep +1)
       }
       <<
         \new Voice = beAlto {
@@ -236,7 +236,7 @@ loiPhienKhucBaBas = \lyricmode {
         \new Lyrics \lyricsto beAlto \loiDiepKhucAlto
     >>
     \new Staff \with {
-        \magnifyStaff #(magstep +1)
+        %\magnifyStaff #(magstep +1)
       }
       <<
         \clef "bass"
@@ -247,7 +247,7 @@ loiPhienKhucBaBas = \lyricmode {
     >>
   >>
   \layout {
-    \override Lyrics.LyricText.font-size = #+3
+    \override Lyrics.LyricText.font-size = #+2.5
     \override Lyrics.LyricSpace.minimum-distance = #0.6
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
@@ -259,7 +259,7 @@ loiPhienKhucBaBas = \lyricmode {
   \new ChoirStaff <<
     \new Staff \with {
         \consists "Merge_rests_engraver"
-        \magnifyStaff #(magstep +1)
+        %\magnifyStaff #(magstep +1)
       }
       <<
         \clef "treble"
@@ -272,7 +272,7 @@ loiPhienKhucBaBas = \lyricmode {
     >>
     \new Staff \with {
         \consists "Merge_rests_engraver"
-        \magnifyStaff #(magstep +1)
+        %\magnifyStaff #(magstep +1)
       }
       <<
         \clef "bass"
@@ -286,7 +286,7 @@ loiPhienKhucBaBas = \lyricmode {
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricText.font-size = #+3
+    \override Lyrics.LyricText.font-size = #+2.5
     \override Lyrics.LyricSpace.minimum-distance = #0.6
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t

@@ -73,7 +73,7 @@ nhacPhienKhucHai = \relative c'' {
 nhacPhienKhucBa = \relative c'' {
   \partial 4 a4 |
   d a8 fs g4. a8 |
-  \slashedGrace {d,8(} fs2) r4 e8 e |
+  \acciaccatura {d,8(} fs2) r4 e8 e |
   \autoBeamOff
   a4. b8 b (cs)
   \autoBeamOn
@@ -210,5 +210,6 @@ loiPhienKhucBa = \lyricmode {
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
     \override Score.SpacingSpanner packed-spacing = ##t
+    \override Score.SpacingSpanner.strict-grace-spacing = ##t
   }
 }

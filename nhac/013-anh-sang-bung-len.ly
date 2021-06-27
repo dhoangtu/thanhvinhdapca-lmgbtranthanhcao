@@ -116,7 +116,7 @@ loiPhienKhucBa = \lyricmode {
   Ánh sáng bừng soi người công chính.
   Niềm hân hoan chiếu rọi kẻ lòng ngay.
   Người hiền đức, nào hãy vui mừng trước Thánh Nhan.
-  Tưởng nhứo Thánh Danh mà dâng lời cảm tạ.
+  Tưởng nhớ Thánh Danh mà dâng lời cảm tạ.
 }
 
 % Dàn trang

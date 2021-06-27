@@ -31,8 +31,8 @@ nhacDiepKhucSop = \relative c' {
   \partial 4 d4 |
   a'2 g8 a e fs |
   e4
-  \stemDown
-  cs8 a e'4. cs8 |
+  \stemUp
+  e8 e a a cs, d
   d1 \bar "|."
 }
 
@@ -40,8 +40,8 @@ nhacDiepKhucBas = \relative c' {
   \skip 4
   \skip 1
   \skip 4
-  \stemUp
-  e8 e a a cs, d
+  \stemDown
+  cs8 a e'4. cs8 |
   d1 \bar "|."
 }
 
@@ -73,7 +73,7 @@ nhacPhienKhucHai = \relative c'' {
 nhacPhienKhucBa = \relative c'' {
   \partial 4 a4 |
   d a8 fs g4. a8 |
-  \acciaccatura d,8 fs2 r4 e8 e |
+  \slashedGrace {d,8(} fs2) r4 e8 e |
   \autoBeamOff
   a4. b8 b (cs)
   \autoBeamOn
@@ -87,11 +87,11 @@ nhacPhienKhucBa = \relative c'' {
 
 % Lời điệp khúc
 loiDiepKhucSop = \lyricmode {
-  Lạy Chúa, Ngài chính là gia nghiệp, là phần phúc đời con.
+  Lạy Chúa, Ngài chính là gia nghiệp, là phần phúc đã dành cho con.
 }
 
 loiDiepKhucBas = \lyricmode {
-  (là phần phúc đã dành cho con.)
+  (là phần phúc đời con.)
 }
 
 % Lời phiên khúc

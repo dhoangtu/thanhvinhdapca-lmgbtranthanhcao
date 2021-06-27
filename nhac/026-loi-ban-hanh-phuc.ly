@@ -6,7 +6,7 @@
   title = \markup { \fontsize #3 "Lời Ban Hạnh Phúc" }
   poet = "Tv. 18"
   composer = "Lm. GB Trần Thanh Cao"
-  arranger = " "
+  %arranger = " "
   tagline = ##f
 }
 
@@ -117,7 +117,7 @@ loiPhienKhucMot = \lyricmode {
 loiPhienKhucHai = \lyricmode {
   \set stanza = #"2."
   Lề luật của Chúa hoàn toàn ngay thẳng.
-  Gieo hoan hỉ chan chưa cõi lòng.
+  Gieo hoan hỉ chan chứa cõi lòng.
   Mệnh lệnh của Chúa, bao la minh bạch.
   Tỏa ánh thiêng mở mắt phàm nhân.
 }

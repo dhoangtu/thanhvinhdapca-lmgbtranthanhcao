@@ -61,7 +61,7 @@ nhacPhienKhucMot = \relative c' {
   a8 c c c c a g4 \breathe
   f8 f e f e c d4 \breathe
   c8 d a4 a8 e' d c g'4 \breathe
-  gs8 f g! g e4 \breathe
+  gs8 f g g e4 \breathe
   e8 d d c a b c4 (c) \bar "||"
 }
 
@@ -102,7 +102,7 @@ loiDiepKhucSop = \lyricmode {
 
 loiDiepKhucBas = \lyricmode {
   Tôi mừng rỡ muôn phần nhờ Thiên Chúa.
-  Vâng nhờ Người, tôi hớn hở bân hoan.
+  Vâng nhờ Người, tôi hớn hở hân hoan.
   Vâng nhờ Người, tôi vui mừng biết bao.
 }
 
@@ -128,7 +128,7 @@ loiPhienKhucBa = \lyricmode {
   \set stanza = #"3."
   Kẻ đói nghèo, Chúa ban của đầy dư.
   Người giàu có lại đuổi về tay trắng.
-  Chúa độ trì Is -- ra -- el tôi tớ.
+  Chúa độ trì "Is -" "ra -" el tôi tớ.
   Bởi vì Người nhớ lại tình thương.
 }
 
@@ -160,7 +160,7 @@ loiPhienKhucBa = \lyricmode {
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #0.5
+    \override Lyrics.LyricSpace.minimum-distance = #2.0
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
@@ -181,7 +181,7 @@ loiPhienKhucBa = \lyricmode {
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #1.5
+    \override Lyrics.LyricSpace.minimum-distance = #2.0
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
     \set Score.barAlways = ##t
@@ -204,7 +204,7 @@ loiPhienKhucBa = \lyricmode {
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #2.0
+    \override Lyrics.LyricSpace.minimum-distance = #3.0
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
     \set Score.barAlways = ##t
@@ -228,7 +228,7 @@ loiPhienKhucBa = \lyricmode {
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #1.0
+    \override Lyrics.LyricSpace.minimum-distance = #1.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   } 

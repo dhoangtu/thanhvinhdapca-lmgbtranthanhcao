@@ -1,5 +1,5 @@
 % Cài đặt chung
-\version "2.22.1"
+\version "2.20.0"
 \include "english.ly"
 
 \header {
@@ -134,15 +134,15 @@ TongNhip = { \key d \major \time 2/4 }
         printPartCombineTexts = ##f
       }
       <<
-      \new Voice \partCombine \nhacDiepKhucSop \nhacDiepKhucBas
+      \new Voice \partcombine \nhacDiepKhucSop \nhacDiepKhucBas
       \new NullVoice = nhacThamChieu \nhacDiepKhucSop
       \new Lyrics \lyricsto nhacThamChieu \loiDiepKhuc
       >>
   >>
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
-    \override Lyrics.LyricText.font-size = #+2.5
-    \override Lyrics.LyricSpace.minimum-distance = #2.0
+    \override Lyrics.LyricText.font-size = #+2
+    \override Lyrics.LyricSpace.minimum-distance = #3.0
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
@@ -162,8 +162,8 @@ TongNhip = { \key d \major \time 2/4 }
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricText.font-size = #+2.5
-    \override Lyrics.LyricSpace.minimum-distance = #3.0
+    \override Lyrics.LyricText.font-size = #+2
+    \override Lyrics.LyricSpace.minimum-distance = #3.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
@@ -183,8 +183,8 @@ TongNhip = { \key d \major \time 2/4 }
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricText.font-size = #+2.5
-    \override Lyrics.LyricSpace.minimum-distance = #3.0
+    \override Lyrics.LyricText.font-size = #+2
+    \override Lyrics.LyricSpace.minimum-distance = #3
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
@@ -204,8 +204,8 @@ TongNhip = { \key d \major \time 2/4 }
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricText.font-size = #+2.5
-    \override Lyrics.LyricSpace.minimum-distance = #4.0
+    \override Lyrics.LyricText.font-size = #+2
+    \override Lyrics.LyricSpace.minimum-distance = #1.9
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }

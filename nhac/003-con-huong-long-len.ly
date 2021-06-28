@@ -24,6 +24,8 @@
       "Liberation Serif"
       (/ 20 20)))
   page-count = #1
+  system-system-spacing = #'((basic-distance . 13))
+  score-system-spacing = #'((basic-distance . 13))
 }
 
 % Nhạc điệp khúc
@@ -47,29 +49,26 @@ nhacDiepKhucBas = \relative c' {
 
 % Nhạc phiên khúc
 nhacPhienKhucMot = \relative c' {
-  \cadenzaOn % dàn trang thủ công
-  e8 a4 a8 g a a g (e) g (a) a4 d,8 e fs4 e8 \bar "" \break
+  e8 a4 a8 g a a g (e) g (a) a4 d,8 e fs4 e8
   cs e cs a4 (a) \breathe
-  e'8 cs e g g4 a8 g16 (e) g8 (a) a4 \bar "" \break
+  e'8 cs e g g4 a8 g16 (e) g8 (a) a4
   g8 g b g a4 (a) d,8 e fs a gs a4
-  g!8 \fermata e \fermata d4 (d) \bar "||"
+  g8 \fermata e \fermata d4 (d) \bar "||"
 }
 
 nhacPhienKhucHai = \relative c' {
-  \cadenzaOn % dàn trang thủ công
-  e8 a4 e8 g fs e d4 (d8) b cs e a,4 \bar "" \break
+  e8 a4 e8 g fs e d4 (d8) b cs e a,4
   e'8 g e e e e fs4 (fs) \breathe
-  g8 e g \bar "" \break
+  g8 e g
   b a gs a4 \breathe
   g8 e g fs e \fermata e d4 (d) \bar "||"
 }
 
 nhacPhienKhucBa = \relative c' {
-  \cadenzaOn % dàn trang thủ công
   g'8 a a g e a \acciaccatura g (a4) \breathe
-  fs8 g fs b, b4 \bar "" \break
+  fs8 g fs b, b4
   a8 cs g' e fs4 (fs) \breathe
-  a8 b b a a4 g8 \bar "" \break
+  a8 b b a a4 g8
   e cs e a,4 (a) e'8 fs g4
   e8 b' \fermata \afterGrace a \fermata (b) d,4 (d) \bar "||"
 }
@@ -82,7 +81,7 @@ loiDiepKhuc = \lyricmode {
 
 % Lời phiên khúc
 loiPhienKhucMot = \lyricmode {
-  \set stanza = #"1."
+  \set stanza = #"1. "
   Lạy Chúa, xin dạy con biết đường lối Chúa.
   Nẻo Ngài đi, xin chỉ bảo con cùng.
   Xin Ngài thương hướng dẫn, lấy lời chân lý mà dạy dỗ bảo ban
@@ -90,7 +89,7 @@ loiPhienKhucMot = \lyricmode {
 }
 
 loiPhienKhucHai = \lyricmode {
-  \set stanza = #"2."
+  \set stanza = #"2. "
   Lạy Chúa, giờ đây xin nhớ lại.
   Tình sâu nghĩa nặng, Ngài đã từng biểu lộ ngàn xưa
   Bởi Ngài vốn xót thương từ ái.
@@ -98,7 +97,7 @@ loiPhienKhucHai = \lyricmode {
 }
 
 loiPhienKhucBa = \lyricmode {
-  \set stanza = #"3."
+  \set stanza = #"3. "
   Thiên Chúa rất nhân từ chính trực.
   Đưa những ai lầm lạc về nẻo chính đường ngay.
   Hướng dẫn kẻ khiêm cung sống cuộc đời ngay thẳng.
@@ -127,9 +126,10 @@ loiPhienKhucBa = \lyricmode {
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #0.5
+    \override Lyrics.LyricSpace.minimum-distance = #5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
+    \override Score.SpacingSpanner packed-spacing = ##t
   }
 }
 
@@ -148,8 +148,11 @@ loiPhienKhucBa = \lyricmode {
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #1.5
+    \override Lyrics.LyricSpace.minimum-distance = #2
     \override Score.SpacingSpanner.uniform-stretching = ##t
+    \override Score.SpacingSpanner packed-spacing = ##t
+    \set Score.barAlways = ##t
+    \set Score.defaultBarType = ""
   } 
 }
 
@@ -168,8 +171,10 @@ loiPhienKhucBa = \lyricmode {
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #1.5
+    \override Lyrics.LyricSpace.minimum-distance = #3.5
     \override Score.SpacingSpanner.uniform-stretching = ##t
+    \set Score.barAlways = ##t
+    \set Score.defaultBarType = ""
   } 
 }
 
@@ -188,7 +193,9 @@ loiPhienKhucBa = \lyricmode {
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #1.5
+    \override Lyrics.LyricSpace.minimum-distance = #2.5
     \override Score.SpacingSpanner.uniform-stretching = ##t
+    \set Score.barAlways = ##t
+    \set Score.defaultBarType = ""
   } 
 }

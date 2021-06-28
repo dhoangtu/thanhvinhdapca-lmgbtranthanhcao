@@ -24,6 +24,8 @@
       "Liberation Serif"
       (/ 20 20)))
   page-count = #1
+  system-system-spacing = #'((basic-distance . 13))
+  score-system-spacing = #'((basic-distance . 13))
 }
 
 % Nhạc điệp khúc
@@ -53,7 +55,7 @@ nhacDiepKhucBas = \relative c' {
 
 % Nhạc phiên khúc
 nhacPhienKhucMot = \relative c'' {
-  r8 c d d |
+  \partial 4. c8 d d |
   c4 \tuplet 3/2 { f,8 f a } |
   d,2 ( |
   d8) g c,8. a16 |
@@ -70,7 +72,7 @@ nhacPhienKhucMot = \relative c'' {
 }
 
 nhacPhienKhucHai = \relative c' {
-  r8 c' d8. d16 |
+  \partial 4. c'8 d8. d16 |
   c8 a bf d, |
   d2 ( |
   d8) a c8. f16 |
@@ -85,7 +87,7 @@ nhacPhienKhucHai = \relative c' {
 }
 
 nhacPhienKhucBa = \relative c' {
-  r8 c' d d |
+  \partial 4. c'8 d d |
   c8. a16 f8. a16 |
   d,2 ( |
   d8) g e8. d16 |
@@ -156,6 +158,7 @@ loiPhienKhucBa = \lyricmode {
     \override Lyrics.LyricSpace.minimum-distance = #2.0
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
+    \override Score.SpacingSpanner packed-spacing = ##t
   }
 }
 
@@ -177,6 +180,7 @@ loiPhienKhucBa = \lyricmode {
     \override Lyrics.LyricSpace.minimum-distance = #2.0
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
+    \override Score.SpacingSpanner packed-spacing = ##t
   }
 }
 
@@ -198,6 +202,7 @@ loiPhienKhucBa = \lyricmode {
     \override Lyrics.LyricSpace.minimum-distance = #2.0
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
+    \override Score.SpacingSpanner packed-spacing = ##t
   }
 }
 

@@ -35,6 +35,7 @@ nhacDiepKhuc = \relative c' {
   d2 |
   a8 g f d |
   a'2 |
+  #(define afterGraceFraction (cons 1 3))
   e8 e g \afterGrace a (bf) |
   a2 |
   g8 f e g |
@@ -71,7 +72,7 @@ loiDiepKhuc = \lyricmode {
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #2.5
+    \override Lyrics.LyricSpace.minimum-distance = #3.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }

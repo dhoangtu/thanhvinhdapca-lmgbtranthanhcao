@@ -24,6 +24,8 @@
       "Liberation Serif"
       (/ 20 20)))
   page-count = #1
+  %system-system-spacing = #'((basic-distance . 13))
+  score-system-spacing = #'((basic-distance . 14))
 }
 
 % Nhạc điệp khúc
@@ -49,7 +51,7 @@ nhacDiepKhucBass = \relative c' {
 
 % Nhạc phiên khúc
 nhacPhienKhuc = \relative c' {
-  r8 b' d d |
+  \partial 4. b'8 d d |
   e, fs fs e |
   d4. d8 |
   g, b d e |
@@ -69,7 +71,7 @@ loiDiepKhuc = \lyricmode {
 
 % Lời phiên khúc
 loiPhienKhucMot = \lyricmode {
-  \set stanza = #"1."
+  \set stanza = #"1. "
   Khi Chúa dẫn tù Si -- on trở về,
   Ta tưởng mình trong giấc mơ.
   Ngoài miệng vang vang câu cười nói,
@@ -78,7 +80,7 @@ loiPhienKhucMot = \lyricmode {
 
 loiPhienKhucHai = \lyricmode {
   \override Lyrics.LyricText.font-shape = #'italic
-  \set stanza = #"2."
+  \set stanza = #"2. "
   Hôm ấy khắp bàn dân nghe luận đàm,
   Ôi việc tay Chúa lớn lao.
   Việc Ngài thi công cao trọng quá,
@@ -86,7 +88,7 @@ loiPhienKhucHai = \lyricmode {
 }
 
 loiPhienKhucBa = \lyricmode {
-  \set stanza = #"3."
+  \set stanza = #"3. "
   Xin Chúa dẫn đường con dân trở về,
   như chuyển dòng suối phía Nam.
   Nghẹn ngào ra đi gieo hạt giống,
@@ -114,7 +116,7 @@ loiPhienKhucBa = \lyricmode {
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #3.0
+    \override Lyrics.LyricSpace.minimum-distance = #4
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }

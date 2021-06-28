@@ -22,7 +22,8 @@
   page-count = #1
   print-all-headers = ##t
   
-  system-system-spacing = #'((basic-distance . 14))
+  system-system-spacing = #'((basic-distance . 12))
+  score-system-spacing = #'((basic-distance . 12))
 }
 
 % Nhạc phiên khúc
@@ -132,7 +133,7 @@ loiDiepKhucTuyenTin = \lyricmode {
     }
     \layout {
       \override Staff.TimeSignature.transparent = ##t
-      \override Lyrics.LyricText.font-size = #+2.5
+      \override Lyrics.LyricText.font-size = #+2
       \override Lyrics.LyricSpace.minimum-distance = #2.0
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \override Score.SpacingSpanner.uniform-stretching = ##t
@@ -164,7 +165,7 @@ loiDiepKhucTuyenTin = \lyricmode {
     }
     \layout {
       \override Lyrics.LyricText.font-series = #'bold
-      \override Lyrics.LyricText.font-size = #+2.5
+      \override Lyrics.LyricText.font-size = #+2
       \override Lyrics.LyricSpace.minimum-distance = #8.5
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \override Score.SpacingSpanner.uniform-stretching = ##t
@@ -189,7 +190,7 @@ loiDiepKhucTuyenTin = \lyricmode {
     >>
     \layout {
       \override Staff.TimeSignature.transparent = ##t
-      \override Lyrics.LyricText.font-size = #+2.5
+      \override Lyrics.LyricText.font-size = #+2
       \override Lyrics.LyricSpace.minimum-distance = #2.2
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \override Score.SpacingSpanner.uniform-stretching = ##t

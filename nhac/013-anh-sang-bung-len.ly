@@ -25,13 +25,13 @@ nhacDiepKhucSop = \relative c'' {
 }
 
 % Nốt bè phụ
-notBePhu = \tweak font-size #-2 \etc
 nhacDiepKhucBas = \relative c' {
+  %\override NoteHead.font-size = #-2
   \key d \major \time 2/4
-  \notBePhu fs8 \notBePhu fs 	\notBePhu g 	\notBePhu fs |
-  \notBePhu d 	\notBePhu d		\notBePhu cs	\notBePhu b |
-  \notBePhu cs4.	\notBePhu b8 |
-  \notBePhu d2 |
+  fs8 fs 	g fs |
+  d d cs b |
+  cs4. b8 |
+  d2 |
   b8 cs d cs |
   g4. a8 |
   g cs a4 |
@@ -121,6 +121,8 @@ loiPhienKhucBa = \lyricmode {
       "Liberation Serif"
       (/ 20 20)))
   %page-count = #1
+  system-system-spacing = #'((basic-distance . 13))
+  score-system-spacing = #'((basic-distance . 13))
 }
 
 % Thiết lập tông và nhịp
@@ -134,7 +136,8 @@ TongNhip = { \key d \major \time 2/4 }
         printPartCombineTexts = ##f
       }
       <<
-      \new Voice \partCombine \nhacDiepKhucSop \nhacDiepKhucBas
+      \new Voice \partCombine 
+        \nhacDiepKhucSop \nhacDiepKhucBas
       \new NullVoice = nhacThamChieu \nhacDiepKhucSop
       \new Lyrics \lyricsto nhacThamChieu \loiDiepKhuc
       >>
@@ -142,7 +145,7 @@ TongNhip = { \key d \major \time 2/4 }
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #2.0
+    \override Lyrics.LyricSpace.minimum-distance = #2.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
@@ -163,7 +166,7 @@ TongNhip = { \key d \major \time 2/4 }
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #3.0
+    \override Lyrics.LyricSpace.minimum-distance = #3.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
@@ -184,7 +187,7 @@ TongNhip = { \key d \major \time 2/4 }
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #3.0
+    \override Lyrics.LyricSpace.minimum-distance = #5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
@@ -205,7 +208,7 @@ TongNhip = { \key d \major \time 2/4 }
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #4.0
+    \override Lyrics.LyricSpace.minimum-distance = #3.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }

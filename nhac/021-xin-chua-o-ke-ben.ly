@@ -24,6 +24,8 @@
       "Liberation Serif"
       (/ 20 20)))
   page-count = #1
+  system-system-spacing = #'((basic-distance . 13))
+  score-system-spacing = #'((basic-distance . 13))
 }
 
 % Nhạc điệp khúc
@@ -39,7 +41,7 @@ nhacDiepKhuc= \relative c'' {
 % Nhạc phiên khúc
 nhacPhienKhucMot = \relative c' {
   e8 a a g c c b4 \breathe
-  b8 ef ef e! a, b a g4 \breathe
+  b8 ef ef e a, b a g4 \breathe
   g8 a b b fs4 \breathe
   a8 b e, g g a b \breathe
   a c a b4 \breathe
@@ -112,7 +114,7 @@ loiPhienKhucBa = \lyricmode {
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #4.0
+    \override Lyrics.LyricSpace.minimum-distance = #6
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
@@ -133,7 +135,7 @@ loiPhienKhucBa = \lyricmode {
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #2.0
+    \override Lyrics.LyricSpace.minimum-distance = #3
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
     \set Score.barAlways = ##t
@@ -156,7 +158,7 @@ loiPhienKhucBa = \lyricmode {
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #3.0
+    \override Lyrics.LyricSpace.minimum-distance = #4
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
     \set Score.barAlways = ##t
@@ -179,7 +181,7 @@ loiPhienKhucBa = \lyricmode {
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #2.0
+    \override Lyrics.LyricSpace.minimum-distance = #2.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
     \set Score.barAlways = ##t

@@ -29,6 +29,8 @@ global = {
       "Liberation Serif"
       (/ 20 20)))
   page-count = #1
+  %system-system-spacing = #'((basic-distance . 12))
+  %score-system-spacing = #'((basic-distance . 12))
 }
 
 % Nhạc điệp khúc
@@ -149,9 +151,9 @@ loiDiepKhucBas = \lyricmode {
 % Lời phiên khúc
 loiPhienKhucMot = \lyricmode {
   \set stanza = #"1."
-  Nhà Is -- ra -- el, nào hãy nói:
+  Nhà "Is -" "ra -" el, nào hãy nói:
   Muôn ngàn đời Chúa vẫn trọn tình thương.
-  Nhà A -- ha -- ron nào hãy nói:
+  Nhà "A -" "ha -" ron nào hãy nói:
   Muôn ngàn đời Chúa vẫn trọn tình thương.
 }
 
@@ -206,7 +208,7 @@ loiPhienKhucBon = \lyricmode {
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #0.5
+    \override Lyrics.LyricSpace.minimum-distance = #1.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
@@ -227,7 +229,7 @@ loiPhienKhucBon = \lyricmode {
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #0.5
+    \override Lyrics.LyricSpace.minimum-distance = #3
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   } 
@@ -248,7 +250,7 @@ loiPhienKhucBon = \lyricmode {
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #0.5
+    \override Lyrics.LyricSpace.minimum-distance = #2
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   } 
@@ -269,7 +271,7 @@ loiPhienKhucBon = \lyricmode {
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #0.5
+    \override Lyrics.LyricSpace.minimum-distance = #2
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   } 

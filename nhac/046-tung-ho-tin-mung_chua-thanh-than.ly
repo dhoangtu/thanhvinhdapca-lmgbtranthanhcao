@@ -24,6 +24,8 @@
       "Liberation Serif"
       (/ 20 20)))
   page-count = #1
+  system-system-spacing = #'((basic-distance . 13))
+  score-system-spacing = #'((basic-distance . 13))
 }
 
 % Nhạc điệp khúc
@@ -49,8 +51,8 @@ nhacDiepKhuc = \relative c' {
 
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
-  Hal -- lê -- lu -- ia. Hal -- lê -- lu -- ia.
-  Hal -- lê -- lu -- ia. Hal -- lê -- lu -- ia.
+  "Hal -" "lê -" "lu -" ia. "Hal -" "lê -" "lu -" ia.
+  "Hal -" "lê -" "lu -" ia. "Hal -" "lê -" "lu -" ia.
   Lạy Chúa Thánh Thần, xin ngự đến
   cho tâm hồn tín hữu được nhuần thấm muôn ơn.
   Và cháy lửa mến yêu, mến yêu Ngài.
@@ -74,7 +76,7 @@ loiDiepKhuc = \lyricmode {
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #2.0
+    \override Lyrics.LyricSpace.minimum-distance = #2.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }

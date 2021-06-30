@@ -32,7 +32,7 @@ nhacDiepKhucSop = \relative c' {
   fs8 a b b |
   a4 r8 b |
   a b cs d |
-  \acciaccatura e8 d2 \bar "|."
+  \slashedGrace {e8 ^(} d2) \bar "|."
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -40,7 +40,7 @@ nhacDiepKhucBas = \relative c' {
   d8 fs g g |
   fs4 r8 g |
   fs g g a |
-  \acciaccatura a8 fs2
+  \slashedGrace { a8 _(} fs2)
 }
 
 % Nhạc phiên khúc
@@ -125,27 +125,38 @@ loiPhienKhucBa = \lyricmode {
 
 
 % Dàn trang
+% Thiết lập tông và nhịp
+TongNhip = { \key d \major \time 2/4 }
+
+% Đổi phông nốt cho bè phụ
+notBePhu =
+#(define-music-function (font-size music) (number? ly:music?)
+   (music-map
+     (lambda (m)
+       (if (music-is-of-type? m 'rhythmic-event)
+           (tweak 'font-size font-size m)
+           m))
+     music))
+
 \score {
   \new ChoirStaff <<
     \new Staff = diepKhuc \with {
         \consists "Merge_rests_engraver"
         %\magnifyStaff #(magstep +1)
+        printPartCombineTexts = ##f
       }
       <<
-      \new Voice = beSop {
-        \voiceOne \key d \major \time 2/4 \nhacDiepKhucSop
-      }
-      \new Voice = beBas {
-        \override NoteHead.font-size = #-2
-        \voiceTwo \key d \major \time 2/4 \nhacDiepKhucBas
-      }
-    >>
-    \new Lyrics \lyricsto beSop \loiDiepKhuc
+      \new Voice \TongNhip \partCombine 
+        \nhacDiepKhucSop
+        \notBePhu -3 { \nhacDiepKhucBas }
+      \new NullVoice = nhacThamChieu \nhacDiepKhucSop
+      \new Lyrics \lyricsto nhacThamChieu \loiDiepKhuc
+      >>
   >>
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #4.0
+    \override Lyrics.LyricSpace.minimum-distance = #6
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }

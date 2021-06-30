@@ -12,7 +12,6 @@
 
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c'' {
-  \key d \major \time 2/4
   a8 a b a |
   fs g a d, |
   e4. g8 |
@@ -26,8 +25,6 @@ nhacDiepKhucSop = \relative c'' {
 
 % Nốt bè phụ
 nhacDiepKhucBas = \relative c' {
-  %\override NoteHead.font-size = #-2
-  \key d \major \time 2/4
   fs8 fs 	g fs |
   d d cs b |
   cs4. b8 |
@@ -128,6 +125,16 @@ loiPhienKhucBa = \lyricmode {
 % Thiết lập tông và nhịp
 TongNhip = { \key d \major \time 2/4 }
 
+% Đổi phông nốt cho bè phụ
+notBePhu =
+#(define-music-function (font-size music) (number? ly:music?)
+   (music-map
+     (lambda (m)
+       (if (music-is-of-type? m 'rhythmic-event)
+           (tweak 'font-size font-size m)
+           m))
+     music))
+
 \score {
   \new ChoirStaff <<
     \new Staff = diepKhuc \with {
@@ -136,8 +143,9 @@ TongNhip = { \key d \major \time 2/4 }
         printPartCombineTexts = ##f
       }
       <<
-      \new Voice \partCombine 
-        \nhacDiepKhucSop \nhacDiepKhucBas
+      \new Voice \TongNhip \partCombine 
+        \nhacDiepKhucSop
+        \notBePhu -3 { \nhacDiepKhucBas }
       \new NullVoice = nhacThamChieu \nhacDiepKhucSop
       \new Lyrics \lyricsto nhacThamChieu \loiDiepKhuc
       >>

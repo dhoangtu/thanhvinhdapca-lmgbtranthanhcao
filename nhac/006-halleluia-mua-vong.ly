@@ -10,22 +10,6 @@
   tagline = ##f
 }
 
-\paper {
-  #(set-paper-size "a4")
-  top-margin = 10\mm
-  bottom-margin = 10\mm
-  left-margin = 20\mm
-  right-margin = 20\mm
-  indent = #0
-  #(define fonts
-    (make-pango-font-tree
-      "Liberation Serif"
-      "Liberation Serif"
-      "Liberation Serif"
-      (/ 20 20)))
-  page-count = #1
-}
-
 % Nhạc điệp khúc
 nhacDiepKhuc = \relative c' {
   \partial 4 \tuplet 3/2 { f8 f f } |
@@ -55,7 +39,26 @@ loiDiepKhuc = \lyricmode {
   Hal -- le -- lu -- ia.
 }
 
-% Bố trí
+% Dàn trang
+\paper {
+  #(set-paper-size "a4")
+  top-margin = 10\mm
+  bottom-margin = 10\mm
+  left-margin = 20\mm
+  right-margin = 20\mm
+  indent = #0
+  #(define fonts
+    (make-pango-font-tree
+      "Liberation Serif"
+      "Liberation Serif"
+      "Liberation Serif"
+      (/ 20 20)))
+  page-count = #1
+}
+
+% Thiết lập tông và nhịp
+TongNhip = { \key f \major \time 2/4 }
+
 \score {
   \new ChoirStaff <<
     \new Staff = diepKhuc \with {
@@ -64,7 +67,7 @@ loiDiepKhuc = \lyricmode {
       }
       <<
       \new Voice = beSop {
-        \key f \major \time 2/4 \stemNeutral \nhacDiepKhuc
+        \TongNhip \stemNeutral \nhacDiepKhuc
       }
     >>
     \new Lyrics \lyricsto beSop \loiDiepKhuc

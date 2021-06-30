@@ -125,15 +125,20 @@ loiPhienKhucBa = \lyricmode {
 % Thiết lập tông và nhịp
 TongNhip = { \key d \major \time 2/4 }
 
-% Đổi phông nốt cho bè phụ
+% Đổi kích thước nốt cho bè phụ
 notBePhu =
 #(define-music-function (font-size music) (number? ly:music?)
-   (music-map
+   (for-some-music
      (lambda (m)
        (if (music-is-of-type? m 'rhythmic-event)
-           (tweak 'font-size font-size m)
-           m))
-     music))
+           (begin
+             (set! (ly:music-property m 'tweaks)
+                   (cons `(font-size . ,font-size)
+                         (ly:music-property m 'tweaks)))
+             #t)
+           #f))
+     music)
+   music)
 
 \score {
   \new ChoirStaff <<

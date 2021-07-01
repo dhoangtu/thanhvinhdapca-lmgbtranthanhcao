@@ -10,22 +10,6 @@
   tagline = ##f
 }
 
-\paper {
-  #(set-paper-size "a4")
-  top-margin = 10\mm
-  bottom-margin = 10\mm
-  left-margin = 20\mm
-  right-margin = 20\mm
-  indent = #0
-  #(define fonts
-    (make-pango-font-tree
-      "Liberation Serif"
-      "Liberation Serif"
-      "Liberation Serif"
-      (/ 20 20)))
-  page-count = #1
-}
-
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c'' {
   a8 a g |
@@ -67,7 +51,7 @@ nhacPhienKhucMot = \relative c'' {
   a'4 \breathe g8 |
   e f g |
   c,4 d8 |
-  d4. ^( |
+  d4. ( |
   d8) r d |
   a'4. |
   r8 bf g |
@@ -88,10 +72,10 @@ nhacPhienKhucHai = \relative c' {
   a4 d,8 |
   e f d |
   a'4. |
-  bf8 a g ^( |
+  bf8 a g ( |
   g) bf (bf) |
   e e d |
-  d4. _( |
+  d4. ( |
   d4) c8 |
   c bf d |
   c g a |
@@ -100,7 +84,7 @@ nhacPhienKhucHai = \relative c' {
   f4 \breathe e8 |
   g a a |
   e4 f8 |
-  d4. ^( |
+  d4. ( |
   d4) r8 \bar "||"
 }
 
@@ -111,7 +95,7 @@ nhacPhienKhucBa = \relative c' {
   a'4 \breathe e8 |
   g f e |
   g e f |
-  d4. ^( |
+  d4. ( |
   d4) g8 |
   bf g bf |
   d e d |
@@ -123,7 +107,7 @@ nhacPhienKhucBa = \relative c' {
   g4 e8 |
   f g e |
   f g e |
-  d4. ^( |
+  d4. ( |
   d4) r8 \bar "||"
 }
 
@@ -163,22 +147,54 @@ loiPhienKhucBa = \lyricmode {
 
 
 % Dàn trang
+\paper {
+  #(set-paper-size "a4")
+  top-margin = 10\mm
+  bottom-margin = 10\mm
+  left-margin = 20\mm
+  right-margin = 20\mm
+  indent = #0
+  #(define fonts
+    (make-pango-font-tree
+      "Liberation Serif"
+      "Liberation Serif"
+      "Liberation Serif"
+      (/ 20 20)))
+  page-count = #1
+}
+
+% Thiết lập tông và nhịp
+TongNhip = { \key f \major \time 3/8 }
+
+% Đổi kích thước nốt cho bè phụ
+notBePhu =
+#(define-music-function (font-size music) (number? ly:music?)
+   (for-some-music
+     (lambda (m)
+       (if (music-is-of-type? m 'rhythmic-event)
+           (begin
+             (set! (ly:music-property m 'tweaks)
+                   (cons `(font-size . ,font-size)
+                         (ly:music-property m 'tweaks)))
+             #t)
+           #f))
+     music)
+   music)
+
 \score {
   \new ChoirStaff <<
     \new Staff = diepKhuc \with {
         \consists "Merge_rests_engraver"
         %\magnifyStaff #(magstep +1)
+        printPartCombineTexts = ##f
       }
       <<
-      \new Voice = beSop {
-        \voiceOne \key f \major \time 3/8 \nhacDiepKhucSop
-      }
-      \new Voice = beBas {
-        \override NoteHead.font-size = #-2
-        \voiceTwo \key f \major \time 3/8 \nhacDiepKhucBas
-      }
-    >>
-    \new Lyrics \lyricsto beSop \loiDiepKhuc
+      \new Voice \TongNhip \partCombine 
+        \nhacDiepKhucSop
+        \notBePhu -3 { \nhacDiepKhucBas }
+      \new NullVoice = nhacThamChieu \nhacDiepKhucSop
+      \new Lyrics \lyricsto nhacThamChieu \loiDiepKhuc
+      >>
   >>
   \layout {
     \override Lyrics.LyricText.font-series = #'bold

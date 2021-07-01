@@ -10,55 +10,35 @@
   tagline = ##f
 }
 
-
-\paper {
-  #(set-paper-size "a4")
-  top-margin = 10\mm
-  bottom-margin = 10\mm
-  left-margin = 20\mm
-  right-margin = 20\mm
-  indent = #0
-  #(define fonts
-    (make-pango-font-tree
-      "Liberation Serif"
-      "Liberation Serif"
-      "Liberation Serif"
-      (/ 20 20)))
-  page-count = #1
-}
-
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c'' {
-
   g8 _(fs) e _(fs) |
   d2 |
   a'4 c, |
   c2 |
   g'4 b, |
   b d |
-  d (g8) r |
-  b _(a) g4 |
+  d ^(g8) r |
+  b ^(a) g4 |
   g2 |
-  c8 _(b) a4 |
+  c8 ^(b) a4 |
   a2 |
   d8 d g,4 |
   g2 ( |
   g4) r \bar "|."
 }
 
-nhacDiepKhucBass = \relative c' {
-
-
+nhacDiepKhucBas = \relative c' {
   \skip 2
   b2 |
   d4 a |
   a2 |
   e'4 g, |
   g b |
-  b (d8) r |
-  g ^(fs) e4 |
+  b _(d8) r |
+  g _(fs) e4 |
   e2 |
-  a8 ^(g) d4 |
+  a8 _(g) d4 |
   d2 |
   b'8 b d,4 |
   g2 ( |
@@ -125,23 +105,54 @@ loiPhienKhucBa = \lyricmode {
 
 
 % Dàn trang
+\paper {
+  #(set-paper-size "a4")
+  top-margin = 10\mm
+  bottom-margin = 10\mm
+  left-margin = 20\mm
+  right-margin = 20\mm
+  indent = #0
+  #(define fonts
+    (make-pango-font-tree
+      "Liberation Serif"
+      "Liberation Serif"
+      "Liberation Serif"
+      (/ 20 20)))
+  page-count = #1
+}
+
+% Thiết lập tông và nhịp
+TongNhip = { \key g \major \time 2/4 }
+
+% Đổi kích thước nốt cho bè phụ
+notBePhu =
+#(define-music-function (font-size music) (number? ly:music?)
+   (for-some-music
+     (lambda (m)
+       (if (music-is-of-type? m 'rhythmic-event)
+           (begin
+             (set! (ly:music-property m 'tweaks)
+                   (cons `(font-size . ,font-size)
+                         (ly:music-property m 'tweaks)))
+             #t)
+           #f))
+     music)
+   music)
+
 \score {
   \new ChoirStaff <<
     \new Staff = diepKhuc \with {
         \consists "Merge_rests_engraver"
         %\magnifyStaff #(magstep +1)
+        printPartCombineTexts = ##f
       }
       <<
-      \new Voice = beSop {
-        \voiceOne \key g \major \time 2/4 \nhacDiepKhucSop
-      }
-      \new Voice = beBas {
-        \override NoteHead.font-size = #-2
-        \voiceTwo \key g \major \time 2/4 \nhacDiepKhucBass
-        
-      }
-    >>
-    \new Lyrics \lyricsto beSop \loiDiepKhuc
+      \new Voice \TongNhip \partCombine 
+        \nhacDiepKhucSop
+        \notBePhu -3 { \nhacDiepKhucBas }
+      \new NullVoice = nhacThamChieu \nhacDiepKhucSop
+      \new Lyrics \lyricsto nhacThamChieu \loiDiepKhuc
+      >>
   >>
   \layout {
     \override Lyrics.LyricText.font-series = #'bold

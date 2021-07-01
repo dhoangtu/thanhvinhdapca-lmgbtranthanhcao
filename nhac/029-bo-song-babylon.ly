@@ -10,26 +10,8 @@
   tagline = ##f
 }
 
-\paper {
-  #(set-paper-size "a4")
-  top-margin = 10\mm
-  bottom-margin = 10\mm
-  left-margin = 20\mm
-  right-margin = 20\mm
-  indent = #0
-  #(define fonts
-    (make-pango-font-tree
-      "Liberation Serif"
-      "Liberation Serif"
-      "Liberation Serif"
-      (/ 20 20)))
-  page-count = #1
-  system-system-spacing = #'((basic-distance . 13))
-  score-system-spacing = #'((basic-distance . 13))
-}
-
 % Nhạc điệp khúc
-nhacDiepKhucSop= \relative c' {
+nhacDiepKhucSop = \relative c' {
   fs8 g a a |
   a4. a16 a |
   fs8 a fs4 |
@@ -43,7 +25,7 @@ nhacDiepKhucSop= \relative c' {
   d4) r \bar "|."
 }
 
-nhacDiepKhucBass= \relative c' {
+nhacDiepKhucBas = \relative c' {
   d8 e fs fs |
   fs4. fs16 fs |
   d8 fs d4 |
@@ -106,7 +88,7 @@ nhacPhienKhucBa = \relative c'' {
 loiDiepKhuc = \lyricmode {
   Bờ sông Ba -- by -- lon,
   ta ra ngồi nức nở mà tưởng nhớ Si -- on.
-  Bờ sông Ba -- by -- lon,
+  Bờ sông "Ba -" "by -" lon,
   ta ra ngồi nức nở mà tưởng nhớ Si -- on.
 }
 
@@ -138,27 +120,61 @@ loiPhienKhucBa = \lyricmode {
 
 
 % Dàn trang
+\paper {
+  #(set-paper-size "a4")
+  top-margin = 10\mm
+  bottom-margin = 10\mm
+  left-margin = 20\mm
+  right-margin = 20\mm
+  indent = #0
+  #(define fonts
+    (make-pango-font-tree
+      "Liberation Serif"
+      "Liberation Serif"
+      "Liberation Serif"
+      (/ 20 20)))
+  page-count = #1
+  system-system-spacing = #'((basic-distance . 13))
+  score-system-spacing = #'((basic-distance . 13))
+}
+
+% Thiết lập tông và nhịp
+TongNhip = { \key d \major \time 2/4 }
+
+% Đổi kích thước nốt cho bè phụ
+notBePhu =
+#(define-music-function (font-size music) (number? ly:music?)
+   (for-some-music
+     (lambda (m)
+       (if (music-is-of-type? m 'rhythmic-event)
+           (begin
+             (set! (ly:music-property m 'tweaks)
+                   (cons `(font-size . ,font-size)
+                         (ly:music-property m 'tweaks)))
+             #t)
+           #f))
+     music)
+   music)
+
 \score {
   \new ChoirStaff <<
     \new Staff = diepKhuc \with {
         \consists "Merge_rests_engraver"
         %\magnifyStaff #(magstep +1)
+        printPartCombineTexts = ##f
       }
       <<
-      \new Voice = beSop {
-        \voiceOne \key d \major \time 2/4 \nhacDiepKhucSop
-      }
-      \new Voice = beBas {
-        \override NoteHead.font-size = #-2
-        \voiceTwo \key d \major \time 2/4 \nhacDiepKhucBass
-      }
-    >>
-    \new Lyrics \lyricsto beSop \loiDiepKhuc
+      \new Voice \TongNhip \partCombine 
+        \nhacDiepKhucSop
+        \notBePhu -3 { \nhacDiepKhucBas }
+      \new NullVoice = nhacThamChieu \nhacDiepKhucSop
+      \new Lyrics \lyricsto nhacThamChieu \loiDiepKhuc
+      >>
   >>
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #5
+    \override Lyrics.LyricSpace.minimum-distance = #3.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }

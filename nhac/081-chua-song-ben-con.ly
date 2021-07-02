@@ -10,22 +10,6 @@
   tagline = ##f
 }
 
-\paper {
-  #(set-paper-size "a4")
-  top-margin = 10\mm
-  bottom-margin = 10\mm
-  left-margin = 20\mm
-  right-margin = 20\mm
-  indent = #0
-  #(define fonts
-    (make-pango-font-tree
-      "Liberation Serif"
-      "Liberation Serif"
-      "Liberation Serif"
-      (/ 20 20)))
-  page-count = #1
-}
-
 % Nhạc điệp khúc
 nhacDiepKhuc= \relative c'' {
   c2 g4 |
@@ -132,6 +116,25 @@ loiPhienKhucBa = \lyricmode {
 
 
 % Dàn trang
+\paper {
+  #(set-paper-size "a4")
+  top-margin = 10\mm
+  bottom-margin = 10\mm
+  left-margin = 20\mm
+  right-margin = 20\mm
+  indent = #0
+  #(define fonts
+    (make-pango-font-tree
+      "Liberation Serif"
+      "Liberation Serif"
+      "Liberation Serif"
+      (/ 20 20)))
+  page-count = #1
+}
+
+% Thiết lập tông và nhịp
+TongNhip = { \key f \major \time 3/4 }
+
 \score {
   \new ChoirStaff <<
     \new Staff = diepKhuc \with {
@@ -140,7 +143,7 @@ loiPhienKhucBa = \lyricmode {
       }
       <<
       \new Voice = beSop {
-        \key f \major \time 3/4 \stemNeutral \nhacDiepKhuc
+        \TongNhip \stemNeutral \nhacDiepKhuc
       }
     >>
     \new Lyrics \lyricsto beSop \loiDiepKhuc
@@ -161,7 +164,7 @@ loiPhienKhucBa = \lyricmode {
       }
       <<
       \new Voice = beSop {
-        \key f \major \time 3/4 \nhacPhienKhucMot
+        \TongNhip \nhacPhienKhucMot
       }
     >>
     \new Lyrics \lyricsto beSop \loiPhienKhucMot
@@ -182,7 +185,7 @@ loiPhienKhucBa = \lyricmode {
       }
       <<
       \new Voice = beSop {
-        \key f \major \time 3/4 \nhacPhienKhucHai
+        \TongNhip \nhacPhienKhucHai
       }
     >>
     \new Lyrics \lyricsto beSop \loiPhienKhucHai
@@ -203,7 +206,7 @@ loiPhienKhucBa = \lyricmode {
       }
       <<
       \new Voice = beSop {
-        \key f \major \time 3/4 \nhacPhienKhucBa
+        \TongNhip \nhacPhienKhucBa
       }
     >>
     \new Lyrics \lyricsto beSop \loiPhienKhucBa

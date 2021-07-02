@@ -10,22 +10,6 @@
   tagline = ##f
 }
 
-\paper {
-  #(set-paper-size "a4")
-  top-margin = 10\mm
-  bottom-margin = 10\mm
-  left-margin = 20\mm
-  right-margin = 20\mm
-  indent = #0
-  #(define fonts
-    (make-pango-font-tree
-      "Liberation Serif"
-      "Liberation Serif"
-      "Liberation Serif"
-      (/ 20 20)))
-  page-count = #1
-}
-
 % Nhạc điệp khúc
 nhacDiepKhuc= \relative c' {
   \partial 4 d4 |
@@ -75,7 +59,7 @@ loiDiepKhuc = \lyricmode {
 
 % Lời phiên khúc
 loiPhienKhucMot = \lyricmode {
-  \set stanza = #"1."
+  \set stanza = \markup { \circle { \huge "1" } }
   Lạy Chúa, xin Ngài xét cho con,
   lắng tai nghe nỗi lòng ai oán.
   Xin đoái nhận bao tiếng van nài
@@ -83,7 +67,7 @@ loiPhienKhucMot = \lyricmode {
 }
 
 loiPhienKhucHai = \lyricmode {
-  \set stanza = #"2."
+  \set stanza = \markup { \circle { \huge "2" } }
   Con tuân giữ mọi điều Chúa dạy.
   Đi theo sát đường Ngài đã chỉ,
   không khi nào lỡ bước sa chân.
@@ -94,7 +78,7 @@ loiPhienKhucHai = \lyricmode {
 }
 
 loiPhienKhucBa = \lyricmode {
-  \set stanza = #"3."
+  \set stanza = \markup { \circle { \huge "3" } }
   Xin giữ con như thể con ngươi.
   Dưới bóng Ngài, xin thương che chở.
   Sống công chính, con được nhìn thấy Chúa.
@@ -103,6 +87,25 @@ loiPhienKhucBa = \lyricmode {
 
 
 % Dàn trang
+\paper {
+  #(set-paper-size "a4")
+  top-margin = 10\mm
+  bottom-margin = 10\mm
+  left-margin = 20\mm
+  right-margin = 20\mm
+  indent = #0
+  #(define fonts
+    (make-pango-font-tree
+      "Liberation Serif"
+      "Liberation Serif"
+      "Liberation Serif"
+      (/ 20 20)))
+  page-count = #1
+}
+
+% Thiết lập tông và nhịp
+TongNhip = { \key f \major \time 2/4 }
+
 \score {
   \new ChoirStaff <<
     \new Staff = diepKhuc \with {

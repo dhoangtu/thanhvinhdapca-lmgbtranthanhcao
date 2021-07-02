@@ -10,23 +10,6 @@
   tagline = ##f
 }
 
-\paper {
-  #(set-paper-size "a4")
-  top-margin = 10\mm
-  bottom-margin = 10\mm
-  left-margin = 20\mm
-  right-margin = 20\mm
-  #(define fonts
-    (make-pango-font-tree
-      "Liberation Serif"
-      "Liberation Serif"
-      "Liberation Serif"
-      (/ 20 20)))
-  page-count = #1
-  indent = #0
-  system-system-spacing.basic-distance = #17
-}
-
 % Nhạc điệp khúc
 nhacDiepKhucBas = \relative c' {
   \partial 8 d8 |
@@ -105,6 +88,23 @@ loiPhienKhucBa = \lyricmode {
 }
 
 % Dàn trang
+\paper {
+  #(set-paper-size "a4")
+  top-margin = 10\mm
+  bottom-margin = 10\mm
+  left-margin = 20\mm
+  right-margin = 20\mm
+  #(define fonts
+    (make-pango-font-tree
+      "Liberation Serif"
+      "Liberation Serif"
+      "Liberation Serif"
+      (/ 20 20)))
+  page-count = #1
+  indent = #0
+  system-system-spacing.basic-distance = #17
+}
+
 \score {
   \new ChoirStaff <<
     \new Staff \with {

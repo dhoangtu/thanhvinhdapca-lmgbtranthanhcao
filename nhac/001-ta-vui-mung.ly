@@ -95,7 +95,7 @@ loiDiepKhuc = \lyricmode {
 
 % Lời phiên khúc
 loiPhienKhucMot = \lyricmode {
-  \set stanza = #"1. "
+  \set stanza = \markup { \circle { \huge "1" } }
   Vui chừng nào khi thiên hạ bảo tôi:
   Ta cùng trẩy lên Đền Thánh Chúa.
   Và giờ đây "Giê -" "ru -" "sa -" lem hỡi
@@ -103,7 +103,7 @@ loiPhienKhucMot = \lyricmode {
 }
 
 loiPhienKhucHai = \lyricmode {
-  \set stanza = #"2. "
+  \set stanza = \markup { \circle { \huge "2" } }
   Từng chi tộc, chi tộc của Chúa.
   Trảy hội lên đền, ở nơi đây.
   Để danh Chúa họ cùng xưng tụng.
@@ -111,7 +111,7 @@ loiPhienKhucHai = \lyricmode {
 }
 
 loiPhienKhucBa = \lyricmode {
-  \set stanza = #"3. "
+  \set stanza = \markup { \circle { \huge "3" } }
   Cũng nơi đó, đặt ngai xét xử.
   Ngai vàng của vương triều Đa -- vít, Tổ phụ xưa.
 }

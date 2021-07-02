@@ -99,13 +99,13 @@ nhacDiepKhucBassTuyenTin = \relative c' {
 
 % Lời điệp khúc
 loiPhienKhucMotTuyenTin = \lyricmode {
-  \set stanza = #"XƯỚNG:"
+  \set stanza = \markup { \rounded-box { \large "XƯỚNG" } }
   Đây là mầu nhiệm đức tin.
 }
 
 % Lời phiên khúc
 loiDiepKhucTuyenTin = \lyricmode {
-  \set stanza = #"ĐÁP:"
+  \set stanza = \markup { \rounded-box { \large "ĐÁP:" } }
   Chúng con loan truyền Chúa đã chịu chết.
   Chúng con tuyên xưng Chúa đã sống lại,
   cho tới khi Ngài lại đến trong vinh quang.

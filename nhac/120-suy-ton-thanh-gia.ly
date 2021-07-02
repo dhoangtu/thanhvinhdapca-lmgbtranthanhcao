@@ -84,12 +84,12 @@ nhacPhienKhucBa = \relative c'' {
 % Lời phiên khúc
 loiPhienKhuc = \lyricmode {
   \override Lyrics.LyricText.font-series = #'bold
-  \set stanza = \markup { \fontsize #3 \normal-text "(Xướng)" }
+  \set stanza = \markup { \rounded-box { \large "Xướng" } }
   Đây là đây là cây Thánh Giá Chúa Ki -- tô,
   chính nơi này đem ơn cứu độ,
   ơn cứu độ cho trần gian.
   \override Lyrics.LyricText.font-series = #'normal
-  \set stanza = \markup { \fontsize #3 \normal-text "(Đáp)" }
+  \set stanza = \markup { \rounded-box { \large "Đáp" } }
   Chúng ta hãy mau mau đến tôn thờ mà thờ lạy mến yêu.
 }
 

@@ -9,23 +9,6 @@
   tagline = ##f
 }
 
-\paper {
-  #(set-paper-size "a4")
-  top-margin = 10\mm
-  bottom-margin = 10\mm
-  left-margin = 20\mm
-  right-margin = 20\mm
-  indent = #0
-  #(define fonts
-    (make-pango-font-tree
-      "Liberation Serif"
-      "Liberation Serif"
-      "Liberation Serif"
-      (/ 20 20)))
-  page-count = #2
-  print-page-number = #f
-}
-
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c'' {
   r2 |
@@ -34,7 +17,7 @@ nhacDiepKhucSop = \relative c'' {
   f4 g8 (a) |
   a4 r8 a |
   a (c) d (c) |
-  a f d4 ^( |
+  a f d4 ( |
   d8) g g g |
   a2 ( |
   a8) d d bf |
@@ -44,7 +27,7 @@ nhacDiepKhucSop = \relative c'' {
   f e c d |
   a c f e |
   d4 \tuplet 3/2 { c8 f e } |
-  d2 ^( |
+  d2 ( |
   d8) \bar "|."
 }
 
@@ -65,7 +48,7 @@ nhacDiepKhucAlto = \relative c'' {
   d c bf d |
   a a c bf |
   a4 \tuplet 3/2 { g8 c bf } |
-  a2 ^( |
+  a2 ( |
   a8)
 }
 
@@ -86,7 +69,7 @@ nhacDiepKhucBas = \relative c' {
   a4 g |
   f8 bf a g |
   f4 \tuplet 3/2 { e8 a g } |
-  f2 _( |
+  f2 ( |
   f8)
 }
 
@@ -99,7 +82,7 @@ nhacPhienKhucSop = \relative c' {
   d8 \breathe d f g |
   a a bf a |
   a g d f |
-  e2 ^( |
+  e2 ( |
   e8) d f g |
   a a a4 ( |
   a8) bf a bf |
@@ -214,6 +197,25 @@ loiPhienKhucBaBas = \lyricmode {
 }
 
 % Dàn trang
+\paper {
+  #(set-paper-size "a4")
+  top-margin = 16\mm
+  bottom-margin = 15\mm
+  left-margin = 20\mm
+  right-margin = 20\mm
+  indent = #0
+  #(define fonts
+    (make-pango-font-tree
+      "Liberation Serif"
+      "Liberation Serif"
+      "Liberation Serif"
+      (/ 20 20)))
+  page-count = #2
+  print-page-number = #f
+  system-system-spacing = #'((basic-distance . 13))
+  score-system-spacing = #'((basic-distance . 13))
+}
+
 \score {
   \new ChoirStaff <<
     \new Staff \with {

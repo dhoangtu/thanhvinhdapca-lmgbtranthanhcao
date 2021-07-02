@@ -22,7 +22,7 @@ nhacDiepKhucSop = \relative c'' {
   a' a g4 ^( |
   g8) e a g |
   c4 \tuplet 3/2 { c8 c a } |
-  c2 ( |
+  c2 ^( |
   c4) r \bar "|."
 }
 
@@ -38,7 +38,7 @@ nhacDiepKhucBas = \relative c' {
   f' f d4 _( |
   d8) c f e |
   a4 \tuplet 3/2 { g8 g f } |
-  e2 ( |
+  e2 _( |
   e4) r
 }
 

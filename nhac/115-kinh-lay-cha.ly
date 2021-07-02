@@ -16,7 +16,7 @@ nhacPhienKhucMot = \relative c'' {
   g8 f bf bf bf4 \breathe
   g8 bf c d bf bf4 \breathe
   d8 c d a g4 \bar "||"
-  d8 g bf a f g d4 ^(d8) \breathe
+  d8 g bf a f g d4 (d8) \breathe
   ef d c f f d16 (f) g4 \breathe
   bf8 a g c4 \breathe
   d8 c bf a c d c bf a g4 (g) \breathe

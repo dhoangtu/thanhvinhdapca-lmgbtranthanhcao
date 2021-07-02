@@ -20,7 +20,7 @@ nhacDiepKhucSop = \relative c' {
   b4 \tuplet 3/2 { b8 b b } |
   e,4 fs8 g |
   a4. fs8 |
-  g2 ( |
+  g2 ^( |
   g4) r \bar "|."
 }
 
@@ -33,7 +33,7 @@ nhacDiepKhucBas = \relative c' {
   g4 \tuplet 3/2 { g8 g g } |
   c,4 d8 c |
   d4. a8 |
-  b2 ( |
+  b2 _( |
   b4) r
 }
 
@@ -170,7 +170,7 @@ notBePhu =
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #1.5
+    \override Lyrics.LyricSpace.minimum-distance = #1.3
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }

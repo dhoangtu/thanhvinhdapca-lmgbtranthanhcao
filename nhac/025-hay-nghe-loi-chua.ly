@@ -19,7 +19,7 @@ nhacDiepKhucSop = \relative c'' {
   a,4. b8 |
   b e4 fs16 ^(e) |
   cs4 e8 fs |
-  a b4 (cs8) |
+  a b4 _(cs8) |
   a2 \bar "|."
 }
 
@@ -31,7 +31,7 @@ nhacDiepKhucBas = \relative c'' {
   e4. d8 |
   d a'4 a8 |
   e4 gs8 a |
-  cs8 d4 (e8) |
+  cs8 d4 ^(e8) |
   cs2
 }
 

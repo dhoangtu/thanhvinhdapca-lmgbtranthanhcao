@@ -55,7 +55,7 @@ nhacPhienKhucBa = \relative c' {
   c2 r4 c8 a |
   g4. a8 d, d4 g8 |
   \acciaccatura d8 g2 \tuplet 3/2 { b4 a a } |
-  g2 \tuplet 3/2 { b4 c d } |
+  g2 \tupletUp \tuplet 3/2 { b4 c d } |
   c2 r \bar "||"
 }
 

@@ -57,7 +57,7 @@ nhacDiepKhucBas = \relative c {
   r2 |
   r2 |
   d4. d8 |
-  a'2 _( |
+  a'2 ( |
   a4) a8 a |
   <fs \tweak font-size #-2 d>2
 }

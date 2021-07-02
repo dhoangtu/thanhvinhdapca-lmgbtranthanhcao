@@ -19,7 +19,7 @@ nhacDiepKhucSop = \relative c' {
   e2 |
   a8 g a e |
   c'4 a8 c |
-  d4 b8 g | a2 ( |
+  d4 b8 g | a2 ^( |
   a4) r \bar "|."
 }
 
@@ -32,7 +32,7 @@ nhacDiepKhucBas = \relative c' {
   f8 e f c |
   a'4 f8 a |
   b4 f8 d |
-  e2 ( |
+  e2 _( |
   e4) r
 }
 

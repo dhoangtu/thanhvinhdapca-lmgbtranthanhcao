@@ -11,13 +11,12 @@
 
 % Nhạc phiên khúc
 nhacPhienKhuc = \relative c' {
-  _\markup { \bold \italic (Nữ) }
   \partial 4 
   d8 a' |
   a g bf a |
   g4. f8 |
   a g f e |
-  d4 d8 _\markup { \bold \italic (Nam) } a' |
+  d4 d8 a' |
   a g bf a |
   g4. f8 |
   a g f e |
@@ -74,8 +73,9 @@ nhacDiepKhucBas = \relative c' {
 
 % Lời phiên khúc
 loiPhienKhucMot = \lyricmode {
-  \set stanza = #"1."
+  \set stanza = #"(Nữ) 1."
   Cùng dâng lên tòa Chúa uy linh của lễ hy sinh nhiệm màu.
+  \set stanza = #"(Nam) "
   Rươu thơm ngon và bánh tinh tuyền cùng khó nhọc của muôn người.
 }
 

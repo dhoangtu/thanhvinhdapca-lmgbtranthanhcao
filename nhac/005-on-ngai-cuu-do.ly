@@ -19,7 +19,7 @@ nhacDiepKhucSop= \relative c' {
   bf4 \tuplet 3/2 { bf8 g c } |
   a4 g8 g |
   d e4 g8 |
-  f2 ( |
+  f2 ^( |
   f8) r8 r4 \bar "|."
 }
 
@@ -31,7 +31,7 @@ nhacDiepKhucBas = \relative c' {
   f4 \tuplet 3/2 { g8 e a } |
   d,4 d8 d |
   bf c4 bf8 |
-  a2 ( |
+  a2 _( |
   a8) r8 r4
 }
 

@@ -49,7 +49,7 @@ nhacDiepKhucSop = \relative c'' {
   b2 fs4 |
   fs2 b8 a |
   a2 a4 |
-  e2. ( |
+  e2. _( |
   e4) r a8 b |
   cs4. d4 cs8 |
   cs4. cs8 a b |
@@ -59,7 +59,7 @@ nhacDiepKhucSop = \relative c'' {
   fs2 a8 a |
   a4. gs8 fs gs |
   \acciaccatura cs,8 e2 a4 
-  a2. ( |
+  a2. _( |
   a2) r4 \bar "|."
 }
 
@@ -72,7 +72,7 @@ nhacDiepKhucBas = \relative c'' {
   d2 b4 |
   b2 d8 cs |
   cs2 cs4 |
-  a2. ( |
+  a2. ^( |
   a4) r cs8 d |
   e4. fs4 e8 |
   e4. e8 cs d |
@@ -82,7 +82,7 @@ nhacDiepKhucBas = \relative c'' {
   b2 cs8 cs |
   cs4. b8 a b |
   a2 cs4 |
-  cs2. ( |
+  cs2. ^( |
   cs2) r4
 }
 

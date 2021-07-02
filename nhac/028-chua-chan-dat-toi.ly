@@ -6,7 +6,7 @@
   title = \markup { \fontsize #3 "Chúa Chăn Dắt Tôi" }
   poet = "Tv. 22"
   composer = "Lm. GB Trần Thanh Cao"
-  arranger = " "
+  %arranger = " "
   tagline = ##f
 }
 
@@ -19,7 +19,7 @@ nhacDiepKhucBas = \relative c'' {
   g8 g a d, |
   e4 fs8 a |
   g4 fs8 e |
-  fs2 ^( |
+  fs2 ( |
   fs4) r \bar "|."
 }
 
@@ -31,7 +31,7 @@ nhacDiepKhucSop = \relative c'' {
   b (d) e b |
   a4 d8 fs |
   e (d) b a |
-  d2 ^( |
+  d2 ( |
   d4) r \bar "|."
 }
 
@@ -48,7 +48,7 @@ nhacPhienKhucMot = \relative c' {
   g8 d a' fs |
   fs4 e8 e |
   a4 cs, |
-  d2 ^( |
+  d2 ( |
   d4) r \bar "||"
 }
 
@@ -56,7 +56,7 @@ nhacPhienKhucHai = \relative c'' {
   \partial 4 b4 |
   d2 |
   b8 d e d |
-  d2 _( |
+  d2 ( |
   d4) r8 e |
   d d4 d8 |
   d4 e fs r |
@@ -65,7 +65,7 @@ nhacPhienKhucHai = \relative c'' {
   g8 e e a |
   a e4 a8 |
   cs,4 d8 (e) |
-  d2 ^( |
+  d2 ( |
   d4) r \bar "||"
 }
 
@@ -82,7 +82,7 @@ nhacPhienKhucBa = \relative c'' {
   e4 cs'8 a |
   cs8 cs4 a8 |
   a4 e' |
-  d2 _( |
+  d2 ( |
   d4) r \bar "||"
 }
 
@@ -97,7 +97,7 @@ nhacPhienKhucBon = \relative c'' {
   a2 |
   g4 b |
   d e |
-  a,4. _(b8) |
+  a,4. (b8) |
   a2 ( |
   a4) cs8 a |
   cs4 cs8 a |

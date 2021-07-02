@@ -15,20 +15,23 @@ nhacDiepKhuc= \relative c' {
   \partial 4. d8 e d |
   b4 g'8 a |
   g4 a |
-  b \breathe \tuplet 3/2 {
+  b \breathe
+  \stemUp \tuplet 3/2 {
     <\tweak font-size -2 e c \tweak font-size -2 g>8
     <\tweak font-size -2 e c \tweak font-size -2 g>8
     <\tweak font-size -2 e c \tweak font-size -2 g>8
   } |
   <\tweak font-size -2 fs d \tweak font-size -2 c,>2 |
+  \stemNeutral
   d8 d d b |
   a4 a8 g |
   e4 a |
-  g4 \breathe \tuplet 3/2 {
+  g4 \breathe
+  \stemDown \tuplet 3/2 {
     <\tweak font-size -2 e' c \tweak font-size -2 d,>8
     <\tweak font-size -2 e c \tweak font-size -2 e,>8
     <\tweak font-size -2 e c \tweak font-size -2 fs,>8
-  } |
+  }
   <\tweak font-size -2 d g,>2 \bar "|."
 }
 

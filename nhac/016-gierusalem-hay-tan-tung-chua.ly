@@ -31,7 +31,7 @@ nhacDiepKhucBas = \relative c' {
   r8 f f f |
   f f4 d8 |
   f4 g |
-  e2 ( |
+  e2 _( |
   e4) r
 }
 

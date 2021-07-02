@@ -10,24 +10,12 @@
   tagline = ##f
 }
 
-\paper {
-  #(set-paper-size "a4")
-  top-margin = 10\mm
-  bottom-margin = 10\mm
-  left-margin = 20\mm
-  right-margin = 20\mm
-  indent = #0
-  #(define fonts
-    (make-pango-font-tree
-      "Liberation Serif"
-      "Liberation Serif"
-      "Liberation Serif"
-      (/ 20 20)))
-  page-count = #1
-}
-
 % Nhạc phiên khúc
-nhacPhienKhucMot = \relative c' {
+nhacPhienKhuc = \relative c' {
+  \set Staff.printKeyCancellation = ##f
+  \set Staff.explicitKeySignatureVisibility = #begin-of-line-visible
+  
+  \key f \major \time 2/4
   \partial 4 f8( e) |
   d d c4 |
   f8 g a4 |
@@ -42,10 +30,9 @@ nhacPhienKhucMot = \relative c' {
   d4 a8( g) |
   f4 d8 d |
   f4 g |
-  f2 \bar "||"
-}
-
-nhacPhienKhucHai = \relative c'' {
+  f2 \bar "|." \break
+  
+  \key g \major
   \partial 4 g8( fs) |
   e e d4 |
   g8 a b4 |
@@ -60,10 +47,9 @@ nhacPhienKhucHai = \relative c'' {
   e4 b8( a) |
   g4 e8 e |
   g4 a |
-  g2 \bar "||"
-}
-
-nhacPhienKhucBa = \relative c'' {
+  g2 \bar "|." \break
+  
+  \key a \major
   \partial 4 a8( gs) |
   fs fs e4 |
   a8 b cs4 |
@@ -84,34 +70,48 @@ nhacPhienKhucBa = \relative c'' {
 % Lời phiên khúc
 loiPhienKhuc = \lyricmode {
   \override Lyrics.LyricText.font-series = #'bold
-  \set stanza = \markup { \rounded-box { \large "Xướng" } }
+  \set stanza = \markup { \rounded-box { \large "Xướng 1" } }
   Đây là đây là cây Thánh Giá Chúa Ki -- tô,
   chính nơi này đem ơn cứu độ,
   ơn cứu độ cho trần gian.
   \override Lyrics.LyricText.font-series = #'normal
-  \set stanza = \markup { \rounded-box { \large "Đáp" } }
+  \set stanza = \markup { \rounded-box { \large "Đáp 1" } }
+  Chúng ta hãy mau mau đến tôn thờ mà thờ lạy mến yêu.
+  
+  \override Lyrics.LyricText.font-series = #'bold
+  \set stanza = \markup { \rounded-box { \large "Xướng 2" } }
+  Đây là đây là cây Thánh Giá Chúa Ki -- tô,
+  chính nơi này đem ơn cứu độ,
+  ơn cứu độ cho trần gian.
+  \override Lyrics.LyricText.font-series = #'normal
+  \set stanza = \markup { \rounded-box { \large "Đáp 2" } }
+  Chúng ta hãy mau mau đến tôn thờ mà thờ lạy mến yêu.
+  
+  \override Lyrics.LyricText.font-series = #'bold
+  \set stanza = \markup { \rounded-box { \large "Xướng 3" } }
+  Đây là đây là cây Thánh Giá Chúa Ki -- tô,
+  chính nơi này đem ơn cứu độ,
+  ơn cứu độ cho trần gian.
+  \override Lyrics.LyricText.font-series = #'normal
+  \set stanza = \markup { \rounded-box { \large "Đáp 3" } }
   Chúng ta hãy mau mau đến tôn thờ mà thờ lạy mến yêu.
 }
 
 % Dàn trang
-\score {
-  \new ChoirStaff <<
-    \new Staff = phienKhuc \with {
-        \magnifyStaff #(magstep +0.5)
-      }
-      <<
-      \new Voice = beSop {
-        \key f \major \time 2/4 \nhacPhienKhucMot
-      }
-    >>
-    \new Lyrics \lyricsto beSop \loiPhienKhuc
-  >>
-  \layout {
-    \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #3.5
-    \override Score.BarNumber.break-visibility = ##(#f #f #f)
-    \override Score.SpacingSpanner.uniform-stretching = ##t
-  } 
+\paper {
+  #(set-paper-size "a4")
+  top-margin = 10\mm
+  bottom-margin = 10\mm
+  left-margin = 20\mm
+  right-margin = 20\mm
+  indent = #0
+  #(define fonts
+    (make-pango-font-tree
+      "Liberation Serif"
+      "Liberation Serif"
+      "Liberation Serif"
+      (/ 20 20)))
+  page-count = #1
 }
 
 \score {
@@ -120,35 +120,11 @@ loiPhienKhuc = \lyricmode {
         \magnifyStaff #(magstep +0.5)
       }
       <<
-      \new Voice = beSop {
-        \key g \major \time 2/4 \nhacPhienKhucHai
-      }
+      \new Voice = beSop \nhacPhienKhuc
     >>
     \new Lyrics \lyricsto beSop \loiPhienKhuc
   >>
   \layout {
-    \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #3.5
-    \override Score.BarNumber.break-visibility = ##(#f #f #f)
-    \override Score.SpacingSpanner.uniform-stretching = ##t
-  } 
-}
-
-\score {
-  \new ChoirStaff <<
-    \new Staff = phienKhuc \with {
-        \magnifyStaff #(magstep +0.5)
-      }
-      <<
-      \new Voice = beSop {
-        \key a \major \time 2/4 \nhacPhienKhucBa
-      }
-    >>
-    \new Lyrics \lyricsto beSop \loiPhienKhuc
-  >>
-  \layout {
-    \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #3.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)

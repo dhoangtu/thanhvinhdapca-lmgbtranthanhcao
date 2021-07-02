@@ -10,23 +10,6 @@
   tagline = ##f
 }
 
-\paper {
-  #(set-paper-size "a4")
-  top-margin = 15\mm
-  bottom-margin = 15\mm
-  left-margin = 20\mm
-  right-margin = 20\mm
-  indent = #0
-  #(define fonts
-    (make-pango-font-tree
-      "Liberation Serif"
-      "Liberation Serif"
-      "Liberation Serif"
-      (/ 20 20)))
-  page-count = #2
-  print-page-number = #f
-}
-
 % Nhạc phiên khúc
 nhacPhienKhucMot = \relative c' {
   r8 d8 b d |
@@ -112,6 +95,23 @@ loiDiepKhucBas = \lyricmode {
 }
 
 % Dàn trang
+\paper {
+  #(set-paper-size "a4")
+  top-margin = 15\mm
+  bottom-margin = 15\mm
+  left-margin = 20\mm
+  right-margin = 20\mm
+  indent = #0
+  #(define fonts
+    (make-pango-font-tree
+      "Liberation Serif"
+      "Liberation Serif"
+      "Liberation Serif"
+      (/ 20 20)))
+  page-count = #2
+  print-page-number = #f
+}
+
 \score {
   \new ChoirStaff <<
     \new Staff = phienKhuc \with {

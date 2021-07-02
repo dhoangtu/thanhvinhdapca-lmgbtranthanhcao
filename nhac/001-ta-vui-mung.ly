@@ -10,6 +10,9 @@
   tagline = ##f
 }
 
+% Thiết lập tông và nhịp
+TongNhip = { \key c \major \time 2/4 }
+
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c'' {
   \partial 4 g8 g |
@@ -33,11 +36,12 @@ nhacDiepKhucBas = \relative c'' {
 }
 
 % Nhạc phiên khúc
-nhacPhienKhucMot = \relative c'' {
+nhacPhienKhuc = \relative c'' {
+  #(define afterGraceFraction (cons 1 3))
+  % Phiên khúc 1
   \partial 4 c8 g |
   g2 |
   g8 g e
-  #(define afterGraceFraction (cons 1 3))
   \afterGrace d (e8) |
   d2 |
   r8 e c e |
@@ -51,10 +55,9 @@ nhacPhienKhucMot = \relative c'' {
   g4. b8 |
   d4 g, |
   c2 ( |
-  c4) r \bar "||"
-}
-
-nhacPhienKhucHai = \relative c'' {
+  c4) r \bar "|."
+  
+  % Phiên khúc 2
   \partial 4 g8 a |
   g4. f8 |
   d4 e |
@@ -69,13 +72,11 @@ nhacPhienKhucHai = \relative c'' {
   r8 d b d |
   g,4. c8 |
   e4
-  #(define afterGraceFraction (cons 1 3))
   \afterGrace d (c8) |
   c2 ( |
-  c4) r4 \bar "||"
-}
-
-nhacPhienKhucBa = \relative c' {
+  c4) r4 \bar "|."
+  
+  % Phiên khúc 3
   \partial 4 e8 g |
   a4. g8 |
   a4 c |
@@ -84,7 +85,7 @@ nhacPhienKhucBa = \relative c' {
   g a g b |
   d4 d8 b |
   c2 ( |
-  c4) r \bar "||"
+  c4) r \bar "|."
 }
 
 % Lời điệp khúc
@@ -94,28 +95,23 @@ loiDiepKhuc = \lyricmode {
 }
 
 % Lời phiên khúc
-loiPhienKhucMot = \lyricmode {
+loiPhienKhuc = \lyricmode {
   \set stanza = \markup { \circle { \huge "1" } }
   Vui chừng nào khi thiên hạ bảo tôi:
   Ta cùng trẩy lên Đền Thánh Chúa.
   Và giờ đây "Giê -" "ru -" "sa -" lem hỡi
   Cửa nội thành, ta đã dừng chân.
-}
 
-loiPhienKhucHai = \lyricmode {
   \set stanza = \markup { \circle { \huge "2" } }
   Từng chi tộc, chi tộc của Chúa.
   Trảy hội lên đền, ở nơi đây.
   Để danh Chúa họ cùng xưng tụng.
-  Như lệnh đã truyền cho Is -- ra -- el.
-}
+  Như lệnh đã truyền cho "Is -" "ra -" el.
 
-loiPhienKhucBa = \lyricmode {
-  \set stanza = \markup { \circle { \huge "3" } }
+\set stanza = \markup { \circle { \huge "3" } }
   Cũng nơi đó, đặt ngai xét xử.
-  Ngai vàng của vương triều Đa -- vít, Tổ phụ xưa.
+  Ngai vàng của vương triều "Đa -" vít, Tổ phụ xưa.
 }
-
 
 % Dàn trang
 \paper {
@@ -132,12 +128,9 @@ loiPhienKhucBa = \lyricmode {
       "Liberation Serif"
       (/ 20 20)))
   %page-count = #1
-  system-system-spacing = #'((basic-distance . 12))
-  score-system-spacing = #'((basic-distance . 12))
+  system-system-spacing = #'((basic-distance . 13))
+  score-system-spacing = #'((basic-distance . 13))
 }
-
-% Thiết lập tông và nhịp
-TongNhip = { \key c \major \time 2/4 }
 
 % Đổi kích thước nốt cho bè phụ
 notBePhu =
@@ -158,7 +151,6 @@ notBePhu =
   \new ChoirStaff <<
     \new Staff = diepKhuc \with {
         \consists "Merge_rests_engraver"
-        %\magnifyStaff #(magstep +1)
         printPartCombineTexts = ##f
       }
         <<
@@ -182,63 +174,19 @@ notBePhu =
 \score {
   \new ChoirStaff <<
     \new Staff = phienKhuc \with {
-        %\magnifyStaff #(magstep +1)
       }
       <<
       \new Voice = beSop {
-        \TongNhip \nhacPhienKhucMot
+        \TongNhip \nhacPhienKhuc
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucMot
+    \new Lyrics \lyricsto beSop \loiPhienKhuc
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #4
+    \override Lyrics.LyricSpace.minimum-distance = #4.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
-  }
-}
-
-\score {
-  \new ChoirStaff <<
-    \new Staff = phienKhuc \with {
-        %\magnifyStaff #(magstep +1)
-      }
-      <<
-      \new Voice = beSop {
-        \TongNhip \nhacPhienKhucHai
-      }
-    >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucHai
-  >>
-  \layout {
-    \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #5
-    \override Score.BarNumber.break-visibility = ##(#f #f #f)
-    \override Score.SpacingSpanner.uniform-stretching = ##t
-  }
-}
-
-\score {
-  \new ChoirStaff <<
-    \new Staff = phienKhuc \with {
-        %\magnifyStaff #(magstep +1)
-      }
-      <<
-      \new Voice = beSop {
-        \TongNhip \nhacPhienKhucBa
-      }
-    >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucBa
-  >>
-  \layout {
-    \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #5
-    \override Score.BarNumber.break-visibility = ##(#f #f #f)
-    \override Score.SpacingSpanner.uniform-stretching = ##t
-    \override Score.SpacingSpanner packed-spacing = ##t
   }
 }

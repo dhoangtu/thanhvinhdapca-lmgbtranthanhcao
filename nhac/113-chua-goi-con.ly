@@ -38,7 +38,7 @@ nhacDiepKhucAlto = \relative c'' {
   d4 e8 (d) 
   c4 r8 f |
   f (a) g (e) |
-  f d a4 ^( |
+  f d a4 ( |
   a8) e' e d |
   c4. d8 |
   e2 ( |
@@ -196,10 +196,16 @@ loiPhienKhucBaBas = \lyricmode {
   Ba Ngôi Thiên Chúa vinh hiển khắp muôn dân.
 }
 
+demKhoangCach = \lyricmode {
+  "." _ _ _ _ _ _ _ _
+  "." _ _ _ _ _ _ "." _ _
+  _ _ _ _ _ _ _ _ _ "."
+}
+
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 18\mm
+  top-margin = 11\mm
   bottom-margin = 10\mm
   left-margin = 20\mm
   right-margin = 20\mm
@@ -210,10 +216,10 @@ loiPhienKhucBaBas = \lyricmode {
       "Liberation Serif"
       "Liberation Serif"
       (/ 20 20)))
-  page-count = #2
+  %page-count = #2
   print-page-number = #f
-  system-system-spacing = #'((basic-distance . 13))
-  score-system-spacing = #'((basic-distance . 13))
+  system-system-spacing = #'((basic-distance . 33))
+  score-system-spacing = #'((basic-distance . 33))
 }
 
 \score {
@@ -250,15 +256,19 @@ loiPhienKhucBaBas = \lyricmode {
   >>
   \layout {
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #0.6
+    \override Lyrics.LyricSpace.minimum-distance = #1.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
     \override Score.NonMusicalPaperColumn.page-break-permission = ##f
   }
 }
 
+\markup { \vspace #3 }
+
 \score {
-  \new ChoirStaff <<
+  \new ChoirStaff \with {
+    
+  }<<
     \new Staff \with {
         \consists "Merge_rests_engraver"
         %\magnifyStaff #(magstep +1)
@@ -268,7 +278,10 @@ loiPhienKhucBaBas = \lyricmode {
         \new Voice = beSop {
           \key f \major \time 2/4 \nhacPhienKhucSop
         }
-        \new Lyrics \lyricsto beSop \loiPhienKhucMotSop
+        \new Lyrics \with {
+          \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucMotSop
         \new Lyrics \lyricsto beSop \loiPhienKhucHaiSop
         \new Lyrics \lyricsto beSop \loiPhienKhucBaSop
     >>
@@ -281,9 +294,14 @@ loiPhienKhucBaBas = \lyricmode {
         \new Voice = beBas {
           \key f \major \time 2/4 \nhacPhienKhucBas
         }
-        \new Lyrics \lyricsto beBas \loiPhienKhucMotBas
+        \new Lyrics  \with {
+          \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #1
+        }
+        \lyricsto beBas \loiPhienKhucMotBas
         \new Lyrics \lyricsto beBas \loiPhienKhucHaiBas
         \new Lyrics \lyricsto beBas \loiPhienKhucBaBas
+        \new Lyrics \lyricsto beBas \demKhoangCach
+        
     >>
   >>
   \layout {

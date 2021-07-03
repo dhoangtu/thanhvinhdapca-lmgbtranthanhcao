@@ -86,7 +86,7 @@ nhacPhienKhucSop = \relative c' {
   e8) d f g |
   a a a4 ( |
   a8) bf a bf |
-  c a4. ( |
+  c \once \stemDown a4. ( |
   a8) <a \tweak font-size #-2 d>8 d e |
   f4. e8 |
   cs4 \tuplet 3/2 { d8 (e) d } |
@@ -199,8 +199,8 @@ loiPhienKhucBaBas = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 16\mm
-  bottom-margin = 15\mm
+  top-margin = 18\mm
+  bottom-margin = 10\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0

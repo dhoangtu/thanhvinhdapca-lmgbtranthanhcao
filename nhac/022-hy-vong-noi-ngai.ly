@@ -12,6 +12,7 @@
 
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c' {
+  %\autoBeamOff
   \partial 4 e4 |
   c'2 |
   b8 c b c |
@@ -19,12 +20,14 @@ nhacDiepKhucSop = \relative c' {
   e2 |
   g8. a16 g8 f |
   e f d4 |
+  \stemDown
   e8. f16 e8 d |
   b4 d8 ^(e) 
   a,2 \bar "|."
 }
 
 nhacDiepKhucBas = \relative c' {
+  %\autoBeamOff
   \partial 4 e4 |
   a2 |
   g8 a g a |
@@ -32,6 +35,7 @@ nhacDiepKhucBas = \relative c' {
   c2 |
   e8. f16 e8 d |
   c d b4 |
+  \stemUp
   g'8. a16 g8 f |
   e4 gs |
   a2
@@ -122,26 +126,12 @@ loiPhienKhucBa = \lyricmode {
       "Liberation Serif"
       (/ 20 20)))
   page-count = #1
-6
+  system-system-spacing = #'((basic-distance . 13))
+  score-system-spacing = #'((basic-distance . 13))
 }
 
 % Thiết lập tông và nhịp
-TongNhip = { \key c \major \time 4/4 }
-
-% Đổi kích thước nốt cho bè phụ
-notBePhu =
-#(define-music-function (font-size music) (number? ly:music?)
-   (for-some-music
-     (lambda (m)
-       (if (music-is-of-type? m 'rhythmic-event)
-           (begin
-             (set! (ly:music-property m 'tweaks)
-                   (cons `(font-size . ,font-size)
-                         (ly:music-property m 'tweaks)))
-             #t)
-           #f))
-     music)
-   music)
+TongNhip = { \key c \major \time 2/4 }
 
 \score {
   \new ChoirStaff <<
@@ -151,12 +141,15 @@ notBePhu =
         printPartCombineTexts = ##f
       }
       <<
-      \new Voice \TongNhip \partCombine 
-        \nhacDiepKhucSop
-        \notBePhu -3 { \nhacDiepKhucBas }
-      \new NullVoice = nhacThamChieu \nhacDiepKhucSop
-      \new Lyrics \lyricsto nhacThamChieu \loiDiepKhuc
+        \new Voice = beSop {
+          \voiceOne \TongNhip \nhacDiepKhucSop
+        }
+        \new Voice = beBas { 
+          \override NoteHead.font-size = #-2
+          \voiceTwo \TongNhip \nhacDiepKhucBas
+        }
       >>
+      \new Lyrics \lyricsto beSop \loiDiepKhuc
   >>
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
@@ -180,6 +173,7 @@ notBePhu =
     \new Lyrics \lyricsto beSop \loiPhienKhucMot
   >>
   \layout {
+    \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #2.2
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
@@ -200,6 +194,7 @@ notBePhu =
     \new Lyrics \lyricsto beSop \loiPhienKhucHai
   >>
   \layout {
+    \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #1.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
@@ -220,6 +215,7 @@ notBePhu =
     \new Lyrics \lyricsto beSop \loiPhienKhucBa
   >>
   \layout {
+    \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #2.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)

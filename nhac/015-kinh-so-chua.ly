@@ -86,8 +86,8 @@ loiPhienKhucBa = \lyricmode {
   \set stanza = #"3."
   Đó chính là phúc lộc Chúa dành cho kẻ biết kính sợ Người.
   Xin Chúa từ Si -- on xuống cho muôn vàn ơn phước.
-  Để trong suốt cuộc đời bạn được thấy Giê -- ru -- sa -- lem
-  thấy Giê -- ru -- sa -- lem phồn vinh.
+  Để trong suốt cuộc đời bạn được thấy "Giê -" "ru -" "sa -" lem
+  thấy "Giê -" "ru -" "sa -" lem phồn vinh.
 }
 
 
@@ -106,8 +106,8 @@ loiPhienKhucBa = \lyricmode {
       "Liberation Serif"
       (/ 20 20)))
   page-count = #1
-  system-system-spacing = #'((basic-distance . 13))
-  score-system-spacing = #'((basic-distance . 13))
+  system-system-spacing = #'((basic-distance . 12))
+  score-system-spacing = #'((basic-distance . 12))
 }
 
 % Thiết lập tông và nhịp

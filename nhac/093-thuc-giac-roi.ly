@@ -59,7 +59,7 @@ loiDiepKhuc = \lyricmode {
 
 % Lời phiên khúc
 loiPhienKhucMot = \lyricmode {
-  \set stanza = \markup { \circle { \huge "1" } }
+  \set stanza = "1. "
   Lạy Chúa, xin Ngài xét cho con,
   lắng tai nghe nỗi lòng ai oán.
   Xin đoái nhận bao tiếng van nài
@@ -67,7 +67,7 @@ loiPhienKhucMot = \lyricmode {
 }
 
 loiPhienKhucHai = \lyricmode {
-  \set stanza = \markup { \circle { \huge "2" } }
+  \set stanza = "2. "
   Con tuân giữ mọi điều Chúa dạy.
   Đi theo sát đường Ngài đã chỉ,
   không khi nào lỡ bước sa chân.
@@ -78,7 +78,7 @@ loiPhienKhucHai = \lyricmode {
 }
 
 loiPhienKhucBa = \lyricmode {
-  \set stanza = \markup { \circle { \huge "3" } }
+  \set stanza = "3. "
   Xin giữ con như thể con ngươi.
   Dưới bóng Ngài, xin thương che chở.
   Sống công chính, con được nhìn thấy Chúa.

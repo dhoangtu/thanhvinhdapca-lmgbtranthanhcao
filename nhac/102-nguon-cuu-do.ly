@@ -201,7 +201,7 @@ TongNhip = { \key f \major \time 2/4 }
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #2.2
+    \override Lyrics.LyricSpace.minimum-distance = #4
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   } 

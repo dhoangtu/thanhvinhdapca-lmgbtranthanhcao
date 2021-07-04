@@ -72,7 +72,7 @@ nhacPhienKhucBa = \relative c'' {
   a2 |
   cs8 a cs4 |
   a8 e' e d |
-  d2 _( |
+  d2 ( |
   d4) r \bar "||"
 }
 

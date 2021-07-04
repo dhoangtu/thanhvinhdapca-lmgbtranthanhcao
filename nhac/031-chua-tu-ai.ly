@@ -55,11 +55,11 @@ nhacPhienKhucBa = \relative c'' {
                                  ((1 . 2) . ,NATURAL)
                                  ((0 . 5) . ,NATURAL))
   \partial 4 g8 e |
-  c'4 d8 e g, c |
+  c'4 d8 e a, c |
   g2 r8 e' |
-  d8. c16 a8 a4 r8 |
-  a b d c8. a16 g8 |
-  g2 a8 c |
+  d8. c16 a8 a r a |
+  c d c8. a16 g8 g( |
+  g2) a8 c |
   a f d4. g8 |
   b4 d16 c e8 d c |
   a2 g8 (b) |
@@ -92,11 +92,11 @@ loiPhienKhucHai = \lyricmode {
 
 loiPhienKhucBa = \lyricmode {
   \set stanza = #"3."
-  Mong đợi Chúa tôi hết lòng mong đợi.
-  Vững tin ở Lời Người.
-  Hồn tôi vẫn trông mong chờ Người,
-  hơn lính canh mong đợi hừng đông.
-  Hơn cả lính canh mong đợi hừng đông.
+  Mong đợi Chúa, tôi hết lòng mong đợi.
+  Vững tin ở Lời Người,
+  hồn tôi vẫn trông mong chờ Người.
+  Hơn lính canh mong đợi hừng đông,
+  hơn cả lính canh mong đợi hừng đông.
 }
 
 

@@ -20,9 +20,9 @@ nhacDiepKhucSop = \relative c' {
   e2 |
   g8. a16 g8 f |
   e f d4 |
-  \stemDown
+  %\stemDown
   e8. f16 e8 d |
-  b4 d8 ^(e) 
+  b4 d8 _(e) 
   a,2 \bar "|."
 }
 
@@ -35,9 +35,9 @@ nhacDiepKhucBas = \relative c' {
   c2 |
   e8. f16 e8 d |
   c d b4 |
-  \stemUp
+  %\stemUp
   g'8. a16 g8 f |
-  e4 gs |
+  e4 \stemDown gs |
   a2
 }
 
@@ -133,6 +133,19 @@ loiPhienKhucBa = \lyricmode {
 % Thiết lập tông và nhịp
 TongNhip = { \key c \major \time 2/4 }
 
+
+% Đổi kích thước nốt cho bè phụ
+notBePhu =
+#(define-music-function
+   (font-size music)
+   (number? ly:music?)
+   (map (lambda (m)
+         (ly:music-set-property! m 'tweaks
+          (cons `(font-size . ,font-size)
+           (ly:music-property m 'tweaks))))
+    (extract-typed-music music 'rhythmic-event))
+   music)
+
 \score {
   \new ChoirStaff <<
     \new Staff = diepKhuc \with {
@@ -141,15 +154,12 @@ TongNhip = { \key c \major \time 2/4 }
         printPartCombineTexts = ##f
       }
       <<
-        \new Voice = beSop {
-          \voiceOne \TongNhip \nhacDiepKhucSop
-        }
-        \new Voice = beBas { 
-          \override NoteHead.font-size = #-2
-          \voiceTwo \TongNhip \nhacDiepKhucBas
-        }
+      \new Voice \TongNhip \partCombine
+        { \partCombineChords \nhacDiepKhucSop }
+        { \stemUp \notBePhu -3 \nhacDiepKhucBas }
+      \new NullVoice = nhacThamChieu \nhacDiepKhucSop
+      \new Lyrics \lyricsto nhacThamChieu \loiDiepKhuc
       >>
-      \new Lyrics \lyricsto beSop \loiDiepKhuc
   >>
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
@@ -159,6 +169,35 @@ TongNhip = { \key c \major \time 2/4 }
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
 }
+
+
+%{
+\score {
+  \new ChoirStaff <<
+    \new Staff = diepKhuc \with {
+        \consists "Merge_rests_engraver"
+        \magnifyStaff #(magstep +1)
+      }
+      <<
+      \new Voice = beSop {
+        \voiceOne \key c \major \time 2/4 \nhacDiepKhucSop
+      }
+      \new Voice = beBas {
+        \override NoteHead.font-size = #-2
+        \voiceTwo \key c \major \time 2/4 \nhacDiepKhucBas
+      }
+    >>
+    \new Lyrics \lyricsto beSop \loiDiepKhuc
+  >>
+  \layout {
+    \override Lyrics.LyricText.font-series = #'bold
+    \override Lyrics.LyricText.font-size = #+3
+    \override Lyrics.LyricSpace.minimum-distance = #4.0
+    \override Score.BarNumber.break-visibility = ##(#f #f #f)
+    \override Score.SpacingSpanner.uniform-stretching = ##t
+  }
+}
+%}
 
 \score {
   \new ChoirStaff <<

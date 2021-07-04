@@ -53,9 +53,10 @@ nhacPhienKhucMot = \relative c'' {
 }
 
 nhacPhienKhucHai = \relative c' {
+  \override Score.SpacingSpanner.strict-grace-spacing = ##t
   \partial 4 e8 g |
   c4. a8 c4 c |
-  \acciaccatura e,8 g2 r4 f8 e |
+  \slashedGrace { e,8 (} g2) r4 f8 e |
   d4. a'8 b4 d, |
   g2 r8 e g a |
   c4. c8 e,4 d |

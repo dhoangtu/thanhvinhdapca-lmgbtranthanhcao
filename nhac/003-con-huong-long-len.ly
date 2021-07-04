@@ -163,7 +163,7 @@ notBePhu =
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #2
+    \override Lyrics.LyricSpace.minimum-distance = #1.5
     \override Score.SpacingSpanner.uniform-stretching = ##t
     \override Score.SpacingSpanner packed-spacing = ##t
     \set Score.barAlways = ##t

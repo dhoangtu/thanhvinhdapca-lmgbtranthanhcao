@@ -12,8 +12,9 @@
 
 % Nhạc điệp khúc
 nhacDiepKhuc = \relative c'' {
+  #(define afterGraceFraction (cons 1 3))
   c4 a8 |
-  \afterGrace c4 _({d8 c)} f, |
+  \autoBeamOff \afterGrace c4 _({d8 c)} f, \autoBeamOn |
   f4 a8 |
   \acciaccatura f8 a4. |
   g4 d8 |
@@ -23,7 +24,7 @@ nhacDiepKhuc = \relative c'' {
   d4 bf8 |
   f'4 bf,8 |
   bf4 d8 |
-  \acciaccatura {c8 d} c4. |
+  \autoBeamOff \slashedGrace {c8 (d} c4.) \autoBeamOn |
   g'4 d8 |
   g4 c8 |
   bf g e |

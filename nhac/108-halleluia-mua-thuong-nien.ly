@@ -12,7 +12,7 @@
 
 \paper {
   #(set-paper-size "a4")
-  top-margin = 10\mm
+  top-margin = 15\mm
   bottom-margin = 10\mm
   left-margin = 20\mm
   right-margin = 20\mm
@@ -73,6 +73,7 @@ loiPhienKhucMot = \lyricmode {
     \new Lyrics \lyricsto beSop \loiPhienKhucMot
   >>
   \layout {
+    \override Lyrics.LyricText.font-series = #'bold
     \override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #1.4
     \override Score.BarNumber.break-visibility = ##(#f #f #f)

@@ -94,7 +94,7 @@ loiDiepKhucBas = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 10\mm
+  top-margin = 15\mm
   bottom-margin = 10\mm
   left-margin = 20\mm
   right-margin = 20\mm
@@ -107,7 +107,7 @@ loiDiepKhucBas = \lyricmode {
       (/ 20 20)))
   page-count = #1
   system-system-spacing = #'((basic-distance . 15))
-  score-system-spacing = #'((basic-distance . 13))
+  score-system-spacing = #'((basic-distance . 12))
 }
 
 \score {

@@ -73,9 +73,9 @@ nhacDiepKhucBas = \relative c' {
 
 % Lời phiên khúc
 loiPhienKhucMot = \lyricmode {
-  \set stanza = #"(Nữ) 1."
+  \set stanza = #"  (Nữ) 1."
   Cùng dâng lên tòa Chúa uy linh của lễ hy sinh nhiệm màu.
-  \set stanza = #"(Nam) "
+  \set stanza = #"  (Nam)"
   Rươu thơm ngon và bánh tinh tuyền cùng khó nhọc của muôn người.
 }
 

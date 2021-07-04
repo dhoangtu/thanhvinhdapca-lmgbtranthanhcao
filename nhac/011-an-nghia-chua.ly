@@ -92,7 +92,7 @@ loiPhienKhucBa = \lyricmode {
   Hùng cường hiển hách sức của dân chính là Ngài.
   Làm uy vũ chúng con trổi cao rạng rỡ.
   Đấng bảo vệ dân là người của Thiên Chúa,
-  thuộc quyền Đức Thánh của Is -- ra -- el.
+  thuộc quyền Đức Thánh của "Is -" "ra -" el.
 }
 
 
@@ -219,7 +219,7 @@ notBePhu =
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #3
+    \override Lyrics.LyricSpace.minimum-distance = #2.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
     \set Score.barAlways = ##t

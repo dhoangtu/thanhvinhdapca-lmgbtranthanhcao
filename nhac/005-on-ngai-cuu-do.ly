@@ -15,7 +15,9 @@ nhacDiepKhucSop= \relative c' {
   \partial 4 c4 |
   a' a8. bf16 |
   g8 f f a |
-  c4 \tuplet 3/2 { c8 bf d } |
+  c4
+  \stemUp \tuplet 3/2 { c8 bf d } |
+  \stemNeutral
   bf4 \tuplet 3/2 { bf8 g c } |
   a4 g8 g |
   d e4 g8 |

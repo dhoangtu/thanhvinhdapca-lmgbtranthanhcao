@@ -42,6 +42,18 @@ nhacDiepKhucBas = \relative c' {
   e4) r
 }
 
+nhacDiepKhucKhac = \relative c'' {
+  \partial 4 g4 |
+  c4. e,8 |
+  g8. g16 f8 e |
+  d2 |
+  r8 e c e |
+  g4. a8 |
+  b4 g |
+  c2( |
+  c4) \bar "|."
+}
+
 % Nhạc phiên khúc
 nhacPhienKhucMot = \relative c'' {
   \partial 4. c8 b a |
@@ -86,9 +98,16 @@ nhacPhienKhucBa = \relative c'' {
 
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
+  \set stanza = #"ĐK 1."
   Chúa lên trời giữa tiếng hò reo, vang trời dậy đất.
   Chúa lên trời kèn sáo trổi cao, mừng Chúa hiển vinh
   "Hal -" "lê -" "lu -" ia.
+}
+
+loiDiepKhucKhac = \lyricmode {
+  \set stanza = #"ĐK 2."
+  Thiên Chúa ngự lên giữa tiếng tưng bừng.
+  Chúa ngự lên giữa bao tiếng kèn vang.
 }
 
 % Lời phiên khúc
@@ -117,7 +136,7 @@ loiPhienKhucBa = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 15\mm
+  top-margin = 10\mm
   bottom-margin = 10\mm
   left-margin = 20\mm
   right-margin = 20\mm
@@ -129,8 +148,8 @@ loiPhienKhucBa = \lyricmode {
       "Liberation Serif"
       (/ 20 20)))
   page-count = #1
-  system-system-spacing = #'((basic-distance . 14))
-  score-system-spacing = #'((basic-distance . 14))
+  system-system-spacing = #'((basic-distance . 13))
+  score-system-spacing = #'((basic-distance . 13))
 }
 
 % Thiết lập tông và nhịp
@@ -173,6 +192,28 @@ notBePhu =
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
     \override Score.SpacingSpanner packed-spacing = ##t
+  }
+}
+
+\score {
+  \new ChoirStaff <<
+    \new Staff = phienKhuc \with {
+        %\magnifyStaff #(magstep +1)
+      }
+      <<
+      \new Voice = beSopKhac {
+        \key c \major \time 2/4 \nhacDiepKhucKhac
+      }
+    >>
+    \new Lyrics \lyricsto beSopKhac \loiDiepKhucKhac
+  >>
+  \layout {
+    \override Lyrics.LyricText.font-series = #'bold
+    \override Staff.TimeSignature.transparent = ##t
+    \override Lyrics.LyricText.font-size = #+2
+    \override Lyrics.LyricSpace.minimum-distance = #4
+    \override Score.BarNumber.break-visibility = ##(#f #f #f)
+    \override Score.SpacingSpanner.uniform-stretching = ##t
   }
 }
 

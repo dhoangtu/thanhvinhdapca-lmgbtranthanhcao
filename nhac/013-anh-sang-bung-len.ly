@@ -36,6 +36,17 @@ nhacDiepKhucBas = \relative c' {
   d4) r
 }
 
+nhacDiepKhucKhac = \relative c'' {
+  b8 fs b a |
+  \slashedGrace { fs8 (} a4) \tuplet 3/2 { a8 b a } |
+  fs4. d8 |
+  e4 fs |
+  b,4. a8 |
+  e'4 fs |
+  d2( |
+  d4) r \bar "|."
+}
+
 % Nhạc phiên khúc
 nhacPhienKhucMot = \relative c'' {
   b8 fs a b |
@@ -78,8 +89,15 @@ nhacPhienKhucBa = \relative c'' {
 
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
+  \set stanza = #"ĐK 1."
   Hôm nay chúng ta được ánh sáng bừng lên chiếu soi.
   Vì Chúa đã giáng trần, giáng trần cứu độ chúng ta.
+}
+
+loiDiepKhucKhac = \lyricmode {
+  \set stanza = #"ĐK 2."
+  Chúa là Đấng cao cả trên khắp địa cầu
+  là Vua hiển trị, là Vua chúng ta.
 }
 
 % Lời phiên khúc
@@ -106,7 +124,7 @@ loiPhienKhucBa = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 15\mm
+  top-margin = 10\mm
   bottom-margin = 10\mm
   left-margin = 20\mm
   right-margin = 20\mm
@@ -118,8 +136,8 @@ loiPhienKhucBa = \lyricmode {
       "Liberation Serif"
       (/ 20 20)))
   %page-count = #1
-  system-system-spacing = #'((basic-distance . 12))
-  score-system-spacing = #'((basic-distance . 12))
+  %system-system-spacing = #'((basic-distance . 12))
+  %score-system-spacing = #'((basic-distance . 12))
 }
 
 % Thiết lập tông và nhịp
@@ -159,6 +177,30 @@ notBePhu =
     \override Lyrics.LyricText.font-series = #'bold
     \override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #2.5
+    \override Score.BarNumber.break-visibility = ##(#f #f #f)
+    \override Score.SpacingSpanner.uniform-stretching = ##t
+  }
+}
+
+\markup { \vspace #0.5 }
+
+\score {
+  \new ChoirStaff <<
+    \new Staff = phienKhuc \with {
+        %\magnifyStaff #(magstep +1)
+      }
+      <<
+      \new Voice = beSop {
+        \TongNhip \nhacDiepKhucKhac
+      }
+    >>
+    \new Lyrics \lyricsto beSop \loiDiepKhucKhac
+  >>
+  \layout {
+    \override Lyrics.LyricText.font-series = #'bold
+    \override Staff.TimeSignature.transparent = ##t
+    \override Lyrics.LyricText.font-size = #+2
+    \override Lyrics.LyricSpace.minimum-distance = #5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }

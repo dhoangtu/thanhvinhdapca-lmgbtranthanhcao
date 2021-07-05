@@ -57,9 +57,9 @@ nhacPhienKhucBa = \relative c'' {
   d a8 fs g4. a8 |
   \acciaccatura {d,8(} fs2) r4 e8 e |
   \autoBeamOff
-  a4. b8 b (cs)
+  a4. b8 b ([cs])
+  \tuplet 3/2 { \phrasingSlurDashed b \([a b]\) } |
   \autoBeamOn
-  \tuplet 3/2 { b8 (a b) } |
   a2 r4 a8 b |
   a4. g8 fs4 fs |
   e2 r8 e gs b |
@@ -94,7 +94,9 @@ loiPhienKhucHai = \lyricmode {
 
 loiPhienKhucBa = \lyricmode {
   \set stanza = #"3."
-  Vì thế tâm hồn con hớn hở và lòng con hoan hỉ nhảy mừng.
+  Vì thế tâm hồn con hớn hở và lòng con hoan hỉ 
+  \set lyricMelismaAlignment = #LEFT
+  nhảy mừng.
   Thân xác con nghỉ ngơi an toàn
   vì Chúa chẳng đành, chẳng đành bỏ mặc con.
 }
@@ -220,10 +222,10 @@ notBePhu =
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #2.0
+    \override Lyrics.LyricSpace.minimum-distance = #2.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
-    \override Score.SpacingSpanner packed-spacing = ##t
-    \override Score.SpacingSpanner.strict-grace-spacing = ##t
+    %\override Score.SpacingSpanner packed-spacing = ##t
+    %\override Score.SpacingSpanner.strict-grace-spacing = ##t
   }
 }

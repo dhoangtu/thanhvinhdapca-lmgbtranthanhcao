@@ -58,7 +58,7 @@ nhacPhienKhucBa = \relative c'' {
   \acciaccatura {d,8(} fs2) r4 e8 e |
   \autoBeamOff
   a4. b8 b ([cs])
-  \tuplet 3/2 { \phrasingSlurDashed b \([a b]\) } |
+  \tuplet 3/2 { b \([a b]\) } |
   \autoBeamOn
   a2 r4 a8 b |
   a4. g8 fs4 fs |
@@ -222,7 +222,7 @@ notBePhu =
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #2.5
+    \override Lyrics.LyricSpace.minimum-distance = #3
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
     %\override Score.SpacingSpanner packed-spacing = ##t

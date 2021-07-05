@@ -73,12 +73,12 @@ nhacDiepKhucBas = \relative c' {
 
 % Lời điệp khúc
 loiDiepKhucSop = \lyricmode {
-  "Hal -" "le -" lu "Ha -" le -- lu -- ia.
-  "Hal -" "le -" lu "Ha -" le -- lu -- ia.
+  "Hal -" "le -" lu "Ha -" "le -" "lu -" ia.
+  "Hal -" "le -" lu "Ha -" "le -" "lu -" ia.
   Này đây, ta báo cho anh em tin xiết bao vui mừng.
   Ngày hôm nay, Trinh Nữ đã sinh hạ Đấng Cứu Độ chúng ta.
-  "Hal -" "le -" lu "Ha -" "le -" lu -- ia.
-  "Hal -" "le -" lu "Ha -" "le -" lu -- ia.
+  "Hal -" "le -" lu "Ha -" "le -" "lu -" ia.
+  "Hal -" "le -" lu "Ha -" "le -" "lu -" ia.
 }
 
 loiDiepKhucBas = \lyricmode {

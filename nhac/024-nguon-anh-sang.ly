@@ -83,11 +83,10 @@ nhacPhienKhucBa = \relative c'' {
   bf4. a8 |
   bf4 a |
   c2 |
-  r4 bf8 bf |
-  c d4 r8 |
-  bf4 g |
-  f2 ( |
-  f4) r \bar "||"
+  r8 bf8 bf c8 |
+  d4 bf4 |
+  g f4 ( |
+  f2) \bar "||"
 }
 
 % Lời điệp khúc

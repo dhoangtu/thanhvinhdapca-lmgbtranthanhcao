@@ -12,7 +12,11 @@ nhacKinhNguyenThanhThe = \relative c'' {
   g8 g bf f f g g f g f16 (g) bf4 \breathe
   g8 c a c \breathe
   g bf bf bf g bf f4 (g) \bar "||"
-  g8 (f g) g4 \bar "|."
+  g8 (f g) g4 \bar "|." \break
+  
+  <g d>4 <g d>
+  <bf g> <bf g>
+  <c a f> \fermata <d bf f> \fermata
 }
 
 % Lời phiên khúc
@@ -26,6 +30,9 @@ loiKinhNguyenThanhThe = \lyricmode {
   \override LyricText.font-series = #'normal
   \set stanza = \markup { "ĐÁP:" }
   A -- men.
+
+  \set stanza = \markup { "ĐÁP (BÈ):" }
+  A -- men, A -- men, A -- men.
 }
 
 % Nhạc Tuyen tin
@@ -134,7 +141,7 @@ loiCauDapTungHo = \lyricmode {
     } 
   }
 
-  \markup { \vspace #3 }
+  \markup { \vspace #1 }
   
   % Tuyen Tin
   \score {
@@ -161,7 +168,7 @@ loiCauDapTungHo = \lyricmode {
     } 
   }
 
-  \markup { \vspace #3 }
+  \markup { \vspace #1 }
   
   % Tuyen Tin
   \score {

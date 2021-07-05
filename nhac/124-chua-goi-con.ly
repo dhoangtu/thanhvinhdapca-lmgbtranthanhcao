@@ -26,7 +26,7 @@ nhacDiepKhucSop = \relative c'' {
   a f8 g |
   f e c d |
   a c f e |
-  d4 \tuplet 3/2 { c8 f e } |
+  d4 \tupletSpan 4 \tuplet 3/2 { c8 f e } |
   d2 ( |
   d8) \bar "|."
 }
@@ -123,7 +123,7 @@ loiDiepKhucSop = \lyricmode {
   Con nghe theo tiếng Người
   Con vững tâm theo đường lối Người
   chẳng chút lo gì
-  chẳng chút lo gì.
+  chẳng chút "   lo   " gì.
 }
 
 loiDiepKhucAlto = \lyricmode {

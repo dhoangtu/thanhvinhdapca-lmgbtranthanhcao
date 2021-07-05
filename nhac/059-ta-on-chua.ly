@@ -26,8 +26,12 @@ nhacDiepKhuc = \relative c' {
 % Nhạc phiên khúc
 nhacPhienKhucMot = \relative c' {
   \partial 4 c8 e |
-  d4 \tuplet 3/2 { f8 f a } c2 ( |
-  c8) c e c g4 \tuplet 3/2 { d8 f f } |
+  d4 \tuplet 3/2 { f8 f a }
+  \autoBeamOff
+  c2 ( |
+  c8)
+  \autoBeamOn
+  c e c g4 \tuplet 3/2 { d8 f f } |
   e2 r4 c8 e |
   g4. a8 a f4 g8 |
   d2 r4 g8 f |
@@ -69,7 +73,10 @@ loiDiepKhuc = \lyricmode {
 loiPhienKhucMot = \lyricmode {
   \set stanza = #"1."
   Hạnh phúc thay được tạ ơn Chúa.
-  Mừng hát danh Ngài, lạy Đấng Chí Tôn.
+  \override LyricText.self-alignment-X = #LEFT
+  Mừng "hát  "
+  \override LyricText.self-alignment-X = #CENTER
+  danh Ngài, lạy Đấng Chí Tôn.
   Từ buổi sớm, tuyên xưng Ngài nhân hậu.
   Suốt canh khuya, truyền giảng Chúa tín thành.
 }

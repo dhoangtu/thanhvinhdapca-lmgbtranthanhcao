@@ -136,8 +136,8 @@ loiPhienKhucBa = \lyricmode {
       "Liberation Serif"
       (/ 20 20)))
   page-count = #1
-  %system-system-spacing = #'((basic-distance . 12))
-  %score-system-spacing = #'((basic-distance . 12))
+  system-system-spacing = #'((basic-distance . 12))
+  score-system-spacing = #'((basic-distance . 12))
 }
 
 % Thiết lập tông và nhịp
@@ -182,7 +182,7 @@ notBePhu =
   }
 }
 
-\markup { \vspace #0.5 }
+%\markup { \vspace #0.5 }
 
 \score {
   \new ChoirStaff <<
@@ -206,7 +206,7 @@ notBePhu =
   }
 }
 
-\markup { \vspace #0.5 }
+%\markup { \vspace #0.5 }
 
 \score {
   \new ChoirStaff <<

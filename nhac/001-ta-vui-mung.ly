@@ -55,7 +55,7 @@ nhacPhienKhuc = \relative c'' {
   g4. b8 |
   d4 g, |
   c2 ( |
-  c4) r \bar "|."
+  c4) r \bar "|." \break
   
   % Phiên khúc 2
   \partial 4 g8 a |
@@ -74,7 +74,7 @@ nhacPhienKhuc = \relative c'' {
   e4
   \afterGrace d (c8) |
   c2 ( |
-  c4) r4 \bar "|."
+  c4) r4 \bar "|." \break
   
   % Phiên khúc 3
   \partial 4 e8 g |
@@ -96,19 +96,19 @@ loiDiepKhuc = \lyricmode {
 
 % Lời phiên khúc
 loiPhienKhuc = \lyricmode {
-  \set stanza = \markup { \circle { \huge "1" } }
+  \set stanza = "1.   "
   Vui chừng nào khi thiên hạ bảo tôi:
   Ta cùng trẩy lên Đền Thánh Chúa.
   Và giờ đây "Giê -" "ru -" "sa -" lem hỡi
   Cửa nội thành, ta đã dừng chân.
 
-  \set stanza = \markup { \circle { \huge "2" } }
+  \set stanza = "2."
   Từng chi tộc, chi tộc của Chúa.
   Trảy hội lên đền, ở nơi đây.
   Để danh Chúa họ cùng xưng tụng.
   Như lệnh đã truyền cho "Is -" "ra -" el.
 
-\set stanza = \markup { \circle { \huge "3" } }
+  \set stanza = "3."
   Cũng nơi đó, đặt ngai xét xử.
   Ngai vàng của vương triều "Đa -" vít, Tổ phụ xưa.
 }
@@ -116,7 +116,7 @@ loiPhienKhuc = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 20\mm
+  top-margin = 15\mm
   bottom-margin = 10\mm
   left-margin = 20\mm
   right-margin = 20\mm
@@ -128,8 +128,8 @@ loiPhienKhuc = \lyricmode {
       "Liberation Serif"
       (/ 20 20)))
   %page-count = #1
-  system-system-spacing = #'((basic-distance . 14))
-  score-system-spacing = #'((basic-distance . 14))
+  system-system-spacing = #'((basic-distance . 13))
+  score-system-spacing = #'((basic-distance . 13))
 }
 
 % Đổi kích thước nốt cho bè phụ
@@ -185,7 +185,7 @@ notBePhu =
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #3.5
+    \override Lyrics.LyricSpace.minimum-distance = #4
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }

@@ -6,7 +6,7 @@
   title = \markup { \fontsize #3 "Tình Chúa" }
   poet = "Tv. 89"
   composer = "Lm. GB Trần Thanh Cao"
-  arranger = " "
+  %arranger = " "
   tagline = ##f
 }
 
@@ -161,6 +161,8 @@ loiPhienKhucBa = \lyricmode {
       "Liberation Serif"
       (/ 20 20)))
   page-count = #1
+  system-system-spacing = #'((basic-distance . 12.5))
+  score-system-spacing = #'((basic-distance . 12.5))
 }
 
 % Thiết lập tông và nhịp

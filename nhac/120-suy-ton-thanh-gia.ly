@@ -112,6 +112,8 @@ loiPhienKhuc = \lyricmode {
       "Liberation Serif"
       (/ 20 20)))
   page-count = #1
+  system-system-spacing = #'((basic-distance . 12))
+  score-system-spacing = #'((basic-distance . 12))
 }
 
 \score {

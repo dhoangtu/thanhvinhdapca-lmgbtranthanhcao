@@ -108,8 +108,8 @@ loiCauDapTungHo = \lyricmode {
       (/ 20 20)))
   page-count = #1
   print-all-headers = ##t
-  system-system-spacing = #'((basic-distance . 13))
-  score-system-spacing = #'((basic-distance . 13))
+  system-system-spacing = #'((basic-distance . 12.5))
+  score-system-spacing = #'((basic-distance . 12.5))
 }
 
 \book {

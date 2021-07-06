@@ -5,7 +5,7 @@
 \header {
   title = \markup { \fontsize #3 "Chúa Gọi Con" }
   composer = "Nhạc và Lời: Lm. GB Trần Thanh Cao"
-  arranger = " "
+  %arranger = " "
   tagline = ##f
 }
 
@@ -205,8 +205,8 @@ demKhoangCach = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 11\mm
-  bottom-margin = 10\mm
+  top-margin = 15\mm
+  bottom-margin = 15\mm
   left-margin = 20\mm
   right-margin = 20\mm
   indent = #0
@@ -216,7 +216,7 @@ demKhoangCach = \lyricmode {
       "Liberation Serif"
       "Liberation Serif"
       (/ 20 20)))
-  %page-count = #2
+  page-count = #2
   print-page-number = #f
   system-system-spacing = #'((basic-distance . 33))
   score-system-spacing = #'((basic-distance . 33))
@@ -263,7 +263,8 @@ demKhoangCach = \lyricmode {
   }
 }
 
-\markup { \vspace #3 }
+\pageBreak
+\markup { \vspace #1 }
 
 \score {
   \new ChoirStaff \with {

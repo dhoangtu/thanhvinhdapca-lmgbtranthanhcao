@@ -90,7 +90,7 @@ loiPhienKhucBa = \lyricmode {
   Xin Chúa dủ tình thương an ủi.
   Theo lời Ngài hứa với bề tôi.
   Xin chạnh lòng thương cho được sống.
-  Vì ocn hằng yêu thích luật Ngài.
+  Vì con hằng yêu thích luật Ngài.
 }
 
 

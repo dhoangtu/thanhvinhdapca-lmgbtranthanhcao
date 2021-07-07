@@ -137,7 +137,7 @@ loiPhienKhucBa = \lyricmode {
       }
       <<
       \new Voice = beSop {
-        \key g \major \time 2/2 \nhacPhienKhucMot
+        \key bf \major \time 2/2 \nhacPhienKhucMot
       }
     >>
     \new Lyrics \lyricsto beSop \loiPhienKhucMot
@@ -160,7 +160,7 @@ loiPhienKhucBa = \lyricmode {
       }
       <<
       \new Voice = beSop {
-        \key g \major \time 2/2 \nhacPhienKhucHai
+        \key bf \major \time 2/2 \nhacPhienKhucHai
       }
     >>
     \new Lyrics \lyricsto beSop \loiPhienKhucHai
@@ -183,7 +183,7 @@ loiPhienKhucBa = \lyricmode {
       }
       <<
       \new Voice = beSop {
-        \key g \major \time 2/2 \nhacPhienKhucBa
+        \key bf \major \time 2/2 \nhacPhienKhucBa
       }
     >>
     \new Lyrics \lyricsto beSop \loiPhienKhucBa

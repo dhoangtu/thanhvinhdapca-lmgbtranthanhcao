@@ -52,8 +52,8 @@ nhacPhienKhucHai = \relative c'' {
 
 nhacPhienKhucBa = \relative c'' {
   bf16 (c) c (bf) g8 a4 \breathe
-  g8 g bf bf16 (c)
-  \acciaccatura { f,8 [g] } f4 \breathe
+  g8 g bf bf16 (c) \break
+  \slashedGrace { f,8 (g } f4) \breathe
   d8 d16 (f) g (f) d (c) c4 f8 (g) a4 bf8 bf bf
   g g16 (a) g8 f4 (f) \bar "||"
 }

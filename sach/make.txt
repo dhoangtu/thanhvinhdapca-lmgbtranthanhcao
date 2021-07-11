@@ -1,3 +1,53 @@
+  \once \override Slur #'extra-offset = #'(0 . 2)
+
+
+
+
+graceOn =
+\applyContext
+#(lambda (c)
+  (for-each
+   (lambda (e)
+    (let ((ct (ly:context-find c (car e))))
+     (if ct
+      (apply ly:context-pushpop-property ct (cdr e)))))
+   (ly:context-property c 'graceSettings)))
+
+graceOff =
+\applyContext
+#(lambda (c)
+  (for-each
+   (lambda (e)
+    (let ((ct (ly:context-find c (car e))))
+     (if ct
+      (apply ly:context-pushpop-property ct (list-head (cdr e) 2)))))
+   (ly:context-property c 'graceSettings))) 
+
+slurShiftx=
+#(define-music-function (amount offsets)
+   (pair? pair?)
+   #{
+     \once \override Slur.positions = $offsets
+     \once \override Voice.Slur.outside-staff-priority = #'()
+     \once \override Voice.Slur.Y-offset = 0
+     \once \override Voice.Slur.extra-offset = $amount
+   #}
+   )
+
+notBePhu =
+#(define-music-function (font-size music) (number? ly:music?)
+   (for-some-music
+     (lambda (m)
+       (if (music-is-of-type? m 'rhythmic-event)
+           (begin
+             (set! (ly:music-property m 'tweaks)
+                   (cons `(font-size . ,font-size)
+                         (ly:music-property m 'tweaks)))
+             #t)
+           #f))
+     music)
+   music)
+
 Find and replace
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.BarNumber.break-visibility = ##(#f #f #f)\r    \override Score.SpacingSpanner.uniform-stretching = ##t

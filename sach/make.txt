@@ -5,7 +5,12 @@
 \tweak extra-offset #'(0 . 2.5)
 
 
-
+  system-system-spacing = #'((basic-distance . 11)
+                             (minimum-distance . 11)
+                             (padding . 1))
+  score-system-spacing = #'((basic-distance . 11))
+  
+  
 
 graceOn =
 \applyContext

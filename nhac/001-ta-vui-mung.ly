@@ -73,7 +73,8 @@ nhacPhienKhuc = \relative c'' {
   g,4. c8 |
   e4
   \afterGrace d (c8) |
-  c2 ( |
+  c2
+  \tweak extra-offset #'(0 . 2.5) ^( |
   c4) r4 \bar "|." \break
   
   % Phiên khúc 3
@@ -128,8 +129,12 @@ loiPhienKhuc = \lyricmode {
       "Liberation Serif"
       (/ 20 20)))
   %page-count = #1
-  system-system-spacing = #'((basic-distance . 12.5))
-  score-system-spacing = #'((basic-distance . 12.5))
+  system-system-spacing = #'((basic-distance . 13)
+                             (minimum-distance . 13)
+                             (padding . 1))
+  score-system-spacing = #'((basic-distance . 13)
+                             (minimum-distance . 13)
+                             (padding . 1))
 }
 
 % Đổi kích thước nốt cho bè phụ
@@ -158,7 +163,13 @@ notBePhu =
           \nhacDiepKhucSop
            \notBePhu -3 { \nhacDiepKhucBas }
         \new NullVoice = nhacThamChieu \nhacDiepKhucSop
-        \new Lyrics \lyricsto nhacThamChieu \loiDiepKhuc
+        \new Lyrics  \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.5
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1.5
+        }
+        \lyricsto nhacThamChieu \loiDiepKhuc
       >>
   >>
   \layout {
@@ -180,7 +191,13 @@ notBePhu =
         \TongNhip \nhacPhienKhuc
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhuc
+    \new Lyrics \with {
+      \override VerticalAxisGroup.
+        nonstaff-relatedstaff-spacing.padding = #1.5
+      \override VerticalAxisGroup.
+        nonstaff-unrelatedstaff-spacing.padding = #1.5
+    }
+    \lyricsto beSop \loiPhienKhuc
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t

@@ -1,4 +1,8 @@
-  \once \override Slur #'extra-offset = #'(0 . 2)
+\once \override Slur #'extra-offset = #'(0 . 2)
+\once \override Slur #'control-points = #'((x . y) (x . y) (x . y) (x . y))
+\once \override Slur #'extra-offset = #'(x . y)
+
+\tweak extra-offset #'(0 . 2.5)
 
 
 

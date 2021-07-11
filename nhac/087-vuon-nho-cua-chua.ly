@@ -12,13 +12,14 @@
 
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c' {
-  c8 g' e _(g) |
+  c8 g' e (g) |
   a4. e8 |
-  d (e) a g |
+  d _(e) a g |
   g2 |
-  g8 c b ^(c) |
+  g8 c
+  b (c) |
   d4. f,8 |
-  e _(g) d' c |
+  e ^(g) d' c |
   c2 \bar "|."
 }
 
@@ -35,28 +36,31 @@ nhacDiepKhucBas = \relative c' {
 
 % Nhạc phiên khúc
 nhacPhienKhucMot = \relative c' {
-  d8 bf (c) d4 \breathe
-  g8 a bf a g d ef f ef d d c4 (c8)
+  d8 bf ^([c]) d4 \breathe
+  g8 a bf a g d ef f ef d d c4
+  \tweak extra-offset #'(0 . 2.5) ^(c8)
   ef c d ef bf bf d c4
   c8 g' a g fs g a b!4 bf8 d c c4 c8 e! d bf4
-  g8 g g (a) d4 \breathe
+  g8 g g ([a]) d4 \breathe
   d,8 d g f g a g g4 \bar "||"
 }
 
 nhacPhienKhucHai = \relative c' {
-  d8 bf (c) d c c4
-  g'8. a16 bf8 (a) g4
-  d8 d ef ef f ef d4 c8 d ef c d4 bf (bf)
-  g'8 g fs (g) g a g a b! b!4 c8 a (bf) \break
-  \acciaccatura c8 e!4 \breathe
-  g,8 g g a a d d d,4 f8 (g) a4 g \bar "||"
+  d8 bf ^([c]) d c c4
+  g'8. a16 bf8 ([a]) g4
+  d8 d ef ef f ef d4 c8 d ef c d4
+  \once \override Slur #'extra-offset = #'(0 . 2)
+  bf ^(bf)
+  g'8 g fs ([g]) g a g a b! b!4 c8 a ([bf])
+  \acciaccatura c8 e!4 \breathe \break
+  g,8 g g a a d d d,4 f8 ([g]) a4 g \bar "||"
 }
 
 nhacPhienKhucBa = \relative c' {
   d8 d d d bf bf bf c c d d4 \breathe
   g8 fs fs g a g g a b!4 (b8)
   d c d c a a bf c \acciaccatura c e!4
-  d8 c b! a g (a) d4
+  d8 c b! a g ([a]) d4
   d,8 g f f f g a4 g \bar "||"
 }
 
@@ -110,8 +114,10 @@ loiPhienKhucBa = \lyricmode {
       "Liberation Serif"
       (/ 20 20)))
   page-count = #1
-  system-system-spacing = #'((basic-distance . 12))
-  score-system-spacing = #'((basic-distance . 12))
+  system-system-spacing = #'((basic-distance . 11)
+                             (minimum-distance . 11)
+                             (padding . 1))
+  score-system-spacing = #'((basic-distance . 11))
 }
 
 % Thiết lập tông và nhịp
@@ -136,7 +142,6 @@ notBePhu =
   \new ChoirStaff <<
     \new Staff = diepKhuc \with {
         \consists "Merge_rests_engraver"
-        %\magnifyStaff #(magstep +1)
         printPartCombineTexts = ##f
       }
       <<
@@ -158,10 +163,7 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
-    \new Staff = phienKhuc \with {
-        %\magnifyStaff #(magstep +1)
-      }
-      <<
+    \new Staff <<
       \new Voice = beSop {
         \key bf \major \time 2/4 \nhacPhienKhucMot
       }
@@ -181,10 +183,7 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
-    \new Staff = phienKhuc \with {
-        %\magnifyStaff #(magstep +1)
-      }
-      <<
+    \new Staff <<
       \new Voice = beSop {
         \key bf \major \time 2/4 \nhacPhienKhucHai
       }
@@ -204,10 +203,7 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
-    \new Staff = phienKhuc \with {
-        %\magnifyStaff #(magstep +1)
-      }
-      <<
+    \new Staff <<
       \new Voice = beSop {
         \key bf \major \time 2/4 \nhacPhienKhucBa
       }

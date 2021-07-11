@@ -5,12 +5,20 @@
 \tweak extra-offset #'(0 . 2.5)
 
 
-  system-system-spacing = #'((basic-distance . 11)
-                             (minimum-distance . 11)
+  system-system-spacing = #'((basic-distance . 13)
+                             (minimum-distance . 13)
                              (padding . 1))
-  score-system-spacing = #'((basic-distance . 11))
+  score-system-spacing = #'((basic-distance . 13)
+                             (minimum-distance . 13)
+                             (padding . 1))
   
-  
+\new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.5
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1.5
+        }
+        \lyricsto 
 
 graceOn =
 \applyContext

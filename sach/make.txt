@@ -2,14 +2,14 @@
 \once \override Slur #'control-points = #'((x . y) (x . y) (x . y) (x . y))
 \once \override Slur #'extra-offset = #'(x . y)
 
-\tweak extra-offset #'(0 . 2.5)
+\tweak extra-offset #'(0 . 3)
 
 
-  system-system-spacing = #'((basic-distance . 13)
-                             (minimum-distance . 13)
+  system-system-spacing = #'((basic-distance . 12)
+                             (minimum-distance . 12.5)
                              (padding . 1))
-  score-system-spacing = #'((basic-distance . 13)
-                             (minimum-distance . 13)
+  score-system-spacing = #'((basic-distance . 12)
+                             (minimum-distance . 12.5)
                              (padding . 1))
   
 \new Lyrics \with {

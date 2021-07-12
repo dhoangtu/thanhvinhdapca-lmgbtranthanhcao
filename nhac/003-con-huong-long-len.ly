@@ -45,7 +45,7 @@ nhacPhienKhucHai = \relative c' {
   e'8 g e e e e fs4 (fs) \breathe
   g8 e g
   b a gs a4 \breathe
-  g8 e g fs e \fermata e d4 (d) \bar "||"
+  g8 e g fs e \fermata e d4 \tweak extra-offset #'(0 . 3) ^(d) \bar "||"
 }
 
 nhacPhienKhucBa = \relative c' {
@@ -200,7 +200,13 @@ notBePhu =
         \key d \major \time 2/4 \nhacPhienKhucHai
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucHai
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.5
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1.5
+        }
+        \lyricsto beSop \loiPhienKhucHai
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
@@ -224,9 +230,9 @@ notBePhu =
     >>
     \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #1.5
+            nonstaff-relatedstaff-spacing.padding = #1
           \override VerticalAxisGroup.
-            nonstaff-unrelatedstaff-spacing.padding = #1.5
+            nonstaff-unrelatedstaff-spacing.padding = #1
         }
         \lyricsto beSop \loiPhienKhucBa
   >>

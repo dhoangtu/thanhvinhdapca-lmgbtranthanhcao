@@ -14,9 +14,9 @@
   
 \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #1.5
+            nonstaff-relatedstaff-spacing.padding = #1
           \override VerticalAxisGroup.
-            nonstaff-unrelatedstaff-spacing.padding = #1.5
+            nonstaff-unrelatedstaff-spacing.padding = #1
         }
         \lyricsto 
 

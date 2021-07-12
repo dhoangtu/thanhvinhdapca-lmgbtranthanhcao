@@ -127,10 +127,10 @@ loiPhienKhucBa = \lyricmode {
       "Liberation Serif"
       (/ 20 20)))
   page-count = #1
-  system-system-spacing = #'((basic-distance . 12)
+  system-system-spacing = #'((basic-distance . 12.5)
                              (minimum-distance . 12)
                              (padding . 1))
-  score-system-spacing = #'((basic-distance . 12)
+  score-system-spacing = #'((basic-distance . 12.5)
                              (minimum-distance . 12)
                              (padding . 1))
 }
@@ -167,9 +167,9 @@ notBePhu =
       \new NullVoice = nhacThamChieu \nhacDiepKhucSop
       \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #0.5
+            nonstaff-relatedstaff-spacing.padding = #0.2
           \override VerticalAxisGroup.
-            nonstaff-unrelatedstaff-spacing.padding = #0.5
+            nonstaff-unrelatedstaff-spacing.padding = #0.2
         }
         \lyricsto nhacThamChieu \loiDiepKhuc
       >>
@@ -196,7 +196,7 @@ notBePhu =
     >>
     \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #0.5
+            nonstaff-relatedstaff-spacing.padding = #1
           \override VerticalAxisGroup.
             nonstaff-unrelatedstaff-spacing.padding = #0.5
         }
@@ -224,9 +224,9 @@ notBePhu =
     >>
     \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #0.5
+            nonstaff-relatedstaff-spacing.padding = #1
           \override VerticalAxisGroup.
-            nonstaff-unrelatedstaff-spacing.padding = #0.5
+            nonstaff-unrelatedstaff-spacing.padding = #1
         }
         \lyricsto beSop \loiPhienKhucHai
   >>
@@ -252,9 +252,9 @@ notBePhu =
     >>
     \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #0.5
+            nonstaff-relatedstaff-spacing.padding = #1
           \override VerticalAxisGroup.
-            nonstaff-unrelatedstaff-spacing.padding = #0.5
+            nonstaff-unrelatedstaff-spacing.padding = #1
         }
         \lyricsto beSop \loiPhienKhucBa
   >>

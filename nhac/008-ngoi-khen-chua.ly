@@ -46,7 +46,7 @@ nhacPhienKhucMot = \relative c' {
   f8 f e f e c d4 \breathe
   c8 d a4 a8 e' d c g'4 \breathe
   gs8 f g g e4 \breathe
-  e8 d d c a b c4 (c) \bar "||"
+  e8 d d c a b c4 \tweak extra-offset #'(0 . 3) ^(c) \bar "||"
 }
 
 nhacPhienKhucHai = \relative c' {
@@ -54,7 +54,7 @@ nhacPhienKhucHai = \relative c' {
   g8 c, d e4 \breathe
   a8 g fs4 a8 b a g4 \breathe
   f8 a a f g g g e4 \breathe
-  d8 fs fs g g d c4 (c) \bar "||"
+  d8 fs fs g g d c4 \tweak extra-offset #'(0 . 3) ^(c) \bar "||"
 }
 
 nhacPhienKhucBa = \relative c' {
@@ -132,6 +132,12 @@ loiPhienKhucBa = \lyricmode {
       "Liberation Serif"
       (/ 20 20)))
   page-count = #1
+  system-system-spacing = #'((basic-distance . 11)
+                             (minimum-distance . 11)
+                             (padding . 1))
+  score-system-spacing = #'((basic-distance . 11)
+                             (minimum-distance . 12)
+                             (padding . 1))
 }
 
 % Thiết lập tông và nhịp
@@ -194,7 +200,13 @@ notBePhu =
         \key c \major \time 2/4 \nhacPhienKhucMot
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucMot
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #0.5
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #0.5
+        }
+        \lyricsto beSop \loiPhienKhucMot
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
@@ -217,7 +229,13 @@ notBePhu =
         \key c \major \time 2/4 \nhacPhienKhucHai
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucHai
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucHai
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
@@ -241,7 +259,13 @@ notBePhu =
         \key c \major \time 2/4 \nhacPhienKhucBa
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucBa
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucBa
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t

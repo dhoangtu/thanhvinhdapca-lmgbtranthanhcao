@@ -207,7 +207,13 @@ loiDiepKhucSop = \lyricmode {
         \key d \major \time 2/4 \stemNeutral \nhacDiepKhucSop
       }
     >>
-    \new Lyrics \lyricsto beSop \loiDiepKhucSop
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiDiepKhucSop
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t

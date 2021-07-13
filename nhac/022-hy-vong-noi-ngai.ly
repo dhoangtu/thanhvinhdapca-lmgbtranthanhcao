@@ -22,7 +22,7 @@ nhacDiepKhucSop = \relative c' {
   e f d4 |
   %\stemDown
   e8. f16 e8 d |
-  b4 \once \autoBeamOff d8 _(e) 
+  b4 d8 _(e) |
   a,2 \bar "|."
 }
 
@@ -37,7 +37,7 @@ nhacDiepKhucBas = \relative c' {
   c d b4 |
   %\stemUp
   g'8. a16 g8 f |
-  e4 \once \stemDown gs |
+  e4 gs8 ^~ gs |
   a2
 }
 
@@ -140,14 +140,17 @@ TongNhip = { \key c \major \time 2/4 }
 
 % Đổi kích thước nốt cho bè phụ
 notBePhu =
-#(define-music-function
-   (font-size music)
-   (number? ly:music?)
-   (map (lambda (m)
-         (ly:music-set-property! m 'tweaks
-          (cons `(font-size . ,font-size)
-           (ly:music-property m 'tweaks))))
-    (extract-typed-music music 'rhythmic-event))
+#(define-music-function (font-size music) (number? ly:music?)
+   (for-some-music
+     (lambda (m)
+       (if (music-is-of-type? m 'rhythmic-event)
+           (begin
+             (set! (ly:music-property m 'tweaks)
+                   (cons `(font-size . ,font-size)
+                         (ly:music-property m 'tweaks)))
+             #t)
+           #f))
+     music)
    music)
 
 \score {

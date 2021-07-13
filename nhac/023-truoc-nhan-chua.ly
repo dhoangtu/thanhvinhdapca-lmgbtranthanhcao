@@ -6,7 +6,7 @@
   title = \markup { \fontsize #3 "Trước Nhan Chúa" }
   poet = "Tv. 115"
   composer = "Lm. GB Trần Thanh Cao"
-  %arranger = " "
+  arranger = " "
   tagline = ##f
 }
 
@@ -122,10 +122,10 @@ loiPhienKhucBa = \lyricmode {
       (/ 20 20)))
   page-count = #1
   system-system-spacing = #'((basic-distance . 12)
-                             (minimum-distance . 12.5)
+                             (minimum-distance . 12)
                              (padding . 1))
   score-system-spacing = #'((basic-distance . 12)
-                             (minimum-distance . 12.5)
+                             (minimum-distance . 12)
                              (padding . 1))
 }
 

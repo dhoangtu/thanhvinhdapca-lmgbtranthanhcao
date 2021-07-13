@@ -6,7 +6,7 @@
   title = \markup { \fontsize #3 "Dâng Lời Ca Tụng" }
   poet = "Tv. 21"
   composer = "Lm. GB Trần Thanh Cao"
-  arranger = " "
+  %arranger = " "
   tagline = ##f
 }
 
@@ -131,8 +131,12 @@ loiPhienKhucBa = \lyricmode {
       "Liberation Serif"
       (/ 20 20)))
   page-count = #1
-  system-system-spacing = #'((basic-distance . 13))
-  score-system-spacing = #'((basic-distance . 13))
+  system-system-spacing = #'((basic-distance . 12)
+                             (minimum-distance . 12)
+                             (padding . 1))
+  score-system-spacing = #'((basic-distance . 12)
+                             (minimum-distance . 12)
+                             (padding . 1))
 }
 
 % Thiết lập tông và nhịp
@@ -149,7 +153,13 @@ TongNhip = { \key c \major \time 2/4 }
         \TongNhip \nhacDiepKhuc
       }
     >>
-    \new Lyrics \lyricsto beSop \loiDiepKhuc
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.5
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiDiepKhuc
   >>
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
@@ -170,7 +180,13 @@ TongNhip = { \key c \major \time 2/4 }
         \key c \major \time 2/4 \nhacPhienKhucMot
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucMot
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.2
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucMot
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
@@ -191,7 +207,13 @@ TongNhip = { \key c \major \time 2/4 }
         \key c \major \time 2/4 \nhacPhienKhucHai
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucHai
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucHai
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
@@ -212,7 +234,13 @@ TongNhip = { \key c \major \time 2/4 }
         \key c \major \time 2/4 \nhacPhienKhucBa
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucBa
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucBa
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t

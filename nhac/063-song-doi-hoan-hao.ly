@@ -17,8 +17,8 @@ nhacDiepKhuc= \relative c' {
   g fs a b |
   d,4. d8 |
   \tuplet 3/2 { b'8 a b } g a |
-  g2 ( |
-  g4) \bar "|."
+  g2 ~ |
+  g4 \bar "|."
 }
 
 % Nhạc phiên khúc
@@ -29,7 +29,7 @@ nhacPhienKhucMot = \relative c'' {
   c8 c b b4 \breathe
   g8 a a e e4 \breathe
   g8 g a4 a8 b b a g a b4 \breathe
-  c8 a b a b e, fs g b g a4 a g (g) \bar "||"
+  c8 a b a b e, fs g b g a4 a g ~ g \bar "||"
 }
 
 nhacPhienKhucHai = \relative c'' {
@@ -37,14 +37,14 @@ nhacPhienKhucHai = \relative c'' {
   a8 a g b a a4 \breathe
   g8 a b b a g b a fs \acciaccatura e8 g4 \breathe
   g8 a g b g b a a4 \breathe
-  b8 a a4 b8 fs d e4 g (g) \bar "||"
+  b8 a a4 b8 fs d e4 g ~ g \bar "||"
 }
 
 nhacPhienKhucBa = \relative c'' {
   g8 b a b g a b e,4 \breathe
   e8 g a g a g e fs d4 \breathe
   e8 e d g g fs fs a4 \breathe
-  a8 b c b4 a8 d d g, e fs4 g (g) \bar "||"
+  a8 b c b4 a8 d d g, e fs4 g ~ g \bar "||"
 }
 
 % Lời điệp khúc
@@ -99,8 +99,12 @@ loiPhienKhucBa = \lyricmode {
       "Liberation Serif"
       (/ 20 20)))
   page-count = #1
-  system-system-spacing = #'((basic-distance . 12))
-  score-system-spacing = #'((basic-distance . 12))
+  system-system-spacing = #'((basic-distance . 11.5)
+                             (minimum-distance . 11.5)
+                             (padding . 1))
+  score-system-spacing = #'((basic-distance . 11.5)
+                             (minimum-distance . 11.5)
+                             (padding . 1))
 }
 
 % Thiết lập tông và nhịp
@@ -117,7 +121,13 @@ TongNhip = { \key g \major \time 2/4 }
         \TongNhip \nhacDiepKhuc
       }
     >>
-    \new Lyrics \lyricsto beSop \loiDiepKhuc
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiDiepKhuc
   >>
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
@@ -138,7 +148,13 @@ TongNhip = { \key g \major \time 2/4 }
         \TongNhip \nhacPhienKhucMot
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucMot
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucMot
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
@@ -161,7 +177,13 @@ TongNhip = { \key g \major \time 2/4 }
         \key g \major \time 2/4 \nhacPhienKhucHai
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucHai
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.2
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucHai
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
@@ -184,7 +206,13 @@ TongNhip = { \key g \major \time 2/4 }
         \key g \major \time 2/4 \nhacPhienKhucBa
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucBa
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucBa
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t

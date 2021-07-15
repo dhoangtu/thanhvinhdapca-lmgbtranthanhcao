@@ -23,8 +23,8 @@ nhacDiepKhucSop = \relative c'' {
   e8 g f |
   e4 g8 |
   g4 e8 |
-  d4. ( |
-  d4) r8 \bar "|."
+  d4. ~ |
+  d4 r8 \bar "|."
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -39,8 +39,8 @@ nhacDiepKhucBas = \relative c' {
   c8 d d |
   c4 d8 |
   d4 c8 |
-  d4. ( |
-  d4) r8
+  d4. ~ |
+  d4 r8
 }
 
 % Nhạc phiên khúc
@@ -51,8 +51,8 @@ nhacPhienKhucMot = \relative c'' {
   a'4 \breathe g8 |
   e f g |
   c,4 d8 |
-  d4. ( |
-  d8) r d |
+  d4. ~ |
+  d8 r d |
   a'4. |
   r8 bf g |
   g4 g8 |
@@ -61,8 +61,8 @@ nhacPhienKhucMot = \relative c'' {
   e e g |
   a4 \fermata \breathe e'8 |
   d e \acciaccatura bf8 a |
-  d4. ( |
-  d4) r8 \bar "||"
+  d4. ~ |
+  d4 r8 \bar "||"
 }
 
 nhacPhienKhucHai = \relative c' {
@@ -72,11 +72,11 @@ nhacPhienKhucHai = \relative c' {
   a4 d,8 |
   e f d |
   a'4. |
-  bf8 a g ( |
-  g) bf (bf) |
+  bf8 a g ~ |
+  g bf ~ bf |
   e e d |
-  d4. ( |
-  d4) c8 |
+  d4. ~ |
+  d4 c8 |
   c bf d |
   c g a |
   \acciaccatura g8 a4. |
@@ -84,8 +84,8 @@ nhacPhienKhucHai = \relative c' {
   f4 \breathe e8 |
   g a a |
   e4 f8 |
-  d4. ( |
-  d4) r8 \bar "||"
+  d4. ~ |
+  d4 r8 \bar "||"
 }
 
 nhacPhienKhucBa = \relative c' {
@@ -95,8 +95,8 @@ nhacPhienKhucBa = \relative c' {
   a'4 \breathe e8 |
   g f e |
   g e f |
-  d4. ( |
-  d4) g8 |
+  d4. ~ |
+  d4 g8 |
   bf g bf |
   d e d |
   a a4 |
@@ -107,8 +107,8 @@ nhacPhienKhucBa = \relative c' {
   g4 e8 |
   f g e |
   f g e |
-  d4. ( |
-  d4) r8 \bar "||"
+  d4. ~ |
+  d4 r8 \bar "||"
 }
 
 % Lời điệp khúc
@@ -161,8 +161,12 @@ loiPhienKhucBa = \lyricmode {
       "Liberation Serif"
       (/ 20 20)))
   page-count = #1
-  system-system-spacing = #'((basic-distance . 12.5))
-  score-system-spacing = #'((basic-distance . 12.5))
+  system-system-spacing = #'((basic-distance . 11.5)
+                             (minimum-distance . 11.5)
+                             (padding . 1))
+  score-system-spacing = #'((basic-distance . 11.5)
+                             (minimum-distance . 11.5)
+                             (padding . 1))
 }
 
 % Thiết lập tông và nhịp
@@ -195,7 +199,13 @@ notBePhu =
         \nhacDiepKhucSop
         \notBePhu -3 { \nhacDiepKhucBas }
       \new NullVoice = nhacThamChieu \nhacDiepKhucSop
-      \new Lyrics \lyricsto nhacThamChieu \loiDiepKhuc
+      \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #0.5
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto nhacThamChieu \loiDiepKhuc
       >>
   >>
   \layout {
@@ -217,7 +227,13 @@ notBePhu =
         \key f \major \time 3/8 \nhacPhienKhucMot
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucMot
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.5
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucMot
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
@@ -238,7 +254,13 @@ notBePhu =
         \key f \major \time 3/8 \nhacPhienKhucHai
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucHai
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.2
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucHai
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
@@ -259,7 +281,13 @@ notBePhu =
         \key f \major \time 3/8 \nhacPhienKhucBa
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucBa
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.2
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucBa
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t

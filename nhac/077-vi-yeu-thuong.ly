@@ -20,8 +20,8 @@ nhacDiepKhucSop = \relative c' {
   f4 g8 |
   g a e |
   d4 g8 |
-  c,4. ( |
-  c4) r8 \bar "|."
+  c,4. ~ |
+  c4 r8 \bar "|."
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -33,15 +33,15 @@ nhacDiepKhucBas = \relative c' {
   d4 e8 |
   e f c |
   b4 b8 |
-  c4. ( |
-  c4) r8
+  c4. ~ |
+  c4 r8
 }
 
 % Nhạc phiên khúc
 nhacPhienKhucMot = \relative c'' {
   g8 f e g c4 \breathe
   c8 b b c4 b8 c d a b g4
-  f8 g e c d4 (d) \breathe
+  f8 g e c d4 ~ d \breathe
   g8 g e g c4 b8 c e c g4
   b8 g g b c4 (c) \bar "||"
 }
@@ -49,19 +49,19 @@ nhacPhienKhucMot = \relative c'' {
 nhacPhienKhucHai = \relative c'' {
   g8 g e g c4
   c8 b c d g,4 \breathe
-  f8 e g a d, g a e4 (e) \breathe
+  f8 e g a d, g a e4 ~ e \breathe
   e8 g c c b d b g4 \breathe
-  a8 g g4 g8 g a b c4 (c) \bar "||"
+  a8 g g4 g8 g a b c4 ~ c \bar "||"
 }
 
 nhacPhienKhucBa = \relative c' {
   e8 g c4
   b8 d c a g4 \breathe
   f8 d d e e c \acciaccatura c8 d4
-  fs8 fs a g4 (g) \breathe
+  fs8 fs a g4 ~ g \breathe
   g8 e g4 \tuplet 3/2 { c,8 c d } e4 \breathe
   \tuplet 3/2 { f8 e f } d4 d8 d a'4 \breathe
-  a8 a b c d e c4 (c) \bar "||"
+  a8 a b c d e c4 ~ c \bar "||"
 }
 
 % Lời điệp khúc
@@ -100,7 +100,7 @@ loiPhienKhucBa = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 10\mm
+  top-margin = 15\mm
   bottom-margin = 10\mm
   left-margin = 20\mm
   right-margin = 20\mm
@@ -112,8 +112,12 @@ loiPhienKhucBa = \lyricmode {
       "Liberation Serif"
       (/ 20 20)))
   page-count = #1
-  system-system-spacing = #'((basic-distance . 12))
-  score-system-spacing = #'((basic-distance . 12))
+  system-system-spacing = #'((basic-distance . 11.5)
+                             (minimum-distance . 11.5)
+                             (padding . 1))
+  score-system-spacing = #'((basic-distance . 11.5)
+                             (minimum-distance . 11.5)
+                             (padding . 1))
 }
 
 % Thiết lập tông và nhịp
@@ -146,7 +150,13 @@ notBePhu =
         \nhacDiepKhucSop
         \notBePhu -3 { \nhacDiepKhucBas }
       \new NullVoice = nhacThamChieu \nhacDiepKhucSop
-      \new Lyrics \lyricsto nhacThamChieu \loiDiepKhuc
+      \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto nhacThamChieu \loiDiepKhuc
       >>
   >>
   \layout {
@@ -169,30 +179,13 @@ notBePhu =
         \key c \major \time 3/8 \nhacPhienKhucMot
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucMot
-  >>
-  \layout {
-    \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #2.0
-    \override Score.BarNumber.break-visibility = ##(#f #f #f)
-    \override Score.SpacingSpanner.uniform-stretching = ##t
-    \set Score.barAlways = ##t
-    \set Score.defaultBarType = ""
-  } 
-}
-
-\score {
-  \new ChoirStaff <<
-    \new Staff = phienKhuc \with {
-        %\magnifyStaff #(magstep +1)
-      }
-      <<
-      \new Voice = beSop {
-        \key c \major \time 3/8 \nhacPhienKhucHai
-      }
-    >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucHai
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucMot
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
@@ -212,15 +205,50 @@ notBePhu =
       }
       <<
       \new Voice = beSop {
-        \key c \major \time 3/8 \nhacPhienKhucBa
+        \key c \major \time 3/8 \nhacPhienKhucHai
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucBa
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucHai
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #3.0
+    \override Lyrics.LyricSpace.minimum-distance = #3
+    \override Score.BarNumber.break-visibility = ##(#f #f #f)
+    \override Score.SpacingSpanner.uniform-stretching = ##t
+    \set Score.barAlways = ##t
+    \set Score.defaultBarType = ""
+  } 
+}
+
+\score {
+  \new ChoirStaff <<
+    \new Staff = phienKhuc \with {
+        %\magnifyStaff #(magstep +1)
+      }
+      <<
+      \new Voice = beSop {
+        \key c \major \time 3/8 \nhacPhienKhucBa
+      }
+    >>
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucBa
+  >>
+  \layout {
+    \override Staff.TimeSignature.transparent = ##t
+    \override Lyrics.LyricText.font-size = #+2
+    \override Lyrics.LyricSpace.minimum-distance = #3.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
     \set Score.barAlways = ##t

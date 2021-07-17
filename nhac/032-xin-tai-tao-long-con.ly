@@ -36,23 +36,23 @@ nhacPhienKhucMot = \relative c'' {
   \partial 4 g4 |
   d' d8 d |
   d4 d8 bf |
-  bf c g4 ( |
-  g) \tuplet 3/2 { g8 f g } |
+  bf c g4 ~ |
+  g \tuplet 3/2 { g8 f g } |
   d4 \tuplet 3/2 { bf'8 bf g } |
   a4 \breathe \tuplet 3/2 { bf8 a bf } |
   \autoBeamOff
   g4 \tuplet 3/2 { ef'8 \fermata ef \fermata c \fermata } |
   \autoBeamOn
-  d2 ( |
-  d8) r c bf |
+  d2 ~ |
+  d8 r c bf |
   c a bf a |
   g4 g8 f |
   g ef g16 (bf) g (f) |
   d4. c8 |
   ef8 g d4 |
   c'4. a16 ef' |
-  d2 ( |
-  d4) r \bar "||"
+  d2 ~ |
+  d4 r \bar "||"
 }
 
 nhacPhienKhucHai = \relative c'' {
@@ -62,14 +62,14 @@ nhacPhienKhucHai = \relative c'' {
   g2 |
   r8 f \tuplet 3/2 { bf8 g f } |
   g f bf a |
-  a2 ( |
-  a8) r \tuplet 3/2 { a8 c a } |
+  a2 ~ |
+  a8 r \tuplet 3/2 { a8 c a } |
   c c ef ef |
   d4 \fermata \breathe g,16 bf a g |
   a4 \fermata \breathe a8 f |
   d4. f16 (g) |
-  g2 ( |
-  g4) r \bar "||"
+  g2 ~ |
+  g4 r \bar "||"
 }
 
 nhacPhienKhucBa = \relative c'' {
@@ -83,10 +83,10 @@ nhacPhienKhucBa = \relative c'' {
   r4 a8 bf |
   g bf ef c |
   d2 |
-  c8 c c d ( |
-  d) r g,16 (a) bf (a) |
-  g2 ( |
-  g4) r \bar "||"
+  c8 c c d ~ |
+  d r g,16 (a) bf (a) |
+  g2 ~ |
+  g4 r \bar "||"
 }
 
 % Lời điệp khúc

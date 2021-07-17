@@ -6,7 +6,7 @@
   title = \markup { \fontsize #3 "Suy Tôn Thánh Giá" }
   poet = " "
   composer = "Lm. GB Trần Thanh Cao"
-  arranger = " "
+  %arranger = " "
   tagline = ##f
 }
 
@@ -112,8 +112,12 @@ loiPhienKhuc = \lyricmode {
       "Liberation Serif"
       (/ 20 20)))
   page-count = #1
-  system-system-spacing = #'((basic-distance . 12))
-  score-system-spacing = #'((basic-distance . 12))
+  system-system-spacing = #'((basic-distance . 11.5)
+                             (minimum-distance . 11.5)
+                             (padding . 1))
+  score-system-spacing = #'((basic-distance . 11.5)
+                             (minimum-distance . 11.5)
+                             (padding . 1))
 }
 
 \score {
@@ -124,7 +128,13 @@ loiPhienKhuc = \lyricmode {
       <<
       \new Voice = beSop \nhacPhienKhuc
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhuc
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.5
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhuc
   >>
   \layout {
     \override Lyrics.LyricText.font-size = #+2

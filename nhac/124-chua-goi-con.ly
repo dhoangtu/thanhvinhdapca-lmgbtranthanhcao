@@ -17,18 +17,18 @@ nhacDiepKhucSop = \relative c'' {
   f4 g8 (a) |
   a4 r8 a |
   a (c) d (c) |
-  a f d4 ( |
-  d8) g g g |
-  a2 ( |
-  a8) d d bf |
+  a f d4 ~ |
+  d8 g g g |
+  a2 ~ |
+  a8 d d bf |
   c4 a8 a |
   a4 c |
   a f8 g |
   f e c d |
   a c f e |
   d4 \tupletSpan 4 \tuplet 3/2 { c8 f e } |
-  d2 ( |
-  d8) \bar "|."
+  d2 ~ |
+  d8 \bar "|."
 }
 
 nhacDiepKhucAlto = \relative c'' {
@@ -38,18 +38,18 @@ nhacDiepKhucAlto = \relative c'' {
   d4 e8 (d) 
   c4 r8 f |
   f (a) g (e) |
-  f d a4 ( |
-  a8) e' e d |
+  f d a4 ~ |
+  a8 e' e d |
   c4. d8 |
-  e2 ( |
-  e4) f8 d |
+  e2 ~ |
+  e4 f8 d |
   c4 c |
   a d8 e |
   d c bf d |
   a a c bf |
   a4 \tuplet 3/2 { g8 c bf } |
-  a2 ( |
-  a8)
+  a2 ~ |
+  a8
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -69,8 +69,8 @@ nhacDiepKhucBas = \relative c' {
   a4 g |
   f8 bf a g |
   f4 \tuplet 3/2 { e8 a g } |
-  f2 ( |
-  f8)
+  f2 ~ |
+  f8
 }
 
 % Nhạc phiên khúc
@@ -82,16 +82,16 @@ nhacPhienKhucSop = \relative c' {
   d8 \breathe d f g |
   a a bf a |
   a g d f |
-  e2 ( |
-  e8) d f g |
-  a a a4 ( |
-  a8) bf a bf |
-  c \once \stemDown a4. ( |
-  a8) <a \tweak font-size #-2 d>8 d e |
+  e2 ~ |
+  e8 d f g |
+  a a a4 ~ |
+  a8 bf a bf |
+  c \once \stemDown a4. ~ |
+  a8 <a \tweak font-size #-2 d>8 d e |
   f4. e8 |
   cs4 \tuplet 3/2 { d8 (e) d } |
-  d2 ( |
-  d8) r r4 \bar "||"
+  d2 ~ |
+  d8 r r4 \bar "||"
 }
 
 nhacPhienKhucBas = \relative c {
@@ -110,8 +110,8 @@ nhacPhienKhucBas = \relative c {
   r8 a bf bf |
   a4. g8 |
   a (g) \tuplet 3/2 { f (g) f } |
-  f2 ( |
-  f8) r r4
+  f2 ~ |
+  f8 r r4
 }
 
 % Lời điệp khúc
@@ -280,7 +280,10 @@ demKhoangCach = \lyricmode {
           \key f \major \time 2/4 \nhacPhienKhucSop
         }
         \new Lyrics \with {
-          \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #1
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.5
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
         }
         \lyricsto beSop \loiPhienKhucMotSop
         \new Lyrics \lyricsto beSop \loiPhienKhucHaiSop
@@ -295,8 +298,11 @@ demKhoangCach = \lyricmode {
         \new Voice = beBas {
           \key f \major \time 2/4 \nhacPhienKhucBas
         }
-        \new Lyrics  \with {
-          \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #1
+        \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
         }
         \lyricsto beBas \loiPhienKhucMotBas
         \new Lyrics \lyricsto beBas \loiPhienKhucHaiBas

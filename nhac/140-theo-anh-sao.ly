@@ -97,7 +97,7 @@ loiDiepKhucBas = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 10\mm
+  top-margin = 15\mm
   bottom-margin = 15\mm
   left-margin = 20\mm
   right-margin = 20\mm
@@ -122,7 +122,13 @@ loiDiepKhucBas = \lyricmode {
         \key g \major \time 2/2 \nhacPhienKhucMot
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucMot
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.2
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucMot
   >>
   \layout {
     \override Lyrics.LyricText.font-size = #+2
@@ -174,7 +180,13 @@ loiDiepKhucBas = \lyricmode {
         \key g \major \time 2/2 \nhacPhienKhucHai
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucHai
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.2
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucHai
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t

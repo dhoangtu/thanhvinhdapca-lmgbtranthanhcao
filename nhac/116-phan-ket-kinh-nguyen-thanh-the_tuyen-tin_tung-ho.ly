@@ -8,11 +8,11 @@
 
 % Nhạc phiên khúc
 nhacKinhNguyenThanhThe = \relative c'' {
-  \afterGrace c4 _({c8 bf)} f g4 c8 (d) bf4 g8 c bf4 \breathe
+  \afterGrace c4 _({c8 bf)} f g4 c8 ([d]) bf4 g8 c bf4 \breathe
   g8 g bf f f g g f g f16 (g) bf4 \breathe
   g8 c a c \breathe
   g bf bf bf g bf f4 (g) \bar "||"
-  g8 (f g) g4 \bar "|." \break
+  g8 ([f g]) g4 \bar "|." \break
   
   <g d>4 <g d>
   <bf g> <bf g>
@@ -41,8 +41,8 @@ nhacTuyenTin = \relative c'' {
   % Xướng
   g4 e8 c |
   c4 a' |
-  g2 ( |
-  g8) r r4 \bar "||" \break
+  g2 ~ |
+  g8 r r4 \bar "||" \break
   
   % Đáp
   \partial 4. g8 e d |
@@ -95,7 +95,7 @@ loiCauDapTungHo = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 10\mm
+  top-margin = 15\mm
   bottom-margin = 10\mm
   left-margin = 20\mm
   right-margin = 20\mm
@@ -108,8 +108,12 @@ loiCauDapTungHo = \lyricmode {
       (/ 20 20)))
   page-count = #1
   print-all-headers = ##t
-  system-system-spacing = #'((basic-distance . 12.5))
-  score-system-spacing = #'((basic-distance . 12.5))
+  system-system-spacing = #'((basic-distance . 11.5)
+                             (minimum-distance . 11.5)
+                             (padding . 1))
+  score-system-spacing = #'((basic-distance . 11.5)
+                             (minimum-distance . 11.5)
+                             (padding . 1))
 }
 
 \book {
@@ -122,7 +126,13 @@ loiCauDapTungHo = \lyricmode {
           \key bf \major \time 2/4 \nhacKinhNguyenThanhThe
         }
       >>
-      \new Lyrics \lyricsto beSop \loiKinhNguyenThanhThe
+      \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.2
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiKinhNguyenThanhThe
     >>
     \header {
       title = \markup { \fontsize #3 "Phần Kết Kinh Nguyện Thánh Thể" }
@@ -152,7 +162,13 @@ loiCauDapTungHo = \lyricmode {
           \key c \major \time 2/4 \nhacTuyenTin
         }
       >>
-      \new Lyrics \lyricsto beSop \loiTuyenTin
+      \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.2
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiTuyenTin
     >>
     \header {
       title = \markup { \fontsize #3 "Tuyên Tín" }
@@ -179,7 +195,13 @@ loiCauDapTungHo = \lyricmode {
           \key bf \major \time 2/4 \nhacCauDapTungHo
         }
       >>
-      \new Lyrics \lyricsto beSop \loiCauDapTungHo
+      \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.7
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiCauDapTungHo
     >>
     \header {
       title = \markup { \fontsize #3 "Câu Đáp Tung Hô" }

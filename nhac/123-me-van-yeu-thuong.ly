@@ -20,8 +20,8 @@ nhacPhienKhuc = \relative c' {
     gs e gs fs4 fs8 |
     fs r gs a b4 |
     b b4. cs,8 |
-    e2. ( |
-    e4) r a8 b |
+    e2. ~ |
+    e4 r a8 b |
     cs4. cs4 cs8 |
     b a b b4 a8 |
     fs2 gs8 fs |
@@ -49,8 +49,8 @@ nhacDiepKhucSop = \relative c'' {
   b2 fs4 |
   fs2 b8 a |
   a2 a4 |
-  e2. _( |
-  e4) r a8 b |
+  e2. ~ |
+  e4 r a8 b |
   cs4. d4 cs8 |
   cs4. cs8 a b |
   cs4. d4 cs8 |
@@ -59,8 +59,8 @@ nhacDiepKhucSop = \relative c'' {
   fs2 a8 a |
   a4. gs8 fs gs |
   \acciaccatura cs,8 e2 a4 
-  a2. _( |
-  a2) r4 \bar "|."
+  a2. ~ |
+  a2 r4 \bar "|."
 }
 
 nhacDiepKhucBas = \relative c'' {
@@ -72,8 +72,8 @@ nhacDiepKhucBas = \relative c'' {
   d2 b4 |
   b2 d8 cs |
   cs2 cs4 |
-  a2. ^( |
-  a4) r cs8 d |
+  a2. ~ |
+  a4 r cs8 d |
   e4. fs4 e8 |
   e4. e8 cs d |
   e4. fs4 e8 |
@@ -82,8 +82,8 @@ nhacDiepKhucBas = \relative c'' {
   b2 cs8 cs |
   cs4. b8 a b |
   a2 cs4 |
-  cs2. ^( |
-  cs2) r4
+  cs2. ~ |
+  cs2 r4
 }
 
 % Lời phiên khúc
@@ -131,7 +131,12 @@ loiDiepKhuc = \lyricmode {
       (/ 20 20)))
   page-count = #1
   indent = #0
-  system-system-spacing.basic-distance = #14
+  system-system-spacing = #'((basic-distance . 14)
+                             (minimum-distance . 14)
+                             (padding . 1))
+  score-system-spacing = #'((basic-distance . 14)
+                             (minimum-distance . 14)
+                             (padding . 1))
 }
 
 \score {
@@ -145,8 +150,20 @@ loiDiepKhuc = \lyricmode {
         \key a \major \time 3/4 \stemNeutral \nhacPhienKhuc
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucMot
-    \new Lyrics \lyricsto beSop \loiPhienKhucHai
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.2
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucMot
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.2
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucHai
   >>
   \layout {
     \override Lyrics.LyricText.font-size = #+2
@@ -186,7 +203,13 @@ notBePhu =
         \notBePhu -3 { \nhacDiepKhucBas }
         \nhacDiepKhucSop
       \new NullVoice = nhacThamChieu \nhacDiepKhucSop
-      \new Lyrics \lyricsto nhacThamChieu \loiDiepKhuc
+      \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #2
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto nhacThamChieu \loiDiepKhuc
       >>
   >>
   \layout {

@@ -33,8 +33,8 @@ nhacDiepKhucSop = \relative c'' {
   d4 d8 e |
   f4 e8 d |
   cs cs b! cs |
-  d2 ( |
-  d4) \bar "|."
+  d2 ~ |
+  d4 \bar "|."
 }
 
 nhacDiepKhucAlto = \relative c'' {
@@ -46,8 +46,8 @@ nhacDiepKhucAlto = \relative c'' {
   f4 f8 bf |
   a4 g8 f |
   e e g g |
-  fs2 ( |
-  fs4)
+  fs2 ~ |
+  fs4
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -118,7 +118,31 @@ loiDiepKhucBas = \lyricmode {
       "Liberation Serif"
       (/ 20 20)))
   page-count = #1
+  system-system-spacing = #'((basic-distance . 13)
+                             (minimum-distance . 13)
+                             (padding . 1))
+  score-system-spacing = #'((basic-distance . 13)
+                             (minimum-distance . 13)
+                             (padding . 1))
 }
+
+% Thiết lập tông và nhịp
+TongNhip = { \key f \major \time 2/4 }
+
+% Đổi kích thước nốt cho bè phụ
+notBePhu =
+#(define-music-function (font-size music) (number? ly:music?)
+   (for-some-music
+     (lambda (m)
+       (if (music-is-of-type? m 'rhythmic-event)
+           (begin
+             (set! (ly:music-property m 'tweaks)
+                   (cons `(font-size . ,font-size)
+                         (ly:music-property m 'tweaks)))
+             #t)
+           #f))
+     music)
+   music)
 
 \score {
   \new ChoirStaff <<
@@ -127,12 +151,24 @@ loiDiepKhucBas = \lyricmode {
       }
       <<
       \new Voice = beSop {
-        \key f \major \time 2/4 \nhacPhienKhuc
+        \TongNhip \nhacPhienKhuc
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucMot
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.2
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucMot
     \new Lyrics \lyricsto beSop \loiPhienKhucHai
-    \new Lyrics \lyricsto beSop \loiPhienKhucBa
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.2
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucBa
   >>
   \layout {
     \override Lyrics.LyricText.font-size = #+2
@@ -148,17 +184,22 @@ loiDiepKhucBas = \lyricmode {
   \new ChoirStaff <<
     \new Staff \with {
         \consists "Merge_rests_engraver"
-        %\magnifyStaff #(magstep +1)
+        printPartCombineTexts = ##f
+        \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 13))
       }
       <<
         \clef "treble"
-        \new Voice = beSop {
-          \voiceOne \key f \major \time 2/4 \nhacDiepKhucSop
-        }
-        \new Voice = beAlto {
-          \voiceTwo \key f \major \time 2/4 \nhacDiepKhucAlto
-        }
-        \new Lyrics \lyricsto beSop \loiDiepKhucSop
+        \new Voice \TongNhip \partCombine 
+        \nhacDiepKhucSop
+        \notBePhu -3 { \nhacDiepKhucAlto }
+        \new NullVoice = nhacThamChieu \nhacDiepKhucSop
+        \new Lyrics \with {
+            \override VerticalAxisGroup.
+              nonstaff-relatedstaff-spacing.padding = #1.2
+            \override VerticalAxisGroup.
+              nonstaff-unrelatedstaff-spacing.padding = #1
+          }
+        \lyricsto nhacThamChieu \loiDiepKhucSop
     >>
     \new Staff \with {
         \consists "Merge_rests_engraver"
@@ -169,7 +210,13 @@ loiDiepKhucBas = \lyricmode {
         \new Voice = beBas {
           \voiceTwo \key f \major \time 2/4 \nhacDiepKhucBas
         }
-        \new Lyrics \lyricsto beBas \loiDiepKhucBas
+        \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.5
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beBas \loiDiepKhucBas
     >>
   >>
   \layout {

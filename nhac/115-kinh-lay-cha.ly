@@ -16,15 +16,15 @@ nhacPhienKhucMot = \relative c'' {
   g8 f bf bf bf4 \breathe
   g8 bf c d bf bf4 \breathe
   d8 c d a g4 \bar "||"
-  d8 g bf a f g d4 (d8) \breathe
+  d8 g bf a f g d4 ~ d8 \breathe
   ef d c f f d16 (f) g4 \breathe
   bf8 a g c4 \breathe
-  d8 c bf a c d c bf a g4 (g) \breathe
+  d8 c bf a c d c bf a g4 ~ g \breathe
   f8 f f g f f f f ef d d4 \breathe
   d8 g f a g4 \breathe
-  bf8 c bf c bf4 d8 d c ef d4 (d8) \breathe
+  bf8 c bf c bf4 d8 d c ef d4 ~ d8 \breathe
   g,8 a f a g ef f ef d4 \breathe
-  g8 bf bf a f d f f g4 (g) \bar "|."
+  g8 bf bf a f d f f g4 ~ g \bar "|."
 }
 
 % Lời phiên khúc
@@ -60,8 +60,12 @@ loiPhienKhucMot = \lyricmode {
       "Liberation Serif"
       (/ 20 20)))
   page-count = #1
-  system-system-spacing = #'((basic-distance . 12.5))
-  score-system-spacing = #'((basic-distance . 12.5))
+  system-system-spacing = #'((basic-distance . 12.5)
+                             (minimum-distance . 12.5)
+                             (padding . 1))
+  score-system-spacing = #'((basic-distance . 12.5)
+                             (minimum-distance . 12.5)
+                             (padding . 1))
 }
 
 \score {
@@ -69,7 +73,13 @@ loiPhienKhucMot = \lyricmode {
     \new Staff <<
       \new Voice = beSop \nhacPhienKhucMot
       >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucMot
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.7
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucMot
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t

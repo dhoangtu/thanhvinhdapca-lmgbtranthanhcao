@@ -34,8 +34,8 @@ nhacPhienKhucMot = \relative c' {
   a4 g8( a16 g) |
   f2 |
   f4 g8 f |
-  e f d4( |
-  d) f |
+  e f d4 ~ |
+  d f |
   d8( f) a4 |
   a8( bf) a4 |
   g8( a) f e |
@@ -70,7 +70,13 @@ loiPhienKhucMot = \lyricmode {
         \key f \major \time 2/4 \nhacPhienKhucMot
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucMot
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.5
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucMot
   >>
   \layout {
     \override Lyrics.LyricText.font-size = #+2

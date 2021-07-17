@@ -21,8 +21,8 @@ nhacDiepKhuc = \relative c'' {
   c4 a |
   a4. e'8 |
   d d16 d b8 d |
-  c2 ( |
-  c4) r \bar "|."
+  c2 ~ |
+  c4 r \bar "|."
 }
 
 % Nhạc phiên khúc
@@ -41,7 +41,7 @@ nhacPhienKhucMot = \relative c'' {
   g2 |
   e8 d a' g |
   g4 d16 ^(e) d8 |
-  c2 \tweak extra-offset #'(0 . 3) ^~ |
+  c2 ~ |
   c4 r \bar "||"
 }
 
@@ -56,8 +56,8 @@ nhacPhienKhucHai = \relative c'' {
   b2 |
   g8 g d' d |
   a4 d8 d |
-  c2 ( |
-  c4) r \bar "||"
+  c2 ~ |
+  c4 r \bar "||"
 }
 
 nhacPhienKhucBa = \relative c'' {
@@ -73,8 +73,8 @@ nhacPhienKhucBa = \relative c'' {
   r4 b8 b |
   g2 |
   g8 g d' d |
-  c2 ( |
-  c4) r \bar "||"
+  c2 ~ |
+  c4 r \bar "||"
 }
 
 % Lời điệp khúc

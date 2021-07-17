@@ -52,8 +52,8 @@ nhacPhienKhucMot = \relative c'' {
   c4 b8 a |
   g4 a |
   a e8 c |
-  g'2 ( |
-  g8) \breathe c, e e |
+  g'2 ~ |
+  g8 \breathe c, e e |
   e4 d8 g |
   g4 a8 g |
   g4 b |
@@ -73,8 +73,8 @@ nhacPhienKhucHai = \relative c'' {
   f,4. a8 |
   c4 e, |
   g e |
-  d2 ( |
-  d8) f f f |
+  d2 ~ |
+  d8 f f f |
   e2 |
   c4 d |
   c2 \bar "||"
@@ -86,16 +86,16 @@ nhacPhienKhucBa = \relative c'' {
   e,4 \breathe e |
   a2 |
   g8 g a d, |
-  e2 ( |
-  e4) c8 d |
+  e2 ~ |
+  e4 c8 d |
   f4. e8 |
   d r e g |
   c b a g |
   f e d c |
   d2 |
   d4 d |
-  c2 ( |
-  c4) r \bar "||"
+  c2 ~ |
+  c4 r \bar "||"
 }
 
 nhacPhienKhucBon = \relative c' {

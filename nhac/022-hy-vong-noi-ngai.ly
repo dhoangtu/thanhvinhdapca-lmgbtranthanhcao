@@ -53,17 +53,17 @@ nhacPhienKhucMot = \relative c' {
   a8 f' \fermata
   \autoBeamOn
   d4 d |
-  e2 (e4) r \bar "||"
+  e2 ~ e4 r \bar "||"
 }
 
 nhacPhienKhucHai = \relative c' {
   \partial 4 a8 e' |
   e4. c8 c d b4 |
-  g'8 d e4 e8 c' b b ( |
-  b) r c a c b b a |
+  g'8 d e4 e8 c' b b ~ |
+  b r c a c b b a |
   c4 d8 b d4 \fermata c \fermata |
   e \fermata \breathe b8 c d b c b |
-  a2 (a4) r \bar "||"
+  a2 ~ a4 r \bar "||"
 }
 
 nhacPhienKhucBa = \relative c' {
@@ -74,7 +74,7 @@ nhacPhienKhucBa = \relative c' {
   c'2 b8 c b c |
   a4 gs8 a e2 |
   d8 e d c b4 d8 (e) |
-  a,2 \tweak extra-offset #'(0 . 3) ^(a4) r \bar "||"
+  a,2 ~ a4 r \bar "||"
 }
 
 % Lời điệp khúc
@@ -245,7 +245,7 @@ notBePhu =
     >>
     \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #1
+            nonstaff-relatedstaff-spacing.padding = #0.7
           \override VerticalAxisGroup.
             nonstaff-unrelatedstaff-spacing.padding = #1
         }
@@ -272,7 +272,7 @@ notBePhu =
     >>
     \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #1
+            nonstaff-relatedstaff-spacing.padding = #0.7
           \override VerticalAxisGroup.
             nonstaff-unrelatedstaff-spacing.padding = #1
         }

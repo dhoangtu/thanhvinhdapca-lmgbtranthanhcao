@@ -18,8 +18,8 @@ nhacDiepKhucSop = \relative c' {
   d4 d8 fs 
   e d b4 |
   b8 d a e' |
-  d2 _( |
-  d4) r \bar "|."
+  d2 ~ |
+  d4 r \bar "|."
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -29,35 +29,35 @@ nhacDiepKhucBas = \relative c' {
   fs4 fs8 a |
   g fs e4 |
   e8 g e g |
-  fs2 ^( |
-  fs4) r
+  fs2 ~ |
+  fs4 r
 }
 
 % Nhạc phiên khúc
 nhacPhienKhucMot = \relative c' {
   e8 g a g b a a \breathe
-  a g b a4 (a8) \breathe
-  a g a a d, e fs4 (fs) \breathe
+  a g b a4 ~ a8 \breathe
+  a g a a d, e fs4 ~ fs \breathe
   a8 g e g b g a4 a16 fs d8 e4 \breathe
   e8 cs b cs a4 \breathe
-  b8 a fs' e4 e8 g a d,4 (d) \bar "||"
+  b8 a fs' e4 e8 g a d,4 ~ d \bar "||"
 }
 
 nhacPhienKhucHai = \relative c' {
   e8 g a g a4 \breathe
-  g8 a d,4 (d8) \breathe
-  b d a4 a8 d fs d e4 (e8) \breathe
+  g8 a d,4 ~ d8 \breathe
+  b d a4 a8 d fs d e4 ~ e8 \breathe
   a g g a a d, e fs4 \breathe
-  a8 g a (a16) a8 b b16 b e,4 \breathe
+  a8 g a ~ a16 a8 b b16 b e,4 \breathe
   e8 e a4 \breathe
-  cs,8 a e' fs d4 (d) \bar "||"
+  cs,8 a e' fs d4 ~ d \bar "||"
 }
 
 nhacPhienKhucBa = \relative c' {
   g'8 a g a a b e, g a4 \breathe
-  g8 a g4 a8 a d, e e fs4 a8 g e g a cs b a4 (a8) \breathe
-  cs b a (a16) cs8 cs a e'4 \breathe
-  d16 fs e4 e8 d8 \fermata e \fermata d4 (d) \bar "||"
+  g8 a g4 a8 a d, e e fs4 a8 g e g a cs b a4 ~ a8 \breathe
+  cs b a ~ a16 cs8 cs a e'4 \breathe
+  d16 fs e4 e8 d8 \fermata e \fermata d4 ~ d \bar "||"
 }
 
 % Lời điệp khúc
@@ -230,7 +230,7 @@ notBePhu =
     >>
     \new Lyrics \with {
       \override VerticalAxisGroup.
-        nonstaff-relatedstaff-spacing.padding = #1
+        nonstaff-relatedstaff-spacing.padding = #1.7
       \override VerticalAxisGroup.
         nonstaff-unrelatedstaff-spacing.padding = #1
     }

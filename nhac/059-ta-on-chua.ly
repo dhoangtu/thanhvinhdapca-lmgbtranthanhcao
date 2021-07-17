@@ -28,8 +28,8 @@ nhacPhienKhucMot = \relative c' {
   \partial 4 c8 e |
   d4 \tuplet 3/2 { f8 f a }
   \autoBeamOff
-  c2 ( |
-  c8)
+  c2 ~ |
+  c8
   \autoBeamOn
   c e c g4 \tuplet 3/2 { d8 f f } |
   e2 r4 c8 e |
@@ -58,7 +58,7 @@ nhacPhienKhucBa = \relative c' {
   a2 a8 d4 c8 |
   c2 r4 c8 a |
   g4. a8 d, d4 g8 |
-  \acciaccatura d8 g2 \tuplet 3/2 { b4 a a } |
+  \acciaccatura d8 g2 \tupletDown \tuplet 3/2 { \stemUp b4 a a \stemNeutral } |
   g2 \tupletUp \tuplet 3/2 { b4 c d } |
   c2 r \bar "||"
 }

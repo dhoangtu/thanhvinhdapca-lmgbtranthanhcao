@@ -19,8 +19,8 @@ nhacDiepKhucSop = \relative c'' {
   d8 e fs e |
   b4. cs8 |
   b e cs e |
-  d2 ( |
-  d4) r \bar "|."
+  d2 ~ |
+  d4 r \bar "|."
 }
 
 % Nốt bè phụ
@@ -32,8 +32,8 @@ nhacDiepKhucBas = \relative c' {
   b8 cs d cs |
   g4. a8 |
   g cs a4 |
-  d2 ( |
-  d4) r
+  d2 ~ |
+  d4 r
 }
 
 nhacDiepKhucKhac = \relative c'' {
@@ -43,8 +43,8 @@ nhacDiepKhucKhac = \relative c'' {
   e4 fs |
   b,4. a8 |
   e'4 fs |
-  d2( |
-  d4) r \bar "|."
+  d2 ~ |
+  d4 r \bar "|."
 }
 
 % Nhạc phiên khúc

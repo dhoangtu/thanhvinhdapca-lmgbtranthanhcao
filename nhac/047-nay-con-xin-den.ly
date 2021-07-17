@@ -23,8 +23,8 @@ nhacDiepKhucSop = \relative c' {
   c4 f,8 f |
   g4 a8 a |
   \stemDown
-  \slashedGrace {a8 ^(} f2) ( |
-  f4) r \bar "|."
+  \slashedGrace {a8 ^(} f2) ~ |
+  f4 r \bar "|."
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -55,8 +55,8 @@ nhacPhienKhucMot = \relative c'' {
   g2 |
   r4 g8 c |
   bf g c d |
-  c2 ( |
-  c4) r \bar "||"
+  c2 ~ |
+  c4 r \bar "||"
 }
 
 nhacPhienKhucHai = \relative c'' {
@@ -84,10 +84,10 @@ nhacPhienKhucBa = \relative c' {
   c g bf c |
   c2 |
   r4 bf8 c |
-  g2 ( |
-  g8) bf \acciaccatura bf8 c g |
-  f2 ( |
-  f4) r \bar "||"
+  g2 ~ |
+  g8 bf \acciaccatura bf8 c g |
+  f2 ~ |
+  f4 r \bar "||"
 }
 
 % Lời điệp khúc

@@ -17,7 +17,7 @@ nhacDiepKhuc = \relative c'' {
   a4 c8 a4 b8 |
   b4 e,8 b' a b |
   g4 a8 fs4 g8 |
-  e4. \tweak extra-offset #'(0 . 3) ^( e) \bar "|."
+  e4. ~ e \bar "|."
 }
 
 % Nhạc phiên khúc
@@ -30,7 +30,7 @@ nhacPhienKhucMot = \relative c'' {
   b4 g8 a4 d,8 |
   d4. r4 c8 |
   g' fs e a4 b8 |
-  e,4. \tweak extra-offset #'(0 . 3) ^(e) \bar "||"
+  e,4. ~ e \bar "||"
 }
 
 nhacPhienKhucHai = \relative c'' {
@@ -42,7 +42,7 @@ nhacPhienKhucHai = \relative c'' {
   fs d a' b4 b8 |
   g4. r8 fs a |
   g4 fs8 a4 fs8 |
-  e4. (e) \bar "||"
+  e4. ~ e \bar "||"
 }
 
 nhacPhienKhucBa = \relative c'' {
@@ -55,7 +55,7 @@ nhacPhienKhucBa = \relative c'' {
   b4. b4 a8 |
   a4. a4 g8 |
   g4 fs8 b4 a8 |
-  e4. (e) \bar "||"
+  e4. ~ e \bar "||"
 }
 
 % Lời điệp khúc
@@ -156,7 +156,7 @@ TongNhip = { \key g \major \time 6/8 }
     >>
     \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #1.5
+            nonstaff-relatedstaff-spacing.padding = #1.7
           \override VerticalAxisGroup.
             nonstaff-unrelatedstaff-spacing.padding = #1
         }
@@ -183,7 +183,7 @@ TongNhip = { \key g \major \time 6/8 }
     >>
     \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #1
+            nonstaff-relatedstaff-spacing.padding = #1.5
           \override VerticalAxisGroup.
             nonstaff-unrelatedstaff-spacing.padding = #1
         }
@@ -210,7 +210,7 @@ TongNhip = { \key g \major \time 6/8 }
     >>
     \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #1.5
+            nonstaff-relatedstaff-spacing.padding = #1.7
           \override VerticalAxisGroup.
             nonstaff-unrelatedstaff-spacing.padding = #1
         }

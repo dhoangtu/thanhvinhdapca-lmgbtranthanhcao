@@ -44,15 +44,15 @@ nhacPhienKhucHai = \relative c'' {
   a2 |
   bf8 a g4 |
   d'8 b!4 g8 |
-  c2 ( |
-  c8) r d c |
+  c2 ~ |
+  c8 r d c |
   d c f, a |
   d,2 |
   r4 e8 c |
   g'4 c,8 c |
   a'4 g |
-  f2 ( |
-  f4) r \bar "||"
+  f2 ~ |
+  f4 r \bar "||"
 }
 
 nhacPhienKhucBa = \relative c'' {
@@ -70,8 +70,8 @@ nhacPhienKhucBa = \relative c'' {
   g b \fermata |
   \autoBeamOn
   d e4 d8 |
-  c2 ( |
-  c4) r \bar "||"
+  c2 ~ |
+  c4 r \bar "||"
 }
 
 % Lời điệp khúc

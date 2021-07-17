@@ -14,32 +14,32 @@
 nhacDiepKhucSop = \relative c'' {
   \partial 4 g8 e |
   c4. g'8 |
-  a e g4 ^( |
-  g8) e c d |
+  a e g4 ~ |
+  g8 e c d |
   e2 |
   r4 f8 e |
   d4. d8 |
-  a' a g4 ^( |
-  g8) e a g |
+  a' a g4 ~ |
+  g8 e a g |
   c4 \tuplet 3/2 { c8 c a } |
-  c2 ^( |
-  c4) r \bar "|."
+  c2 ~ |
+  c4 r \bar "|."
 }
 
 nhacDiepKhucBas = \relative c' {
   \override NoteHead.font-size = #-2
   \skip 4
   \skip 4. e8 |
-  f c e4 _( |
-  e8) c a g |
+  f c e4 ~ |
+  e8 c a g |
   c2 |
   r4 d8 c |
   b4. b8 |
-  f' f d4 _( |
-  d8) c f e |
+  f' f d4 ~ |
+  d8 c f e |
   a4 \tuplet 3/2 { g8 g f } |
-  e2 _( |
-  e4) r
+  e2 ~ |
+  e4 r
 }
 
 nhacDiepKhucKhac = \relative c'' {
@@ -50,8 +50,8 @@ nhacDiepKhucKhac = \relative c'' {
   r8 e c e |
   g4. a8 |
   b4 g |
-  c2( |
-  c4) \bar "|."
+  c2 ~ |
+  c4 \bar "|."
 }
 
 % Nhạc phiên khúc
@@ -78,8 +78,8 @@ nhacPhienKhucHai = \relative c' {
   a8 r \tuplet 3/2 { f8 a a } |
   f4 \breathe f8 a |
   c d c a |
-  g2 ( |
-  g4) r \bar "||"
+  g2 ~ |
+  g4 r \bar "||"
 }
 
 nhacPhienKhucBa = \relative c'' {
@@ -92,8 +92,8 @@ nhacPhienKhucBa = \relative c'' {
   c4 d8 c |
   a4 d |
   d4. c8 |
-  \acciaccatura a8 c2 ( |
-  c4) r \bar "||"
+  \acciaccatura a8 c2 ~ |
+  c4 r \bar "||"
 }
 
 % Lời điệp khúc

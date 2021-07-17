@@ -17,8 +17,8 @@ nhacDiepKhuc = \relative c' {
   a4 \tuplet 3/2 { fs8 e d } |
   e4. e8 |
   d4 b |
-  d2 ( |
-  d8) d fs e |
+  d2 ~ |
+  d8 d fs e |
   d4 fs8 g |
   a4 fs8 fs |
   d fs a4 |
@@ -27,8 +27,8 @@ nhacDiepKhuc = \relative c' {
   fs8 a d cs |
   b4 cs8 b |
   a4 \tuplet 3/2 { a8 a a } |
-  d2 ( |
-  d4) r \bar "|."
+  d2 ~ |
+  d4 r \bar "|."
 }
 
 % Lời điệp khúc

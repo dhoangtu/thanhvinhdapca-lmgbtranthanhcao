@@ -21,8 +21,8 @@ nhacDiepKhuc = \relative c' {
   f8 e d e |
   c4. f8 |
   e d e g |
-  a2 ( |
-  a4) r \bar "|."
+  a2 ~ |
+  a4 r \bar "|."
 }
 
 % Nhạc phiên khúc
@@ -40,8 +40,8 @@ nhacPhienKhucMot = \relative c' {
   e4 \fermata a,8 c |
   b4. d8 |
   c8 (b) a4 |
-  a2 ( |
-  a4) r \bar "||"
+  a2 ~ |
+  a4 r \bar "||"
 }
 
 nhacPhienKhucHai = \relative c' {
@@ -55,9 +55,10 @@ nhacPhienKhucHai = \relative c' {
   c4 \tuplet 3/2 { d8 d e } |
   c4 b8 g |
   g4
-  \autoBeamOff \tuplet 3/2 { b8 \fermata g \fermata b \fermata } |
-  a2 ( |
-  a4) r \bar "||"
+  \autoBeamOff \tupletDown \tuplet 3/2 {
+    \stemUp b8 \fermata g \fermata b \fermata \stemNeutral } |
+  a2 ~ |
+  a4 r \bar "||"
 }
 
 nhacPhienKhucBa = \relative c' {
@@ -76,8 +77,8 @@ nhacPhienKhucBa = \relative c' {
   \acciaccatura d8 e4 b8 b |
   d4. c8 |
   c4 b |
-  a2 ( |
-  a4) r \bar "||"
+  a2 ~ |
+  a4 r \bar "||"
 }
 
 % Lời điệp khúc

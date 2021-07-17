@@ -18,8 +18,8 @@ nhacDiepKhucSop = \relative c'' {
   e,4 fs8 g |
   a4 d |
   d8 a a b |
-  g2 _( |
-  g4) r \bar "|."
+  g2 ~ |
+  g4 r \bar "|."
 }
 
 nhacDiepKhucBas = \relative c'' {
@@ -29,8 +29,8 @@ nhacDiepKhucBas = \relative c'' {
   a,4 b8 c |
   d4 d |
   d8 c c d |
-  b2 ^( |
-  b4) r
+  b2 ~ |
+  b4 r
 }
 
 % Nhạc phiên khúc
@@ -51,7 +51,7 @@ nhacPhienKhucBa = \relative c' {
   e8 d a'4 a8 d, d g e4 \breathe
   a8 g g a a g b d c4 \breathe
   c8 c c a g4 \breathe
-  a8 f g a e4 a8 g b b b g b d e c4 (c) \bar "||"
+  a8 f g a e4 a8 g b b b g b d e c4 ~ c \bar "||"
 }
 
 % Lời điệp khúc

@@ -15,24 +15,24 @@ nhacDiepKhucSop = \relative c'' {
   r4 d8 a |
   b4 a8 b |
   d,4 e |
-  a2 _( |
-  a8) r d, fs |
+  a2 ~ |
+  a8 r d, fs |
   e r g b |
   a g e d |
-  d2 ( |
-  d4) r \bar "|."
+  d2 ~ |
+  d4 r \bar "|."
 }
 
 nhacDiepKhucBas = \relative c'' {
   \skip 4. cs8 |
   d4 cs8 d |
   g,4 a |
-  cs2 ^( |
-  cs8) r g b 
+  cs2 ~ |
+  cs8 r g b 
   a r b d |
   cs b a g |
-  fs2 ^( |
-  fs4) r
+  fs2 ~ |
+  fs4 r
 }
 
 % Nhạc phiên khúc
@@ -40,14 +40,14 @@ nhacPhienKhucMot = \relative c'' {
   a8 a fs d' b d e4 \breathe
   d8 cs b a4 e8 g fs fs4 \breathe
   a8 a gs a b cs e,4 \breathe
-  a8 a gs gs!4 a8 b cs e, a a4 (a) \bar "||"
+  a8 a gs gs!4 a8 b cs e, a a4 ~ a \bar "||"
 }
 
 nhacPhienKhucHai = \relative c'' {
   a8 fs d' d cs d e4 \breathe
   d8 b d e cs d a4 \breathe
   g8 a fs d4 d8 d fs b,4 \breathe
-  d8 fs e4 gs8 e cs' b a4 (a) \bar "||"
+  d8 fs e4 gs8 e cs' b a4 ~ a \bar "||"
 }
 
 nhacPhienKhucBa = \relative c'' {
@@ -55,7 +55,7 @@ nhacPhienKhucBa = \relative c'' {
   g8 a g e fs d fs e4 \breathe
   a8 fs fs g a4 b8 cs d b a4 \breathe
   b8 a b g g4 \breathe
-  a8 e' d d4 (d) \bar "||"
+  a8 e' d d4 ~ d \bar "||"
 }
 
 % Lời điệp khúc

@@ -21,8 +21,8 @@ nhacDiepKhucSop= \relative c' {
   bf4 \tuplet 3/2 { bf8 g c } |
   a4 g8 g |
   d e4 g8 |
-  f2 ^( |
-  f8) r8 r4 \bar "|."
+  f2 ~ |
+  f8 r8 r4 \bar "|."
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -33,36 +33,36 @@ nhacDiepKhucBas = \relative c' {
   f4 \tuplet 3/2 { g8 e a } |
   d,4 d8 d |
   bf c4 bf8 |
-  a2 ( |
-  a8) r8 r4
+  a2 ~ |
+  a8 r8 r4
 }
 
 % Nhạc phiên khúc
 nhacPhienKhucMot = \relative c'' {
   \partial 4. c8 d d |
   c4 \tuplet 3/2 { f,8 f a } |
-  d,2 ( |
-  d8) g c,8. a16 |
+  d,2 ~ |
+  d8 g c,8. a16 |
   c8 f a bf |
-  g2 ( |
-  g8) bf c c |
+  g2 ~ |
+  g8 bf c c |
   bf4 \tuplet 3/2 { e,8 e g } |
   c,4. g'8 |
   c,4 \tuplet 3/2 { g'8 g bf } |
   a2 |
   g8 g c e, |
-  f2 ( |
-  f4) r \bar "||"
+  f2 ~ |
+  f4 r \bar "||"
 }
 
 nhacPhienKhucHai = \relative c' {
   \partial 4. c'8 d8. d16 |
   c8 a bf d, |
-  d2 ( |
-  d8) a c8. f16 |
+  d2 ~ |
+  d8 a c8. f16 |
   a8 a bf a |
-  g2 ( |
-  g8) f bf8. d,16 |
+  g2 ~ |
+  g8 f bf8. d,16 |
   f8 f4 g8 |
   a8 a4 r8 |
   r g c,8. e16 |
@@ -73,17 +73,17 @@ nhacPhienKhucHai = \relative c' {
 nhacPhienKhucBa = \relative c' {
   \partial 4. c'8 d d |
   c8. a16 f8. a16 |
-  d,2 ( |
-  d8) g e8. d16 |
+  d,2 ~ |
+  d8 g e8. d16 |
   c8. c16 f8. g16 |
-  a2 ( |
-  a08) bf bf8. g16 |
+  a2 ~ |
+  a8 bf bf8. g16 |
   g8 bf4 c8 |
-  c2 ( |
-  c8) g g8. e16 |
+  c2 ~ |
+  c8 g g8. e16 |
   c8 g' a g |
-  f2 ( |
-  f4) r \bar "||"
+  f2 ~ |
+  f4 r \bar "||"
 }
 
 % Lời điệp khúc
@@ -230,7 +230,7 @@ notBePhu =
     >>
     \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #1
+            nonstaff-relatedstaff-spacing.padding = #1.5
           \override VerticalAxisGroup.
             nonstaff-unrelatedstaff-spacing.padding = #1
         }
@@ -258,7 +258,7 @@ notBePhu =
     >>
     \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #1
+            nonstaff-relatedstaff-spacing.padding = #1.5
           \override VerticalAxisGroup.
             nonstaff-unrelatedstaff-spacing.padding = #1
         }

@@ -19,8 +19,8 @@ nhacDiepKhucSop= \relative c'' {
   r8 a a a |
   a a4 f8 |
   a4 d |
-  c2 ^( |
-  c4) r \bar "|."
+  c2 ~ |
+  c4 r \bar "|."
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -31,8 +31,8 @@ nhacDiepKhucBas = \relative c' {
   r8 f f f |
   f f4 d8 |
   f4 g |
-  e2 _( |
-  e4) r
+  e2 ~ |
+  e4 r
 }
 
 % Nhạc phiên khúc
@@ -144,7 +144,7 @@ notBePhu =
       \new NullVoice = nhacThamChieu \nhacDiepKhucSop
       \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #1
+            nonstaff-relatedstaff-spacing.padding = #1.2
           \override VerticalAxisGroup.
             nonstaff-unrelatedstaff-spacing.padding = #1
         }
@@ -172,7 +172,7 @@ notBePhu =
     >>
     \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #1
+            nonstaff-relatedstaff-spacing.padding = #1.5
           \override VerticalAxisGroup.
             nonstaff-unrelatedstaff-spacing.padding = #1
         }

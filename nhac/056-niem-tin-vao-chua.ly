@@ -17,8 +17,8 @@ nhacDiepKhucSop = \relative c'' {
   a4. g8 |
   b4 a8 a |
   c4 b8 _(a) |
-  g2 ^( |
-  g4) r \bar "|."
+  g2 ~ |
+  g4 r \bar "|."
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -27,15 +27,15 @@ nhacDiepKhucBas = \relative c' {
   fs4. e8 |
   g4 fs8 fs |
   e4 d |
-  b2 ( |
-  b4) r
+  b2 ~ |
+  b4 r
 }
 
 % Nhạc phiên khúc
 nhacPhienKhucMot = \relative c'' {
   \partial 4 d8 c |
   c4 a8 c |
-  a c a d16 (e) |
+  a c a d16 _(e) |
   d4 b8 d |
   e,4 \tuplet 3/2 { e8 g a } |
   b2 |
@@ -46,8 +46,8 @@ nhacPhienKhucMot = \relative c'' {
   d b fs a |
   d,2 |
   r8 e g a |
-  d, d'4 a8 |g2 ( |
-  g4) r \bar "||"
+  d, d'4 a8 |g2 ~ |
+  g4 r \bar "||"
 }
 
 nhacPhienKhucHai = \relative c'' {
@@ -64,8 +64,8 @@ nhacPhienKhucHai = \relative c'' {
   e2 |
   d8 fs a4 |
   d,8 a' b a |
-  g2 ( |
-  g4) r \bar "||"
+  g2 ~ |
+  g4 r \bar "||"
 }
 
 nhacPhienKhucBa = \relative c'' {
@@ -82,8 +82,8 @@ nhacPhienKhucBa = \relative c'' {
   c8 c e e |
   d2 |
   c8 a b a |
-  g2 ( |
-  g4) r \bar "||"
+  g2 ~ |
+  g4 r \bar "||"
 }
 
 % Lời điệp khúc

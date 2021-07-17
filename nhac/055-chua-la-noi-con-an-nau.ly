@@ -22,8 +22,8 @@ nhacDiepKhucSop = \relative c'' {
   d4 d,8 d |
   fs a a4 |
   e8 _(g) fs e |
-  d2 ^( |
-  d4) r \bar "|."
+  d2 ~ |
+  d4 r \bar "|."
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -37,8 +37,8 @@ nhacDiepKhucBas = \relative c' {
   b4 b,8 b |
   d fs fs4 |
   \once \stemUp a, d8 cs |
-  a2 ( |
-  a4) r
+  a2 ~ |
+  a4 r
 }
 
 % Nhạc phiên khúc
@@ -48,13 +48,13 @@ nhacPhienKhucMot = \relative c' {
   g8 e e g |
   a4 cs8 a |
   a a e g |
-  fs2 ( |
-  fs8) r d fs |
+  fs2 ~ |
+  fs8 r d fs |
   e4 d8. a'16 |
   g8 e e g |
   a4 \breathe d,8 d |
   d e fs e |
-  d2 \tweak extra-offset #'(0 . 3) ^~ |
+  d2 ~ |
   d4 \bar "||"
 }
 
@@ -64,13 +64,13 @@ nhacPhienKhucHai = \relative c' {
   g8 a \afterGrace e4 (a8) |
   r8 a cs e |
   a, e g g |
-  fs2 \tweak extra-offset #'(0 . 3) ^~ |
+  fs2 ~ |
   fs8 r e d |
   \acciaccatura e8 fs4 a8. a16 |
   g8 e a4 |
   r8 d, d fs |
   e4 e8 fs |
-  d2 \tweak extra-offset #'(0 . 3) ^~ |
+  d2 ~ |
   d4 \bar "||"
 }
 
@@ -84,7 +84,7 @@ nhacPhienKhucBa = \relative c'' {
   a4 fs8 g |
   e g \acciaccatura e8 g4 \fermata |
   \tempo "Rall" e8 g \acciaccatura e8 a fs |
-  d2 \tweak extra-offset #'(0 . 3) ^~ |
+  d2 ~ |
   d4 r \bar "||"
 }
 

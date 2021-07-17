@@ -23,8 +23,8 @@ nhacDiepKhucSop= \relative c' {
   d4 f |
   c d |
   g8 _(f) d4 |
-  a'2 ^( |
-  a4) r \bar "|."
+  a'2 ~ |
+  a4 r \bar "|."
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -39,24 +39,24 @@ nhacDiepKhucBas = \relative c' {
   bf4 d |
   a bf |
   c bf |
-  a2 ( |
-  a4) r
+  a2 ~ |
+  a4 r
 }
 
 % Nhạc phiên khúc
 nhacPhienKhucMot = \relative c' {
   f8 c'4 \breathe
   bf8 bf c a f4 d8 f d4 d8 f g c,4 \breathe
-  c'8 bf c f, bf bf a4 (a) \breathe
+  c'8 bf c f, bf bf a4 ~ a \breathe
   f8 c' bf c f,4 d8 f g f f4 d8 f g c,4
-  d8 f4 e8 f g a a f4 (f) \bar "||"
+  d8 f4 e8 f g a a f4 ~ f \bar "||"
 }
 
 nhacPhienKhucHai = \relative c' {
   f8 c' bf4 f8 bf bf c4 \breathe
   a8 a a4 a8 g16 _(c) a (g) f4 \breathe
   d8 g f4 f8 d f f g c,4 \breathe
-  e8 f g4 d8 e c4 a'8 g a c, f4 (f) \bar "||"
+  e8 f g4 d8 e c4 a'8 g a c, f4 ~ f \bar "||"
 }
 
 nhacPhienKhucBa = \relative c'' {
@@ -64,7 +64,7 @@ nhacPhienKhucBa = \relative c'' {
   a8 g g4 g8 g d e c4 \breathe
   e8 f g4 g8 c bf g4 g8 e d c4
   g'8
-  \tempo "Rall." g c, f4 (f) \bar "||"
+  \tempo "Rall." g c, f4 ~ f \bar "||"
 }
 
 % Lời điệp khúc

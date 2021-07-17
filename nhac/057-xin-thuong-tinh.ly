@@ -19,8 +19,8 @@ nhacDiepKhucSop = \relative c' {
   c2 \breathe |
   c8 f, g bf |
   a4 g |
-  f2 ( |
-  f4) r \bar "|."
+  f2 ~ |
+  f4 r \bar "|."
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -31,16 +31,16 @@ nhacDiepKhucBas = \relative c' {
   a2 |
   f8 d e g |
   f4 c |
-  f2 ( |
-  f4) r
+  f2 ~ |
+  f4 r
 }
 
 % Nhạc phiên khúc
 nhacPhienKhucMot = \relative c'' {
   c8 bf4 g8 |
   bf f d c |
-  a'2 ( |
-  a8) d, f d |
+  a'2 ~ |
+  a8 d, f d |
   c4. d8 |
   c4 f8 bf |
   a4 \breathe bf8 g |
@@ -52,7 +52,7 @@ nhacPhienKhucMot = \relative c'' {
   c2 |
   r8 g' g e |
   f d c e |
-  f2 \tweak extra-offset #'(0 . 3) ^~ 
+  f2 ~ 
   f4 r \bar "||"
 }
 
@@ -70,7 +70,7 @@ nhacPhienKhucHai = \relative c'' {
   a2 |
   bf8 g bf c |
   a4 g |
-  f2 \tweak extra-offset #'(0 . 3) ^~ |
+  f2 ~ |
   f4 r \bar "||"
 }
 
@@ -89,8 +89,8 @@ nhacPhienKhucBa = \relative c' {
   c4 bf8 c |
   g4. a8 |
   bf4 g8 g |
-  f2 ( |
-  f4) r \bar "||"
+  f2 ~ |
+  f4 r \bar "||"
 }
 
 % Lời điệp khúc

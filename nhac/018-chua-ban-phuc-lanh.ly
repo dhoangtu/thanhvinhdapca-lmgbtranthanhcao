@@ -29,7 +29,7 @@ nhacPhienKhucMot = \relative c' {
   d8 cs b b a4 \breathe
   fs8 a a a fs e cs'4 \breathe
   d8 cs d b \fermata
-  e e gs, a4 (a) \bar "||"
+  e e gs, a4 ~ a \bar "||"
 }
 
 nhacPhienKhucHai = \relative c'' {
@@ -37,15 +37,15 @@ nhacPhienKhucHai = \relative c'' {
   fs8 a fs a b4 \breathe
   a8 gs fs fs4 cs8 gs' fs e4 \breathe
   a8 a fs a b4 \breathe
-  d8 d b cs cs4 (cs) \bar "||"
+  d8 d b cs cs4 ~ cs \bar "||"
 }
 
 nhacPhienKhucBa = \relative c'' {
   a8 a fs fs4 \breathe
   e8 cs'^^ cs^^ a^^ a4^^
   fs8 a b gs4 a8 a cs, d e4 \breathe
-  fs8 b, e gs4 a8 fs e gs4 (gs8) \breathe
-  a b fs a4 cs8 b b a4 (a) \bar "||"
+  fs8 b, e gs4 a8 fs e gs4 ~ gs8 \breathe
+  a b fs a4 cs8 b b a4 ~ a \bar "||"
 }
 
 % Lời điệp khúc

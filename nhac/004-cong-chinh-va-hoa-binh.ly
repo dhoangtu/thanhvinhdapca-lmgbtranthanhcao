@@ -28,8 +28,8 @@ nhacDiepKhucSop = \relative c' {
 nhacDiepKhucBas = \relative c' {
   \partial 2 g4 b |
   c8. g16 g8 g g4 b |
-  c2 f8 ^(e) d4 |
-  d2 g8 ^(f) e4 |
+  c2 f8 (e) d4 |
+  d2 g8 (f) e4 |
   e4. e8 b4 b |
   b2 g4 b |
   c8. g16 g8 g g4 b |
@@ -167,7 +167,7 @@ notBePhu =
       \new NullVoice = nhacThamChieu \nhacDiepKhucSop
       \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #0.2
+            nonstaff-relatedstaff-spacing.padding = #0.5
           \override VerticalAxisGroup.
             nonstaff-unrelatedstaff-spacing.padding = #0.2
         }

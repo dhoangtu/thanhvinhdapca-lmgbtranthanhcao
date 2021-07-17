@@ -40,14 +40,14 @@ nhacPhienKhucMot = \relative c'' {
   a8 c c a a c a c4 \breathe
   c8 d d c e c g4 \breathe
   af8 af af f f4 f8 c f \acciaccatura c8 g'4
-  e8 e e d b' b d, \fermata g4 (g) \bar "||"
+  e8 e e d b' b d, \fermata g4 ~ g \bar "||"
 }
 
 nhacPhienKhucHai = \relative c'' {
   a8 c a c a c g4 \breathe
   c8 e, f g c, d e4
   d8 d fs \fermata a b a g4
-  g8 e e c' c d \acciaccatura c8 e4 (e) \bar "||"
+  g8 e e c' c d \acciaccatura c8 e4 ~ e \bar "||"
 }
 
 nhacPhienKhucBa = \relative c'' {
@@ -56,7 +56,7 @@ nhacPhienKhucBa = \relative c'' {
   b'8 a a d, fs g4 \breathe
   e8 g a e e4
   e8 e c' b16 b b b8 \breathe
-  e d16 d d d4 g, c (c) \bar "||"
+  e d16 d d d4 g, c ~ c \bar "||"
 }
 
 % Lời điệp khúc

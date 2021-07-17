@@ -18,8 +18,8 @@ nhacDiepKhuc = \relative c'' {
   d4 c8 c e d |
   g2 \breathe b8 d |
   d,4 d8 d g d |
-  c2. \tweak extra-offset #'(0 . 3) ^( |
-  c2) r4 \bar "|."
+  c2. ~ |
+  c2 r4 \bar "|."
 }
 
 % Nhạc phiên khúc
@@ -58,8 +58,8 @@ nhacPhienKhucBa = \relative c'' {
   c'4 d8 e a, c |
   g2 r8 e' |
   d8. c16 a8 a r a |
-  c d c8. a16 g8 g( |
-  g2) a8 c |
+  c d c8. a16 g8 g ~ |
+  g2 a8 c |
   a f d4. g8 |
   b4 d16 c e8 d c |
   a2 g8 (b) |

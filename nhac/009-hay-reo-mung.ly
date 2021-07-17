@@ -39,14 +39,14 @@ nhacPhienKhucMot = \relative c' {
   bf4 \tuplet 3/2 { bf8 bf f } |
   a2 g8 g e4 |
   d8 e d e |
-  c2 \tweak extra-offset #'(0 . 3) ^( |
-  c4) \tuplet 3/2 { d8 e c } |
+  c2 ~ |
+  c4 \tuplet 3/2 { d8 e c } |
   g'4 g8 bf |
   g a a g |
   bf4 \tuplet 3/2 { d8 d b! } |
   c4 bf8 g |
-  f2 ( |
-  f4) r \bar "||"
+  f2 ~ |
+  f4 r \bar "||"
 }
 
 nhacPhienKhucHai = \relative c' {
@@ -61,8 +61,8 @@ nhacPhienKhucHai = \relative c' {
   bf2 |
   g8 c a g |
   c,4 g' |
-  f2 ( |
-  f4) r \bar "||"
+  f2 ~ |
+  f4 r \bar "||"
 }
 
 nhacPhienKhucBa = \relative c' {
@@ -75,8 +75,8 @@ nhacPhienKhucBa = \relative c' {
   bf bf g bf |
   g _(c4) \breathe f,8 |
   a (g) g (e) |
-  f2 ( |
-  f4) r \bar "||"
+  f2 ~ |
+  f4 r \bar "||"
 }
 
 % Lời điệp khúc

@@ -20,8 +20,8 @@ nhacDiepKhucSop = \relative c'' {
   e8 g a4 |
   a8 g d'4 |
   e8 d c d |
-  c2 ^( |
-  c4) r
+  c2 ~ |
+  c4 r
   \bar "|."
 }
 
@@ -31,8 +31,8 @@ nhacDiepKhucBas = \relative c'' {
   c8 e f4 |
   f8 e g4 |
   c8 b g f |
-  e2 _( |
-  e4) r
+  e2 ~ |
+  e4 r
 }
 
 % Nhạc phiên khúc
@@ -46,16 +46,16 @@ nhacPhienKhuc = \relative c'' {
   d2 |
   r8 e c e |
   f4 d8 f |
-  g2 ( |
-  g8) r g g |
+  g2 ~ |
+  g8 r g g |
   b2 |
   c8 c c c |
   d2 |
   r4 d8 b |
   g4. b8 |
   d4 g, |
-  c2 ( |
-  c4) r \bar "|." \break
+  c2 ~ |
+  c4 r \bar "|." \break
   
   % Phiên khúc 2
   \partial 4 g8 a |
@@ -73,9 +73,8 @@ nhacPhienKhuc = \relative c'' {
   g,4. c8 |
   e4
   \afterGrace d (c8) |
-  c2
-  \tweak extra-offset #'(0 . 2.5) ^( |
-  c4) r4 \bar "|." \break
+  c2 ~ |
+  c4 r4 \bar "|." \break
   
   % Phiên khúc 3
   \partial 4 e8 g |
@@ -85,8 +84,8 @@ nhacPhienKhuc = \relative c'' {
   r4 g8 e |
   g a g b |
   d4 d8 b |
-  c2 ( |
-  c4) r \bar "|."
+  c2 ~ |
+  c4 r \bar "|."
 }
 
 % Lời điệp khúc
@@ -193,9 +192,9 @@ notBePhu =
     >>
     \new Lyrics \with {
       \override VerticalAxisGroup.
-        nonstaff-relatedstaff-spacing.padding = #1.5
+        nonstaff-relatedstaff-spacing.padding = #1.6
       \override VerticalAxisGroup.
-        nonstaff-unrelatedstaff-spacing.padding = #1.5
+        nonstaff-unrelatedstaff-spacing.padding = #1.6
     }
     \lyricsto beSop \loiPhienKhuc
   >>

@@ -20,8 +20,8 @@ nhacDiepKhuc = \relative c' {
   g4 g8 e |
   c4 c16 g' a8 |
   bf4 c8 c |
-  a2 ( |
-  a4) r \bar "|."
+  a2 ~ |
+  a4 r \bar "|."
 }
 
 % Nhạc phiên khúc
@@ -31,15 +31,15 @@ nhacPhienKhucSop = \relative c' {
   f8 bf a g |
   g4. g16 g |
   a8 g g e |
-  \slashedGrace { \stemDown d8 _( } e2) _( |
-  e8)
+  \slashedGrace { \stemDown d8 _( } e2) ~ |
+  e8
   \stemUp e4 f8 |
   g4. g16 g |
   a8 a f e |
   d4. d16 c |
   c8 e g e |
-  f2 ( |
-  f4) r \bar "||"
+  f2 ~ |
+  f4 r \bar "||"
 }
 
 nhacPhienKhucBas = \relative c'' {
@@ -48,8 +48,8 @@ nhacPhienKhucBas = \relative c'' {
   bf8 e d d |
   c4. c16 c |
   d8 c bf g |
-  \slashedGrace { g8 ^( } a2) ^( |
-  a8)
+  \slashedGrace { g8 ^( } a2) ~ |
+  a8
   \skip 4.
   \skip 2
   \skip 2

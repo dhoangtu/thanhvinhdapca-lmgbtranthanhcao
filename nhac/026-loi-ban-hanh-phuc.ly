@@ -20,8 +20,8 @@ nhacDiepKhucSop = \relative c' {
   b4 \tuplet 3/2 { b8 b b } |
   e,4 fs8 g |
   a4. fs8 |
-  g2 ^( |
-  g4) r \bar "|."
+  g2 ~ |
+  g4 r \bar "|."
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -33,8 +33,8 @@ nhacDiepKhucBas = \relative c' {
   g4 \tuplet 3/2 { g8 g g } |
   c,4 d8 c |
   d4. a8 |
-  b2 ( |
-  b4) r
+  b2 ~ |
+  b4 r
 }
 
 % Nhạc phiên khúc
@@ -50,8 +50,8 @@ nhacPhienKhucMot = \relative c' {
   \autoBeamOff
   a8 ^^ d ^^ d ^^ g, ^^ |
   \autoBeamOn
-  g2 ( |
-  g4) r \bar "||"
+  g2 ~ |
+  g4 r \bar "||"
 }
 
 nhacPhienKhucHai = \relative c' {
@@ -64,8 +64,8 @@ nhacPhienKhucHai = \relative c' {
   e4 \tuplet 3/2 { c8 a c } |
   a4 g8 e' |
   d4 \tuplet 3/2 { d8 d fs, } |
-  g2 ( |
-  g4) r \bar "||"
+  g2 ~ |
+  g4 r \bar "||"
 }
 
 nhacPhienKhucBa = \relative c'' {
@@ -77,8 +77,8 @@ nhacPhienKhucBa = \relative c'' {
   a4 \tuplet 3/2 { a8 fs a } |
   d,4 fs8 e |
   d4 \tuplet 3/2 { a'8 fs g } |
-  g2 ( |
-  g4) r \bar "||"
+  g2 ~ |
+  g4 r \bar "||"
 }
 
 % Lời điệp khúc

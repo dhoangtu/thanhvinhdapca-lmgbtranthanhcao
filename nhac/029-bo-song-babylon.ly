@@ -21,8 +21,8 @@ nhacDiepKhucSop = \relative c' {
   g4. g16 g |
   e8 g cs,4 |
   a8 e' fs e |
-  d2 ^( |
-  d4) r \bar "|."
+  d2 ~ |
+  d4 r \bar "|."
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -35,8 +35,8 @@ nhacDiepKhucBas = \relative c' {
   d4. d16 d |
   b8 d a4 |
   fs8 b cs b |
-  a2 _( |
-  a4) r
+  a2 ~ |
+  a4 r
 }
 
 % Nhạc phiên khúc

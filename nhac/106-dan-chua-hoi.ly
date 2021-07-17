@@ -32,7 +32,7 @@ nhacPhienKhucMot = \relative c'' {
   c8 c d4 c8 d d g, \acciaccatura g8 bf4 \breathe
   c8 bf a4 bf8 f d a' f g4 \breathe
   c8 d d c c d \acciaccatura g,8 bf4 \breathe
-  a8 c f, d d4 a'8 \fermata g8 g4 (g) \bar "||"
+  a8 c f, d d4 a'8 \fermata g8 g4 ~ g \bar "||"
 }
 
 nhacPhienKhucHai = \relative c'' {
@@ -42,7 +42,7 @@ nhacPhienKhucHai = \relative c'' {
   c8 bf a4 g8 a bf a g4 \breathe
   d'8 d bf4
   c8 d d c c \acciaccatura g8 bf4 \breathe
-  c8 c bf a4 f8 a a g4 (g) \bar "||"
+  c8 c bf a4 f8 a a g4 ~ g \bar "||"
 }
 
 nhacPhienKhucBa = \relative c'' {
@@ -50,7 +50,7 @@ nhacPhienKhucBa = \relative c'' {
   c8 d c d c d \acciaccatura g,8 bf4 \breathe
   a8 c c f, a a f g4 \breathe
   g8 g g g d' c d d4 \breathe
-  a8 a c4 bf8 \tempo "Rall." c d d g,4 (g) \bar "||"
+  a8 a c4 bf8 \tempo "Rall." c d d g,4 ~ g \bar "||"
 }
 
 % Lời điệp khúc
@@ -92,7 +92,7 @@ loiPhienKhucBa = \lyricmode {
 % Dàn trang
 \paper {
   #(set-paper-size "a4")
-  top-margin = 15\mm
+  top-margin = 20\mm
   bottom-margin = 15\mm
   left-margin = 20\mm
   right-margin = 20\mm
@@ -104,8 +104,12 @@ loiPhienKhucBa = \lyricmode {
       "Liberation Serif"
       (/ 20 20)))
   page-count = #1
-  system-system-spacing = #'((basic-distance . 12.5))
-  score-system-spacing = #'((basic-distance . 12.5))
+  system-system-spacing = #'((basic-distance . 11)
+                             (minimum-distance . 11)
+                             (padding . 1))
+  score-system-spacing = #'((basic-distance . 11)
+                             (minimum-distance . 11)
+                             (padding . 1))
 }
 
 \score {
@@ -119,12 +123,18 @@ loiPhienKhucBa = \lyricmode {
         \key g \major \time 2/2 \stemNeutral \nhacDiepKhuc
       }
     >>
-    \new Lyrics \lyricsto beSop \loiDiepKhuc
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiDiepKhuc
   >>
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #4.0
+    \override Lyrics.LyricSpace.minimum-distance = #2
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }
@@ -140,7 +150,13 @@ loiPhienKhucBa = \lyricmode {
         \key bf \major \time 2/2 \nhacPhienKhucMot
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucMot
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.2
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucMot
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
@@ -163,7 +179,13 @@ loiPhienKhucBa = \lyricmode {
         \key bf \major \time 2/2 \nhacPhienKhucHai
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucHai
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucHai
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
@@ -186,7 +208,13 @@ loiPhienKhucBa = \lyricmode {
         \key bf \major \time 2/2 \nhacPhienKhucBa
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucBa
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiPhienKhucBa
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t

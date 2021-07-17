@@ -43,8 +43,8 @@ nhacPhienKhuc = \relative c'' {
   g, b d e |
   d4. c8 |
   c4 e8 e |
-  e4 d8 fs ( |
-  fs) a a e |
+  e4 d8 fs ~ |
+  fs a a e |
   c' d4 fs,8 |
   g2 \bar "||"
 }
@@ -102,30 +102,46 @@ loiPhienKhucBa = \lyricmode {
       (/ 20 20)))
   page-count = #1
   indent = #0
-  system-system-spacing.basic-distance = #17
+  system-system-spacing = #'((basic-distance . 14)
+                             (minimum-distance . 14)
+                             (padding . 1))
+  score-system-spacing = #'((basic-distance . 13)
+                             (minimum-distance . 13)
+                             (padding . 1))
 }
 
 \score {
   \new ChoirStaff <<
     \new Staff \with {
         \consists "Merge_rests_engraver"
-        %\magnifyStaff #(magstep +1)
+        \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 13))
       }
       <<
       \new Voice = beSop {
         \key g \major \time 2/4 \nhacDiepKhucSop
       }
-      \new Lyrics \lyricsto beSop \loiDiepKhucSop
+      \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #2.5
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beSop \loiDiepKhucSop
     >>
     \new Staff \with {
         \consists "Merge_rests_engraver"
-        %\magnifyStaff #(magstep +1)
-      }
+    }
       <<
       \new Voice = beBas {
         \key g \major \time 2/4 \nhacDiepKhucBas
       }
-      \new Lyrics \lyricsto beBas \loiDiepKhucBas
+      \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #2
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1
+        }
+        \lyricsto beBas \loiDiepKhucBas
     >>
   >>
   \layout {
@@ -133,7 +149,7 @@ loiPhienKhucBa = \lyricmode {
     \override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #1.6
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
-    \override Score.SpacingSpanner.uniform-stretching = ##t
+    \override Score.SpacingSpanner.uniform-stretching = ##t    
   }
 }
 
@@ -147,9 +163,21 @@ loiPhienKhucBa = \lyricmode {
         \key g \major \time 2/4 \nhacPhienKhuc
       }
     >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucMot
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.2
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1.5
+        }
+        \lyricsto beSop \loiPhienKhucMot
     \new Lyrics \lyricsto beSop \loiPhienKhucHai
-    \new Lyrics \lyricsto beSop \loiPhienKhucBa
+    \new Lyrics \with {
+          \override VerticalAxisGroup.
+            nonstaff-relatedstaff-spacing.padding = #1.5
+          \override VerticalAxisGroup.
+            nonstaff-unrelatedstaff-spacing.padding = #1.5
+        }
+        \lyricsto beSop \loiPhienKhucBa
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t

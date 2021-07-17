@@ -14,7 +14,7 @@
 nhacDiepKhucSop = \relative c' {
   c8 g' e (g) |
   a4. e8 |
-  d _(e) a g |
+  d ^(e) a g |
   g2 |
   g8 c
   b (c) |
@@ -38,7 +38,7 @@ nhacDiepKhucBas = \relative c' {
 nhacPhienKhucMot = \relative c' {
   d8 bf ^([c]) d4 \breathe
   g8 a bf a g d ef f ef d d c4
-  \tweak extra-offset #'(0 . 2.5) ^(c8)
+  \tweak extra-offset #'(0 . 2.5) ^~ c8
   ef c d ef bf bf d c4
   c8 g' a g fs g a b!4 bf8 d c c4 c8 e! d bf4
   g8 g g ([a]) d4 \breathe
@@ -117,7 +117,9 @@ loiPhienKhucBa = \lyricmode {
   system-system-spacing = #'((basic-distance . 11)
                              (minimum-distance . 11)
                              (padding . 1))
-  score-system-spacing = #'((basic-distance . 11))
+  score-system-spacing = #'((basic-distance . 11)
+                             (minimum-distance . 11)
+                             (padding . 1))
 }
 
 % Thiết lập tông và nhịp

@@ -5,11 +5,11 @@
 \tweak extra-offset #'(0 . 3)
 
 
-  system-system-spacing = #'((basic-distance . 12)
-                             (minimum-distance . 12.5)
+  system-system-spacing = #'((basic-distance . 11.5)
+                             (minimum-distance . 11.5)
                              (padding . 1))
-  score-system-spacing = #'((basic-distance . 12)
-                             (minimum-distance . 12.5)
+  score-system-spacing = #'((basic-distance . 11.5)
+                             (minimum-distance . 11.5)
                              (padding . 1))
   
 \new Lyrics \with {

@@ -30,7 +30,7 @@ nhacPhienKhucMot = \relative c' {
   a2 |
   g8 g e4 |
   d8 e d e |
-  c2 \tweak extra-offset #'(0 . 3) ^~ |
+  c2 ~ |
   c4 \tuplet 3/2 { d8 e c } |
   g'4 g8 bf |
   g a a g |
@@ -52,8 +52,8 @@ nhacPhienKhucHai = \relative c' {
   bf2 |
   g8 c a g |
   c,4 g' |
-  f2 ( |
-  f4) r \bar "||"
+  f2 ~ |
+  f4 r \bar "||"
 }
 
 nhacPhienKhucBa = \relative c'' {

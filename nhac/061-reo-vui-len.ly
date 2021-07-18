@@ -19,8 +19,8 @@ nhacDiepKhucSop = \relative c'' {
   bf8 bf bf g |
   d'2 \breathe |
   bf8 e, g d' |
-  c2 ^( |
-  c4) r \bar "|."
+  c2 ~ |
+  c4 r \bar "|."
 }
 
 nhacDiepKhucBas = \relative c' {
@@ -31,8 +31,8 @@ nhacDiepKhucBas = \relative c' {
   g8 g g e |
   bf'2 |
   f8 c d g |
-  e2 _( |
-  e4) r
+  e2 ~ |
+  e4 r
 }
 
 % Nhạc phiên khúc

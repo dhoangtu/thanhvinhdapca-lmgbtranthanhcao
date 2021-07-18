@@ -46,8 +46,8 @@ nhacDiepKhucBas = \relative c' {
 nhacPhienKhucMot = \relative c'' {
   c4. a8 |
   d c a f |
-  d2 ( |
-  d8) f d f |
+  d2 ~ |
+  d8 f d f |
   c4 f8 g |
   bf4. a8 |
   g4 \breathe f |

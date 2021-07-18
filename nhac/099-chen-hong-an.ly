@@ -68,7 +68,7 @@ nhacPhienKhucBa = \relative c'' {
   b4 b8 d |
   g,4 g8 d |
   e4 d |
-  c2 ~ |
+  c2 \tweak extra-offset #'(0 . 3) ^~ |
   c4 r \bar "||"
 }
 
@@ -195,7 +195,7 @@ TongNhip = { \key c \major \time 2/4 }
     >>
     \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #1.5
+            nonstaff-relatedstaff-spacing.padding = #2
           \override VerticalAxisGroup.
             nonstaff-unrelatedstaff-spacing.padding = #1
         }

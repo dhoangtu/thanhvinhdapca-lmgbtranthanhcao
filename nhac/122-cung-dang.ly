@@ -33,7 +33,7 @@ nhacDiepKhucSop = \relative c'' {
   d4 d8 e |
   f4 e8 d |
   cs cs b! cs |
-  d2 ~ |
+  \stemDown d2 ~ |
   d4 \bar "|."
 }
 
@@ -46,7 +46,7 @@ nhacDiepKhucAlto = \relative c'' {
   f4 f8 bf |
   a4 g8 f |
   e e g g |
-  fs2 ~ |
+  \stemDown fs2 ~ |
   fs4
 }
 

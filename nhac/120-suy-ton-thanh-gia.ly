@@ -24,8 +24,8 @@ nhacPhienKhuc = \relative c' {
   f8. g16 g8 a |
   d,4 f8 g |
   c,4 f8 d |
-  f2( |
-  f4) a8( g16 f) |
+  f2 ~ |
+  f4 a8( g16 f) |
   a8 bf c c |
   d4 a8( g) |
   f4 d8 d |
@@ -41,8 +41,8 @@ nhacPhienKhuc = \relative c' {
   g8. a16 a8 b |
   e,4 g8 a |
   d,4 g8 e |
-  g2( |
-  g4) b8( a16 g) |
+  g2 ~ |
+  g4 b8( a16 g) |
   b8 c d d |
   e4 b8( a) |
   g4 e8 e |
@@ -58,8 +58,8 @@ nhacPhienKhuc = \relative c' {
   a8. b16 b8 cs |
   fs,4 a8 b |
   e,4 a8 fs |
-  a2( |
-  a4) cs8( b16 a) |
+  a2 ~ |
+  a4 cs8( b16 a) |
   cs8 d e e |
   fs4 cs8( b) |
   a4 fs8 fs |

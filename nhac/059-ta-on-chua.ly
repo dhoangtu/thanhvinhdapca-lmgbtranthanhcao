@@ -122,7 +122,11 @@ loiPhienKhucBa = \lyricmode {
 }
 
 % Thiết lập tông và nhịp
-TongNhip = { \key c \major \time 4/4 }
+TongNhip = {
+  \key c \major \time 4/4
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = #'(1 1 1 1)}
 
 \score {
   \new ChoirStaff <<
@@ -132,7 +136,7 @@ TongNhip = { \key c \major \time 4/4 }
       }
       <<
       \new Voice = beSop {
-        \TongNhip \stemNeutral \nhacDiepKhuc
+        \TongNhip \nhacDiepKhuc
       }
     >>
     \new Lyrics \with {

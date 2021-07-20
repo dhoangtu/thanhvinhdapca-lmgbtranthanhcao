@@ -131,7 +131,11 @@ loiPhienKhucBa = \lyricmode {
       }
       <<
       \new Voice = beSop {
-        \key c \major \time 3/4 \stemNeutral \nhacDiepKhuc
+        \key c \major \time 3/4 \stemNeutral
+          \set Timing.beamExceptions = #'()
+          \set Timing.baseMoment = #(ly:make-moment 1/4)
+          \set Timing.beatStructure = #'(1 1 1)
+          \nhacDiepKhuc
       }
     >>
     \new Lyrics \with {
@@ -158,7 +162,11 @@ loiPhienKhucBa = \lyricmode {
       }
       <<
       \new Voice = beSop {
-        \key ef \major \time 3/4 \nhacPhienKhucMot
+        \key ef \major \time 3/4
+          \set Timing.beamExceptions = #'()
+          \set Timing.baseMoment = #(ly:make-moment 1/4)
+          \set Timing.beatStructure = #'(1 1 1)
+          \nhacPhienKhucMot
       }
     >>
     \new Lyrics \with {
@@ -185,7 +193,11 @@ loiPhienKhucBa = \lyricmode {
       }
       <<
       \new Voice = beSop {
-        \key ef \major \time 3/4 \nhacPhienKhucHai
+        \key ef \major \time 3/4
+          \set Timing.beamExceptions = #'()
+          \set Timing.baseMoment = #(ly:make-moment 1/4)
+          \set Timing.beatStructure = #'(1 1 1)
+          \nhacPhienKhucHai
       }
     >>
     \new Lyrics \with {
@@ -212,7 +224,11 @@ loiPhienKhucBa = \lyricmode {
       }
       <<
       \new Voice = beSop {
-        \key ef \major \time 3/4 \nhacPhienKhucBa
+        \key ef \major \time 3/4
+          \set Timing.beamExceptions = #'()
+          \set Timing.baseMoment = #(ly:make-moment 1/4)
+          \set Timing.beatStructure = #'(1 1 1)
+          \nhacPhienKhucBa
       }
     >>
     \new Lyrics \with {

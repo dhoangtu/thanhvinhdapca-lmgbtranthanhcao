@@ -127,7 +127,11 @@ loiPhienKhucBa = \lyricmode {
 }
 
 % Thiết lập tông và nhịp
-TongNhip = { \key g \major \time 2/2 }
+TongNhip = {
+  \key g \major \time 2/2
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = #'(1 1 1 1)}
 
 % Đổi kích thước nốt cho bè phụ
 notBePhu =
@@ -181,7 +185,7 @@ notBePhu =
       }
       <<
       \new Voice = beSop {
-        \key g \major \time 2/2 \nhacPhienKhucMot
+        \TongNhip \nhacPhienKhucMot
       }
     >>
     \new Lyrics \with {
@@ -208,7 +212,7 @@ notBePhu =
       }
       <<
       \new Voice = beSop {
-        \key g \major \time 2/2 \nhacPhienKhucHai
+        \TongNhip \nhacPhienKhucHai
       }
     >>
     \new Lyrics \with {
@@ -235,7 +239,7 @@ notBePhu =
       }
       <<
       \new Voice = beSop {
-        \key g \major \time 2/2 \nhacPhienKhucBa
+        \TongNhip \nhacPhienKhucBa
       }
     >>
     \new Lyrics \with {

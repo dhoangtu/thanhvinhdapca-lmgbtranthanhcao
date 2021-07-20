@@ -135,7 +135,11 @@ loiPhienKhucBa = \lyricmode {
 }
 
 % Thiết lập tông và nhịp
-TongNhip = { \key c \major \time 2/4 }
+TongNhip = {
+  \key c \major \time 2/4
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = #'(1 1)
+}
 
 
 % Đổi kích thước nốt cho bè phụ
@@ -177,35 +181,6 @@ notBePhu =
   }
 }
 
-
-%{
-\score {
-  \new ChoirStaff <<
-    \new Staff = diepKhuc \with {
-        \consists "Merge_rests_engraver"
-        \magnifyStaff #(magstep +1)
-      }
-      <<
-      \new Voice = beSop {
-        \voiceOne \key c \major \time 2/4 \nhacDiepKhucSop
-      }
-      \new Voice = beBas {
-        \override NoteHead.font-size = #-2
-        \voiceTwo \key c \major \time 2/4 \nhacDiepKhucBas
-      }
-    >>
-    \new Lyrics \lyricsto beSop \loiDiepKhuc
-  >>
-  \layout {
-    \override Lyrics.LyricText.font-series = #'bold
-    \override Lyrics.LyricText.font-size = #+3
-    \override Lyrics.LyricSpace.minimum-distance = #4.0
-    \override Score.BarNumber.break-visibility = ##(#f #f #f)
-    \override Score.SpacingSpanner.uniform-stretching = ##t
-  }
-}
-%}
-
 \score {
   \new ChoirStaff <<
     \new Staff = phienKhuc \with {
@@ -213,7 +188,7 @@ notBePhu =
       }
       <<
       \new Voice = beSop {
-        \key c \major \time 4/4 \nhacPhienKhucMot
+        \TongNhip \nhacPhienKhucMot
       }
     >>
     \new Lyrics \with {
@@ -240,7 +215,7 @@ notBePhu =
       }
       <<
       \new Voice = beSop {
-        \key c \major \time 4/4 \nhacPhienKhucHai
+        \TongNhip \nhacPhienKhucHai
       }
     >>
     \new Lyrics \with {
@@ -267,7 +242,7 @@ notBePhu =
       }
       <<
       \new Voice = beSop {
-        \key c \major \time 4/4 \nhacPhienKhucBa
+        \TongNhip \nhacPhienKhucBa
       }
     >>
     \new Lyrics \with {

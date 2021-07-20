@@ -1,3 +1,9 @@
+TongNhip = {
+  \key c \major \time 2/2 
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = #'(1 1 1 1)
+}
+
 \once \override Slur #'extra-offset = #'(0 . 2)
 \once \override Slur #'control-points = #'((x . y) (x . y) (x . y) (x . y))
 \once \override Slur #'extra-offset = #'(x . y)

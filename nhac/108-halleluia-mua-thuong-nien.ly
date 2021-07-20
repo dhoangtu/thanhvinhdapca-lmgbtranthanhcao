@@ -66,6 +66,13 @@ loiPhienKhucMot = \lyricmode {
                              (padding . 1))
 }
 
+TongNhip = {
+  \key d \major \time 2/2
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = #'(1 1 1 1)
+}
+
 \score {
   \new ChoirStaff <<
     \new Staff = phienKhuc \with {
@@ -73,7 +80,7 @@ loiPhienKhucMot = \lyricmode {
       }
       <<
       \new Voice = beSop {
-        \key d \major \time 2/2 \nhacPhienKhucMot
+        \TongNhip \nhacPhienKhucMot
       }
     >>
     \new Lyrics \with {

@@ -130,6 +130,13 @@ loiPhienKhucBa = \lyricmode {
                              (padding . 1))
 }
 
+TongNhip = {
+  \key c \major \time 3/4
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = #'(1 1 1)
+}
+
 \score {
   \new ChoirStaff <<
     \new Staff = diepKhuc \with {
@@ -165,7 +172,7 @@ loiPhienKhucBa = \lyricmode {
       }
       <<
       \new Voice = beSop {
-        \key c \major \time 3/4 \nhacPhienKhucMot
+        \TongNhip \nhacPhienKhucMot
       }
     >>
     \new Lyrics \with {
@@ -192,7 +199,7 @@ loiPhienKhucBa = \lyricmode {
       }
       <<
       \new Voice = beSop {
-        \key c \major \time 3/4 \nhacPhienKhucHai
+        \TongNhip \nhacPhienKhucHai
       }
     >>
     \new Lyrics \with {
@@ -219,7 +226,7 @@ loiPhienKhucBa = \lyricmode {
       }
       <<
       \new Voice = beSop {
-        \key c \major \time 3/4 \nhacPhienKhucBa
+        \TongNhip \nhacPhienKhucBa
       }
     >>
     \new Lyrics \with {

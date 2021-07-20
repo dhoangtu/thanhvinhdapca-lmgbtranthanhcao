@@ -112,6 +112,13 @@ loiDiepKhucBas = \lyricmode {
   print-page-number = #f
 }
 
+TongNhip = {
+  \key g \major \time 2/2 
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = #'(1 1 1 1)
+}
+
 \score {
   \new ChoirStaff <<
     \new Staff = phienKhuc \with {
@@ -119,7 +126,7 @@ loiDiepKhucBas = \lyricmode {
       }
       <<
       \new Voice = beSop {
-        \key g \major \time 2/2 \nhacPhienKhucMot
+        \TongNhip \nhacPhienKhucMot
       }
     >>
     \new Lyrics \with {
@@ -145,7 +152,7 @@ loiDiepKhucBas = \lyricmode {
       }
       <<
       \new Voice = beSop {
-        \key g \major \time 2/2 \stemNeutral \nhacDiepKhucSop
+        \TongNhip \nhacDiepKhucSop
       }
       \new Lyrics \lyricsto beSop \loiDiepKhucSop
     >>
@@ -154,7 +161,7 @@ loiDiepKhucBas = \lyricmode {
       }
       <<
       \new Voice = beBas {
-        \key g \major \time 2/2 \stemNeutral \nhacDiepKhucBas
+        \TongNhip \nhacDiepKhucBas
       }
       \new Lyrics \lyricsto beBas \loiDiepKhucBas
     >>
@@ -177,7 +184,7 @@ loiDiepKhucBas = \lyricmode {
       }
       <<
       \new Voice = beSop {
-        \key g \major \time 2/2 \nhacPhienKhucHai
+        \TongNhip \nhacPhienKhucHai
       }
     >>
     \new Lyrics \with {

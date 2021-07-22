@@ -3,7 +3,7 @@
 \include "english.ly"
 
 \header {
-  title = \markup { \fontsize #3 "Tối Sẽ Chỗi Dậy" }
+  title = \markup { \fontsize #3 "Tôi Sẽ Chỗi Dậy" }
   poet = "Tv. 50"
   composer = "Lm. GB Trần Thanh Cao"
   %arranger = " "

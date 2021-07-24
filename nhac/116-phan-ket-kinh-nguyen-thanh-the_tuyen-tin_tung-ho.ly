@@ -8,11 +8,10 @@
 
 % Nhạc phiên khúc
 nhacKinhNguyenThanhThe = \relative c'' {
-  \afterGrace c4 _({c8 bf)} f g4 c8 ([d]) bf4 g8 c bf4 \breathe
-  g8 g bf f f g g f g f16 (g) bf4 \breathe
+  \afterGrace c4 _({c8 [bf])} f g4 c8 ([d]) bf4 g8 c bf4 \breathe
+  g8 g bf f f g g f g f16 ([g]) bf4 \breathe
   g8 c a c \breathe
-  g bf bf bf g bf f4 (g) \bar "||"
-  g8 ([f g]) g4 \bar "|." \break
+  g bf bf bf g bf f4 (g) \bar "||" \break
   
   <g d>4 <g d>
   <bf g> <bf g>
@@ -29,9 +28,8 @@ loiKinhNguyenThanhThe = \lyricmode {
 
   \override LyricText.font-series = #'normal
   \set stanza = \markup { "ĐÁP:" }
-  A -- men.
 
-  \set stanza = \markup { "ĐÁP (BÈ):" }
+  \set stanza = \markup { "ĐÁP:" }
   A -- men, A -- men, A -- men.
 }
 
@@ -143,7 +141,7 @@ loiCauDapTungHo = \lyricmode {
     \layout {
       \override Staff.TimeSignature.transparent = ##t
       \override Lyrics.LyricText.font-size = #+2
-      \override Lyrics.LyricSpace.minimum-distance = #2.0
+      \override Lyrics.LyricSpace.minimum-distance = #3
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \override Score.SpacingSpanner.uniform-stretching = ##t
       \set Score.barAlways = ##t

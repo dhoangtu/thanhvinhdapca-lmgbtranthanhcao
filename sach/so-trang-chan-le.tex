@@ -1,5 +1,5 @@
-\documentclass{article}
-\usepackage[a4paper,left=2cm,right=2cm,top=2.4cm,bottom=4cm]{geometry}
+\documentclass[twoside]{article}
+\usepackage[a4paper,inner=4cm,outer=2cm,top=2.5cm]{geometry}
 \usepackage{pdfpages}
 \usepackage{fancyhdr}
 \usepackage{ifthen,changepage}
@@ -19,11 +19,11 @@
 }
 
 \begin{document}
-  \getpdfpages{songs.pdf}
+  \getpdfpages{bai-hat.pdf}
   \foreach \x in {1,...,\value{pdfpages}} {
   	\checkoddpage
 	\ifthenelse{\boolean{oddpage}}
-		{\lhead[]{} \rhead{\rmfamily\bfseries\fontsize{14pt}{14pt}\selectfont\thepage} \includepdf[pagecommand={\thispagestyle{fancy}},pages=\thepage]{songs.pdf}}
-		{\lhead{\rmfamily\bfseries\fontsize{14pt}{14pt}\selectfont\thepage} \rhead[]{} \includepdf[pagecommand={\thispagestyle{fancy}},pages=\thepage]{songs.pdf}}
+		{\lhead[]{} \rhead{\rmfamily\bfseries\fontsize{14pt}{14pt}\selectfont\thepage} \includepdf[pagecommand={\thispagestyle{fancy}},pages=\thepage]{bai-hat.pdf}}
+		{\lhead{\rmfamily\bfseries\fontsize{14pt}{14pt}\selectfont\thepage} \rhead[]{} \includepdf[pagecommand={\thispagestyle{fancy}},pages=\thepage]{bai-hat.pdf}}
   }
 \end{document}

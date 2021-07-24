@@ -27,6 +27,19 @@ TongNhip = {
         }
         \lyricsto 
 
+
+<<
+  \new Staff <<
+    \new Voice = "voc" \relative c' { \stemDown a bes c8 b c4 }
+  >>
+  \new Lyrics \with {
+    \override LyricText.extra-offset = #'(0 . 8.6)
+    \override LyricExtender.extra-offset = #'(0 . 8.6)
+    \override LyricHyphen.extra-offset = #'(0 . 8.6)
+  } \lyricsto "voc" { La la -- la __ _ la }
+>>
+
+
 graceOn =
 \applyContext
 #(lambda (c)

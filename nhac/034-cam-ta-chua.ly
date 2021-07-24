@@ -6,7 +6,7 @@
   title = \markup { \fontsize #3 "Cảm Tạ Chúa" }
   poet = "Tv. 117"
   composer = "Lm. GB Trần Thanh Cao"
-  arranger = " "
+  %arranger = " "
   tagline = ##f
 }
 
@@ -58,7 +58,7 @@ nhacPhienKhucMot = \relative c'' {
   g4 a8 g |
   g4 b |
   d8 g,4 e8 |
-  c'2 \bar "||"
+  c'2 \bar "|."
 }
 
 nhacPhienKhucHai = \relative c'' {
@@ -77,7 +77,7 @@ nhacPhienKhucHai = \relative c'' {
   d8 f f f |
   e2 |
   c4 d |
-  c2 \bar "||"
+  c2 \bar "|."
 }
 
 nhacPhienKhucBa = \relative c'' {
@@ -95,19 +95,18 @@ nhacPhienKhucBa = \relative c'' {
   d2 |
   d4 d |
   c2 ~ |
-  c4 r \bar "||"
-}
-
-nhacPhienKhucBon = \relative c' {
+  c4 r \bar "|."
+  
+  %4
   d8 e c4 |
   a' g8 e |
   c'4 b8 a |
   g2 |
   f4 f |
-  d8 d g4 ( |
-  g) b,8 b |
+  d8 d g4 ~ |
+  g b,8 b |
   d4. c8 |
-  c2 \bar "||"
+  c2 \bar "|."
 }
 
 % Lời điệp khúc
@@ -149,9 +148,7 @@ loiPhienKhucBa = \lyricmode {
   Nguyện xin Chúa chúc lành,
   Nguyện xin Chúa chúc lành cho những ai tiến vào đây,
   nhân danh Ngài.
-}
-
-loiPhienKhucBon = \lyricmode {
+  
   \set stanza = #"4."
   Từ thánh điện chúng tôi cầu phúc cho anh em.
   Đức Chúa là Thượng Đế,
@@ -227,7 +224,7 @@ TongNhip = { \key c \major \time 2/4 }
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #3
+    \override Lyrics.LyricSpace.minimum-distance = #1.2
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   } 
@@ -269,30 +266,8 @@ TongNhip = { \key c \major \time 2/4 }
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #2
+    \override Lyrics.LyricSpace.minimum-distance = #1.7
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   } 
 }
-%{
-\score {
-  \new ChoirStaff <<
-    \new Staff = phienKhuc \with {
-        %\magnifyStaff #(magstep +1)
-      }
-      <<
-      \new Voice = beSop {
-        \key c \major \time 2/4 \nhacPhienKhucBon
-      }
-    >>
-    \new Lyrics \lyricsto beSop \loiPhienKhucBon
-  >>
-  \layout {
-    \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #0.5
-    \override Score.BarNumber.break-visibility = ##(#f #f #f)
-    \override Score.SpacingSpanner.uniform-stretching = ##t
-  } 
-}
-%}

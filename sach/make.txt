@@ -1,3 +1,7 @@
+		{\lhead[]{} \rhead{\rmfamily\bfseries\fontsize{14pt}{14pt}\selectfont\thepage} \includepdf[pagecommand={\thispagestyle{fancy}},pages=\thepage,noautoscale=true,offset=0.3cm -0.3cm]{bai-hat.pdf}}
+		{\lhead{\rmfamily\bfseries\fontsize{14pt}{14pt}\selectfont\thepage} \rhead[]{} \includepdf[pagecommand={\thispagestyle{fancy}},pages=\thepage,noautoscale=true,offset=0.3cm -0.3cm]{bai-hat.pdf}}
+
+
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
 
 TongNhip = {

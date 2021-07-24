@@ -13,6 +13,7 @@ CONTENT=./content-table.csv
 rm ${CONTENT}
 
 # xuất PDF từ file nhạc lilypond
+#set +x
 IFS=' '
 pagecounter=1
 filelist=()
@@ -29,7 +30,7 @@ do
     #echo "title: ${title}"
 
     # xuất PDF
-    #${lilypondcmd} --output="${GEN}/${shortname}" -dno-point-and-click --pdf "$fullname"
+    ${lilypondcmd} --output="${GEN}/${shortname}" -dno-point-and-click --pdf "$fullname"
     
     # đếm số trang
     echo "${title};${pagecounter}" >> ${CONTENT}
@@ -45,17 +46,20 @@ done
 
 # gộp những file PDF thành 1 file
 pdftk "${filelist[@]}" cat output bai-hat.pdf
-
-# đánh số trang chẵn lẻ
+#set -x
+# đánh số trang chẵn lẻ, chỉnh lệch trang chẵn lẻ
 pdflatex so-trang-chan-le.tex
 
-# thêm lời mở đầu
-pdftk bia-truoc-trong.pdf blank-a4.pdf loi-phi-lo.pdf blank-a4.pdf so-trang-chan-le.pdf blank-a4.pdf cat output song-book.pdf
+# thêm trang bìa
+pdftk bia-truoc-xanh.pdf blank-a4.pdf bia-truoc.pdf blank-a4.pdf \
+  bia-truoc-trong.pdf blank-a4.pdf loi-phi-lo.pdf blank-a4.pdf so-trang-chan-le.pdf blank-a4.pdf \
+  muc-luc.pdf blank-a4.pdf bia-sau-trong.pdf \
+  bia-sau.pdf blank-a4.pdf bia-sau-xanh.pdf cat output thanhvinhdapca-lmgbtranthanhcao.pdf
 
 # chỉnh lệch trang chẵn lẻ
-pdfjam --twoside --paper a4paper --offset '0.3cm 0cm' song-book.pdf --outfile song-book-adjusted.pdf
+#pdfjam --twoside --paper a4paper --offset '0.3cm 0cm' song-book.pdf --outfile song-book-adjusted.pdf
 
-pdftk  bia-truoc-xanh.pdf blank-a4.pdf bia-truoc.pdf blank-a4.pdf song-book-adjusted.pdf muc-luc.pdf blank-a4.pdf bia-sau-trong.pdf bia-sau.pdf blank-a4.pdf bia-sau-xanh.pdf cat output thanhvinhdapca-lmgbtranthanhcao.pdf
+#pdftk  bia-truoc-xanh.pdf blank-a4.pdf bia-truoc.pdf blank-a4.pdf song-book-adjusted.pdf bia-sau.pdf blank-a4.pdf bia-sau-xanh.pdf cat output thanhvinhdapca-lmgbtranthanhcao.pdf
 
 # xóa những file tạm
-#rm -rf ${GEN} so-trang-chan-le.pdf songs.pdf song-book.pdf song-book-adjusted.pdf *.aux *.log
+rm -rf ${GEN} bai-hat.pdf so-trang-chan-le.pdf *.aux *.log

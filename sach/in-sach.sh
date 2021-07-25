@@ -35,11 +35,12 @@ do
     # đếm số trang
     echo "${title};${pagecounter}" >> ${CONTENT}
     # bắt đầu trang kế tiếp
-    pageno=`pdfinfo "${GEN}/${shortname}.pdf" | grep "Pages" | grep -Eo '[0-9]+'`
-    echo "${title} : ${pageno} pages"
+    pageno=`find . -xdev -type f -name "${GEN}/${shortname}.pdf" -exec pdfinfo "{}" ";" | awk '/^Pages:/ {n += $2} END {print n}'`
+    #pageno=`pdfinfo "${GEN}/${shortname}.pdf" | grep "Pages" | grep -Eo '[0-9]+'`
+    #echo "${title} : ${pageno} pages"
     pagecounter=$(( $pageno + $pagecounter ))
-	
-	filelist+=( "${GEN}/${shortname}.pdf" )
+	  
+	  filelist+=( "${GEN}/${shortname}.pdf" )
     
     echo "" 
 done
@@ -53,7 +54,7 @@ pdflatex so-trang-chan-le.tex
 # thêm trang bìa
 pdftk bia-truoc-xanh.pdf blank-a4.pdf bia-truoc.pdf blank-a4.pdf \
   bia-truoc-trong.pdf blank-a4.pdf loi-phi-lo.pdf blank-a4.pdf so-trang-chan-le.pdf blank-a4.pdf \
-  muc-luc.pdf blank-a4.pdf bia-sau-trong.pdf \
+  muc-luc-thanh-vinh.pdf muc-luc-phung-vu.pdf blank-a4.pdf bia-sau-trong.pdf \
   bia-sau.pdf blank-a4.pdf bia-sau-xanh.pdf cat output thanhvinhdapca-lmgbtranthanhcao.pdf
 
 # chỉnh lệch trang chẵn lẻ
@@ -62,4 +63,5 @@ pdftk bia-truoc-xanh.pdf blank-a4.pdf bia-truoc.pdf blank-a4.pdf \
 #pdftk  bia-truoc-xanh.pdf blank-a4.pdf bia-truoc.pdf blank-a4.pdf song-book-adjusted.pdf bia-sau.pdf blank-a4.pdf bia-sau-xanh.pdf cat output thanhvinhdapca-lmgbtranthanhcao.pdf
 
 # xóa những file tạm
-rm -rf ${GEN} bai-hat.pdf so-trang-chan-le.pdf *.aux *.log
+rm -rf ${GEN} bai-hat.pdf so-trang-chan-le.pdf *.aux *.log ${CONTENT}
+

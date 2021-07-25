@@ -24,5 +24,5 @@ pdftk bia-truoc-xanh.pdf blank-a4.pdf bia-truoc.pdf blank-a4.pdf ^
   muc-luc.pdf blank-a4.pdf bia-sau-trong.pdf ^
   bia-sau.pdf blank-a4.pdf bia-sau-xanh.pdf cat output thanhvinhdapca-lmgbtranthanhcao.pdf
 
-rem del /s /f /q %GEN% bai-hat.pdf *.aux *.log so-trang-chan-le.pdf
-rem rmdir /s/q %GEN%
+del /s /f /q %GEN% bai-hat.pdf *.aux *.log so-trang-chan-le.pdf
+rmdir /s/q %GEN%

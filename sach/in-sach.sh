@@ -57,11 +57,6 @@ pdftk bia-truoc-xanh.pdf blank-a4.pdf bia-truoc.pdf blank-a4.pdf \
   muc-luc-thanh-vinh.pdf muc-luc-phung-vu.pdf blank-a4.pdf bia-sau-trong.pdf \
   bia-sau.pdf blank-a4.pdf bia-sau-xanh.pdf cat output thanhvinhdapca-lmgbtranthanhcao.pdf
 
-# chỉnh lệch trang chẵn lẻ
-#pdfjam --twoside --paper a4paper --offset '0.3cm 0cm' song-book.pdf --outfile song-book-adjusted.pdf
-
-#pdftk  bia-truoc-xanh.pdf blank-a4.pdf bia-truoc.pdf blank-a4.pdf song-book-adjusted.pdf bia-sau.pdf blank-a4.pdf bia-sau-xanh.pdf cat output thanhvinhdapca-lmgbtranthanhcao.pdf
-
 # xóa những file tạm
 rm -rf ${GEN} bai-hat.pdf so-trang-chan-le.pdf *.aux *.log ${CONTENT}
 

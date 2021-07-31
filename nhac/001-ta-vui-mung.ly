@@ -90,7 +90,7 @@ nhacPhienKhuc = \relative c'' {
 
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
-  Ta vui mừng trảy lên Đền Thánh Chúa,
+  Ta vui mừng trẩy lên Đền Thánh Chúa,
   Ta mừng vui tiến lên Đền Thánh Người.
 }
 

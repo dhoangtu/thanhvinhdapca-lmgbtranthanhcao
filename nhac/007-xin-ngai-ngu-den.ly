@@ -85,7 +85,7 @@ nhacPhienKhucBa = \relative c' {
 
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
-  Lạy Chúa, xin Ngài ngự đến mà giải thoát chung con.
+  Lạy Chúa, xin Ngài ngự đến mà giải thoát chúng con.
   Xin Ngài ngự đến mà giải thoát chúng con.
 }
 

@@ -93,10 +93,10 @@ loiPhienKhucHai = \lyricmode {
 loiPhienKhucBa = \lyricmode {
   \set stanza = #"3."
   Mong đợi Chúa, tôi hết lòng mong đợi.
-  Vững tin ở Lời Người,
-  hồn tôi vẫn trông mong chờ Người.
-  Hơn lính canh mong đợi hừng đông,
-  hơn cả lính canh mong đợi hừng đông.
+  Vững tin ở Lời Người.
+  Hồn tôi vẫn trông mong chờ Người,
+  hơn lính canh mong đợi hừng đông.
+  Hơn cả lính canh mong đợi hừng đông.
 }
 
 

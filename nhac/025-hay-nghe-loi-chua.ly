@@ -38,7 +38,10 @@ nhacDiepKhucBas = \relative c'' {
 % Nhạc phiên khúc
 nhacPhienKhucMot = \relative c' {
   \partial 4 e8 a |
-  a b cs b16 a |
+  a b
+  \stemUp
+  cs b16 a |
+  \stemNeutral
   b4 \breathe b8 b16 (a) |
   fs2 |
   r8 a b16 (a) cs,8 |
@@ -211,6 +214,7 @@ notBePhu =
     \override Lyrics.LyricSpace.minimum-distance = #3
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
+    \override Score.SpacingSpanner packed-spacing = ##t
   } 
 }
 

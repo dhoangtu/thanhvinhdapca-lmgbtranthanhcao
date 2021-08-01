@@ -175,7 +175,8 @@ TongNhip = {
   }
 }
 
-\markup { \vspace #2 }
+\pageBreak
+\markup { \vspace #1 }
 
 \score {
   \new ChoirStaff <<

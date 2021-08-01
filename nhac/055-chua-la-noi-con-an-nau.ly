@@ -36,7 +36,7 @@ nhacDiepKhucBas = \relative c' {
   d,8 d g b |
   b4 b,8 b |
   d fs fs4 |
-  \once \stemUp a, d8 cs |
+  a, d8 cs |
   a2 ~ |
   a4 r
 }
@@ -90,9 +90,13 @@ nhacPhienKhucBa = \relative c'' {
 
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
+  \override LyricText.extra-offset = #'(0 . 0.5)
   Chúa là nơi con ẩn náu, con cất lên tiếng ca,
+  \override LyricText.extra-offset = #'(0 . -0.5)
   con cất lên tiếng ca.
-  Vì Ngài thương cứu giúp,
+  Vì Ngài thương cứu
+  \override LyricText.extra-offset = #'(0 . 0.8)
+  giúp,
   vì Ngài thương cứu giúp chở che đêm ngày.
 }
 
@@ -177,7 +181,7 @@ notBePhu =
       \new NullVoice = nhacThamChieu \nhacDiepKhucSop
       \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #0.7
+            nonstaff-relatedstaff-spacing.padding = #1
           \override VerticalAxisGroup.
             nonstaff-unrelatedstaff-spacing.padding = #1
         }

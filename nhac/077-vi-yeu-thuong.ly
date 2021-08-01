@@ -59,8 +59,8 @@ nhacPhienKhucBa = \relative c' {
   b8 d c a g4 \breathe
   f8 d d e e c \acciaccatura c8 d4
   fs8 fs a g4 ~ g \breathe
-  g8 e g4 \tuplet 3/2 { c,8 c d } e4 \breathe
-  \tuplet 3/2 { f8 e f } d4 d8 d a'4 \breathe
+  g8 e g4 \tuplet 3/2 { c,8 [c d] } e4 \breathe
+  \tuplet 3/2 { f8 [e f] } d4 d8 d a'4 \breathe
   a8 a b c d e c4 ~ c \bar "||"
 }
 

@@ -70,8 +70,8 @@ nhacPhienKhucBa = \relative c'' {
   f8 d d a' |
   a2 |
   g8 a g b |
-  c2 ( |
-  c4) r \bar "||"
+  c2 ~ |
+  c4 r \bar "||"
 }
 
 % Lời điệp khúc

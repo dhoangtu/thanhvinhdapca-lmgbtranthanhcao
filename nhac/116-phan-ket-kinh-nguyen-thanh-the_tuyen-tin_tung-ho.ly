@@ -16,6 +16,7 @@ nhacKinhNguyenThanhThe = \relative c'' {
   <g d>4 <g d>
   <bf g> <bf g>
   <c a f> \fermata <d bf f> \fermata
+  \bar "|."
 }
 
 % Lời phiên khúc
@@ -79,7 +80,7 @@ loiTuyenTin = \lyricmode {
 nhacCauDapTungHo = \relative c'' {
   \partial 4. g8 bf f |
   g \breathe c f c |
-  d4 \tuplet 3/2 { c8 (d c) } |
+  d4 \tuplet 3/2 { \stemUp c8 (d c) \stemNeutral } |
   bf4 g8 c |
   bf (d) c (bf) |
   bf2 \bar "|."
@@ -87,7 +88,7 @@ nhacCauDapTungHo = \relative c'' {
 
 % Lời phiên khúc
 loiCauDapTungHo = \lyricmode {
-  Vì Chúa là Vua, vì Chúa là Vua uy quyền và vinh hiển muôn đời.
+  Vì Chúa là Vua, vì Chúa là Vua "    uy" quyền và vinh hiển muôn đời.
 }
 
 

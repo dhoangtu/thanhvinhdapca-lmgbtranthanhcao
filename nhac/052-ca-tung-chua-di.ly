@@ -41,7 +41,8 @@ nhacPhienKhucMot = \relative c'' {
   g2 |
   e8 d a' g |
   g4 d16 ^(e) d8 |
-  c2 ~ |
+  c2
+  \tweak extra-offset #'(0 . 3) ^~ |
   c4 r \bar "||"
 }
 

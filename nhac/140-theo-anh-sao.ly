@@ -32,11 +32,16 @@ nhacPhienKhucHai = \relative c' {
   g4 g8 fs e g c b |
   a2 r8 a b c |
   d4 d8 e d c b a |
-  g2 r4 \bar "||"
+  g2
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \bar "||"
 }
 
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c'' {
+  \once \override Score.RehearsalMark.font-size = #0.1
+  \mark \markup { \musicglyph #"scripts.segno" }
   \partial 2 r4 g |
   c2 r8 g g a |
   b2 r8 d, cs d |

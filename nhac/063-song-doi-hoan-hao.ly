@@ -16,7 +16,8 @@ nhacDiepKhuc= \relative c' {
   \acciaccatura d8 g4. g8 |
   g fs a b |
   d,4. d8 |
-  \tuplet 3/2 { b'8 a b } g a |
+  \tuplet 3/2 { b'8 a
+  \once \override NoteColumn.X-offset = 5 b } g a |
   g2 ~ |
   g4 \bar "|."
 }

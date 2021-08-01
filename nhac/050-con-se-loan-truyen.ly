@@ -27,7 +27,7 @@ nhacPhienKhucMot = \relative c' {
   d8 a'4 a8 bf c bf a4 \breathe
   a8 g g c c g a \acciaccatura g8 a4 \breathe
   a8 f f a d, f g4
-  e8 f g c, e f d4 \tweak extra-offset #'(0 . 3) ^~ d \bar "||"
+  e8 f g c, e f d4 ~ d \bar "||"
 }
 
 nhacPhienKhucHai = \relative c' {
@@ -35,7 +35,7 @@ nhacPhienKhucHai = \relative c' {
   d8 a'4 a8 g a g c bf a4 \breathe
   a8 g g a bf a g a g f4 \breathe
   f8  bf g c a \fermata g g g c c bf a4 \breathe
-  g8 g a g e f e d4 \tweak extra-offset #'(0 . 3) ^~ d \bar "||"
+  g8 g a g e f e d4 ~ d \bar "||"
 }
 
 nhacPhienKhucBa = \relative c' {

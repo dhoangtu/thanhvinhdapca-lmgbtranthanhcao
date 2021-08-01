@@ -54,7 +54,7 @@ pdflatex so-trang-chan-le.tex
 # thêm trang bìa
 pdftk bia-truoc-xanh.pdf blank-a4.pdf bia-truoc.pdf blank-a4.pdf \
   bia-truoc-trong.pdf blank-a4.pdf loi-phi-lo.pdf blank-a4.pdf so-trang-chan-le.pdf blank-a4.pdf \
-  muc-luc-thanh-vinh.pdf muc-luc-phung-vu.pdf blank-a4.pdf bia-sau-trong.pdf \
+  muc-luc.pdf blank-a4.pdf bia-sau-trong.pdf \
   bia-sau.pdf blank-a4.pdf bia-sau-xanh.pdf cat output thanhvinhdapca-lmgbtranthanhcao.pdf
 
 # xóa những file tạm

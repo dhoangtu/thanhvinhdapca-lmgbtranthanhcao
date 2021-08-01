@@ -118,9 +118,9 @@ loiPhienKhucBa = \lyricmode {
   indent = #0
   #(define fonts
     (make-pango-font-tree
-      "Liberation Serif"
-      "Liberation Serif"
-      "Liberation Serif"
+      "Deja Vu Serif Condensed"
+      "Deja Vu Serif Condensed"
+      "Deja Vu Serif Condensed"
       (/ 20 20)))
   page-count = #1
   system-system-spacing = #'((basic-distance . 12)
@@ -173,7 +173,7 @@ notBePhu =
   \layout {
     ragged-last = ##f
     \override Lyrics.LyricText.font-series = #'bold
-    \override Lyrics.LyricText.font-size = #+2
+    %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #3
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
@@ -200,7 +200,7 @@ notBePhu =
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricText.font-size = #+2
+    %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #2.2
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
@@ -227,7 +227,7 @@ notBePhu =
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricText.font-size = #+2
+    %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #3
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
@@ -254,7 +254,7 @@ notBePhu =
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricText.font-size = #+2
+    %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t

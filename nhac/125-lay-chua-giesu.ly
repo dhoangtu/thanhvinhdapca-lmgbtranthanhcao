@@ -19,9 +19,9 @@
   indent = #0
   #(define fonts
     (make-pango-font-tree
-      "Liberation Serif"
-      "Liberation Serif"
-      "Liberation Serif"
+      "Deja Vu Serif Condensed"
+      "Deja Vu Serif Condensed"
+      "Deja Vu Serif Condensed"
       (/ 20 20)))
   page-count = #1
   system-system-spacing = #'((basic-distance . 12.5))
@@ -79,7 +79,7 @@ loiPhienKhucMot = \lyricmode {
         \lyricsto beSop \loiPhienKhucMot
   >>
   \layout {
-    \override Lyrics.LyricText.font-size = #+2
+    %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #3.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t

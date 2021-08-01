@@ -92,9 +92,9 @@ loiPhienKhucBa = \lyricmode {
   indent = #0
   #(define fonts
     (make-pango-font-tree
-      "Liberation Serif"
-      "Liberation Serif"
-      "Liberation Serif"
+      "Deja Vu Serif Condensed"
+      "Deja Vu Serif Condensed"
+      "Deja Vu Serif Condensed"
       (/ 20 20)))
   page-count = #1
   system-system-spacing = #'((basic-distance . 12)
@@ -129,7 +129,7 @@ TongNhip = { \key d \major \time 2/4 }
   >>
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
-    \override Lyrics.LyricText.font-size = #+2
+    %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #4
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
@@ -156,7 +156,7 @@ TongNhip = { \key d \major \time 2/4 }
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricText.font-size = #+2
+    %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #2
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
@@ -185,7 +185,7 @@ TongNhip = { \key d \major \time 2/4 }
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricText.font-size = #+2
+    %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #3.0
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
@@ -214,7 +214,7 @@ TongNhip = { \key d \major \time 2/4 }
   >>
   \layout {
     \override Staff.TimeSignature.transparent = ##t
-    \override Lyrics.LyricText.font-size = #+2
+    %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #2.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t

@@ -14,7 +14,8 @@
 nhacDiepKhucSop = \relative c' {
   \partial 8 a'8 |
   f d d f |
-  c4 \tuplet 3/2 { c8 f a } |
+  c4 \tuplet 3/2 { c8
+  \once \override NoteColumn.X-offset = 1 f a } |
   g4 r8 bf |
   bf bf g bf |
   g ( \once \stemUp  c4) \breathe f,8 |
@@ -40,7 +41,9 @@ nhacPhienKhucMot = \relative c' {
   a2 g8 g e4 |
   d8 e d e |
   c2 ~ |
-  c4 \tuplet 3/2 { d8 e c } |
+  c4 \tuplet 3/2 { d8
+  \once \override NoteColumn.X-offset = 4 e
+  c } |
   g'4 g8 bf |
   g a a g |
   bf4 \tuplet 3/2 { d8 d b! } |

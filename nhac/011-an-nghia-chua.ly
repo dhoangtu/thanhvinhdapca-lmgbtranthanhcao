@@ -43,21 +43,21 @@ nhacDiepKhucBas = \relative c' {
 
 % Nhạc phiên khúc
 nhacPhienKhucMot = \relative c'' {
-  g8 a _(b) b4 b8 b a b g \breathe
-  e e e e g g a (g) b, d4 \breathe
+  g8 a _([b]) b4 b8 b a b g \breathe
+  e e e e g g a ([g]) b, d4 \breathe
   c8 c e4 g8 a g e fs d4 \breathe
   d8 d d b'4 \fermata b8 fs a g g4 \bar "||"
 }
 
 nhacPhienKhucHai = \relative c'' {
-  g8 a _(b) b4 b8 a b a g4 \breathe
+  g8 a _([b]) b4 b8 a b a g4 \breathe
   e8 g e4 e8 g4 a8 g e b d4 \breathe
   d8 e d b' b a g a4 a8 e e g d'4 \fermata
   d,8 d d g g4 \bar "||"
 }
 
 nhacPhienKhucBa = \relative c'' {
-  g8 g a b b a b b a (g) g4 \breathe
+  g8 g a b b a b b a ([g]) g4 \breathe
   e8 g a a g a g b, d4 \breathe
   e8 e d e4 d8 d g a b4 \breathe
   d,8 d d' d fs, a g g4 \bar "||"

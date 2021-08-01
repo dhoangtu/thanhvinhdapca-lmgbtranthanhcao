@@ -26,10 +26,10 @@ nhacDiepKhuc = \relative c' {
 % Nhạc phiên khúc
 nhacPhienKhucMot = \relative c' {
   e8 a4 \breathe
-  a8 g a a g (e) g (a) a4 \breathe
+  a8 g a a g ([e]) g ([a]) a4 \breathe
   d,8 e fs4 e8 cs e cs a4 ~ a \breathe
   e'8 cs e g g4 \breathe
-  a8 g16 (e) g8 (a) a4 g8 g b g a4 (a)
+  a8 g16 ([e]) g8 ([a]) a4 g8 g b g a4 (a)
   d,8 e fs a gs a4 g8 \fermata e \fermata d4 ~ d \bar "||"
 }
 

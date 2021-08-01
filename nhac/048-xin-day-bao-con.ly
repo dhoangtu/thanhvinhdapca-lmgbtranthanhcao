@@ -34,10 +34,10 @@ nhacDiepKhucBas = \relative c' {
 % Nhạc phiên khúc
 nhacPhienKhucMot = \relative c' {
   e8 a4 \breathe
-  a8 g a a g (e) g (a) a4 \breathe
+  a8 g a a g ([e]) g ([a]) a4 \breathe
   d,8 e fs4 e8 cs e cs a4 \tweak extra-offset #'(0 . 3) ^~ a \breathe
   e'8 cs e g g4 \breathe
-  a8 g16 (e) g8 (a) a4 g8 g b g a4 (a)
+  a8 g16 ([e]) g8 ([a]) a4 g8 g b g a4 (a)
   d,8 e fs a gs a4 g8 \fermata
   e \fermata d4 ~ d \bar "||"
 }
@@ -55,7 +55,8 @@ nhacPhienKhucBa = \relative c'' {
   fs8 g fs b, b4
   a8 cs g' e fs4 ~ fs \breathe
   a8 b b a a4 g8 e cs e a,4 ~ a
-  e'8 fs g4 e8 b' \fermata a \fermata
+  e'8 fs g4 e8 b' \fermata
+  \once \stemDown a \fermata
   d,4 ~ d \bar "||"
 }
 

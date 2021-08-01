@@ -21,8 +21,8 @@ nhacDiepKhuc = \relative c'' {
 
 % Nhạc phiên khúc
 nhacPhienKhucMot = \relative c' {
-  c8 f a4 a16 bf d,4 f16 (g) a4 \breathe
-  g8 a c,4 a8 c g'16 (a) g4 \breathe
+  c8 f a4 a16 bf d,4 f16 ([g]) a4 \breathe
+  g8 a c,4 a8 c g'16 ([a]) g4 \breathe
   bf8 bf g4 bf8 bf b! c4 \bar "||"
 }
 
@@ -42,7 +42,7 @@ nhacPhienKhucBa = \relative c' {
 
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
-  "        Nữ" Hoàng, Nữ Hoàng bên hữu Thánh Vương,
+  "       Nữ" Hoàng, Nữ Hoàng bên hữu Thánh Vương,
   điểm trang lộng lẫy, toàn vàng ô -- phia.
 }
 

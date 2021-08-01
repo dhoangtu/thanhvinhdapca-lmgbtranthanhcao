@@ -26,7 +26,7 @@ nhacDiepKhuc= \relative c' {
 
 % Nhạc phiên khúc
 nhacPhienKhucMot = \relative c' {
-  d8 (f) a4 a8 g a a g a a4 \breathe
+  d8 ([f]) a4 a8 g a a g a a4 \breathe
   a8 d, f e c e d4 ~d \breathe
   a'8 g a4 bf8 bf g bf c4 \breathe
   f,8 f a d, g4 \breathe
@@ -46,7 +46,7 @@ nhacPhienKhucBa = \relative c'' {
   g8 a a f d a' f4
   g8 bf a g g g g bf g a4
   cs8 c a d d a g f g e4
-  e8 g a e g f (e) d4 \bar "||"
+  e8 g a e g f ([e]) d4 \bar "||"
 }
 
 % Lời điệp khúc

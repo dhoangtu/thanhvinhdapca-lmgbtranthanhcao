@@ -48,16 +48,16 @@ nhacDiepKhucBas = \relative c' {
 % Nhạc phiên khúc
 nhacPhienKhucMot = \relative c'' {
  
-  g8 a (b) b4 b8 b a b g \breathe
-  e e e e g g a (g) b, d4 \breathe
+  g8 a ([b]) b4 b8 b a b g \breathe
+  e e e e g g a ([g]) b, d4 \breathe
   c8 c e4 g8 a g e fs d4 \breathe
   d8 d d d'4 \fermata b8 fs a g g4 \bar "||"
 }
 
 nhacPhienKhucHai = \relative c'' {
  
-  g8 a (b) b b4 b8 a a b g4 \breathe
-  a8 g e e g a a (g) b, d4 \breathe
+  g8 a ([b]) b b4 b8 a a b g4 \breathe
+  a8 g e e g a a ([g]) b, d4 \breathe
   c \breathe e8 g d g a b a g a4 \breathe
   e \breathe a8 e a \breathe a d4 \fermata
   d,8 b' a fs g4 \bar "||"
@@ -65,10 +65,10 @@ nhacPhienKhucHai = \relative c'' {
 
 nhacPhienKhucBa = \relative c'' {
  
-  g8 a (b) b b a a b a b g4 \breathe
+  g8 a ([b]) b b a a b a b g4 \breathe
   e8 g a g e4 \breathe
   e8 g g b, d4 \breathe
-  \tempo "Rall" d8 d'4 \fermata b8 (a) fs g4 \bar "||"
+  \tempo "Rall" d8 d'4 \fermata b8 ([a]) fs g4 \bar "||"
 }
 
 % Lời điệp khúc

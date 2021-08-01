@@ -54,13 +54,13 @@ nhacPhienKhucMot = \relative c' {
 
 nhacPhienKhucHai = \relative c' {
   f8 c' bf4 f8 bf bf c4 \breathe
-  a8 a a4 a8 g16 _(c) a (g) f4 \breathe
+  a8 a a4 a8 g16 _([c]) a ([g]) f4 \breathe
   d8 g f4 f8 d f f g c,4 \breathe
   e8 f g4 d8 e c4 a'8 g a c, f4 ~ f \bar "||"
 }
 
 nhacPhienKhucBa = \relative c'' {
-  c8 bf a a c a16 _(bf) c4 f,8 (g) a4 a8 g g c bf g f4
+  c8 bf a a c a16 _([bf]) c4 f,8 ([g]) a4 a8 g g c bf g f4
   a8 g g4 g8 g d e c4 \breathe
   e8 f g4 g8 c bf g4 g8 e d c4
   g'8

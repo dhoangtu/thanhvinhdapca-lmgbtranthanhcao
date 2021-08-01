@@ -37,8 +37,8 @@ nhacDiepKhucBas = \relative c' {
 
 % Nhạc phiên khúc
 nhacPhienKhucMot = \relative c'' {
-  bf16 (g) c4 bf16 (g) g8 g bf c4 \breathe
-  bf8 bf bf16 (g) g8 g a g f4 \breathe
+  bf16 ([g]) c4 bf16 ([g]) g8 g bf c4 \breathe
+  bf8 bf bf16 ([g]) g8 g a g f4 \breathe
   f8 d c4 \breathe
   f8 g a a g g4 \breathe
   c8 c bf4 (bf8) 
@@ -46,16 +46,16 @@ nhacPhienKhucMot = \relative c'' {
 }
 
 nhacPhienKhucHai = \relative c'' {
-  c16 (bf) bf (g) g8 bf c a a4 g8 f f g g g c, a'4 \breathe
-  bf16 (g) c4 g8 c bf bf f g4 a8 g a f f4 (f) \bar "||"
+  c16 ([bf]) bf ([g]) g8 bf c a a4 g8 f f g g g c, a'4 \breathe
+  bf16 ([g]) c4 g8 c bf bf f g4 a8 g a f f4 (f) \bar "||"
 }
 
 nhacPhienKhucBa = \relative c'' {
-  bf16 (c) c (bf) g8 a4 \breathe
-  g8 g bf bf16 (c) \break
-  \slashedGrace { f,8 (g } f4) \breathe
-  d8 d16 (f) g (f) d (c) c4 f8 (g) a4 bf8 bf bf
-  g g16 (a) g8 f4 (f) \bar "||"
+  bf16 ([c]) c ([bf]) g8 a4 \breathe
+  g8 g bf bf16 ([c]) \break
+  \slashedGrace { f,8 ([g] } f4) \breathe
+  d8 d16 ([f]) g ([f]) d ([c]) c4 f8 ([g]) a4 bf8 bf bf
+  g g16 ([a]) g8 f4 ~ f \bar "||"
 }
 
 % Lời điệp khúc

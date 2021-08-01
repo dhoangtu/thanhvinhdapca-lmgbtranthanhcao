@@ -50,7 +50,7 @@ nhacPhienKhucBa = \relative c' {
   d8 a' g g d g \acciaccatura g8 a4 \breathe
   bf8 bf g bf \acciaccatura g8 d' c c4 \breathe
   a8 e e bf' g a4 \breathe
-  g8 d a' a4 d,16 (e) f (e) d8 d4 \bar "||"
+  g8 d a' a4 d,16 ([e]) f ([e]) d8 d4 \bar "||"
 }
 
 % Lời điệp khúc

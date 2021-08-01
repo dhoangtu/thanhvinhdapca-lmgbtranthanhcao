@@ -35,7 +35,7 @@ nhacDiepKhucBas = \relative c' {
 
 % Nhạc phiên khúc
 nhacPhienKhucMot = \relative c' {
-  f8 (g) c4 bf8 bf c (d) c4
+  f8 ([g]) c4 bf8 bf c ([d]) c4
   bf8 bf c d4 d8 c g a c g f4 \breathe
   f8 d d d4 c8 f a f g4 \breathe
   g8 c, g' a g \breathe

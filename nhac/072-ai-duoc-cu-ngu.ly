@@ -35,7 +35,7 @@ nhacPhienKhucHai = \relative c'' {
   c8 e a, g f4 \breathe
   a8 e g a d,4 \breathe
   f8 e d g a4 \breathe
-  g8 a c d (c) a4 ~ a \bar "||"
+  g8 a c d ([c]) a4 ~ a \bar "||"
 }
 
 nhacPhienKhucBa = \relative c'' {

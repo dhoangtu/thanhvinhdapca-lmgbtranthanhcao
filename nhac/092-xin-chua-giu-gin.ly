@@ -81,7 +81,9 @@ nhacPhienKhucBa = \relative c'' {
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
   Hồn con xin Chúa giữ gìn.
-  Sống kề bên Chúa an bình thảnh thơi.
+  Sống kề bên
+  \override LyricText.extra-offset = #'(0 . 1)
+  Chúa an bình thảnh thơi.
 }
 
 % Lời phiên khúc
@@ -162,7 +164,7 @@ notBePhu =
       \new NullVoice = nhacThamChieu \nhacDiepKhucSop
       \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #1.5
+            nonstaff-relatedstaff-spacing.padding = #1.7
           \override VerticalAxisGroup.
             nonstaff-unrelatedstaff-spacing.padding = #1.5
         }

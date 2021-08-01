@@ -61,7 +61,9 @@ nhacPhienKhucBas = \relative c'' {
 
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
-  Lạy Chúa mọi dân tộc trên địa cầu đều thờ lạy Chúa,
+  Lạy Chúa mọi dân tộc trên địa
+  \override LyricText.extra-offset = #'(0 . 0.5)
+  cầu đều thờ lạy Chúa,
   mọi dân tộc trên địa cầu đều thờ lạy Chúa,
   Chúa chúng ta.
 }
@@ -147,7 +149,7 @@ notBePhu =
     >>
     \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #1
+            nonstaff-relatedstaff-spacing.padding = #1.5
           \override VerticalAxisGroup.
             nonstaff-unrelatedstaff-spacing.padding = #1
         }

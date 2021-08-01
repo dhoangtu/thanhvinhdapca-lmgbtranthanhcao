@@ -62,7 +62,9 @@ nhacPhienKhucHai = \relative c' {
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
   Hãy đi rao giảng tin mừng.
-  Hãy đi rao giảng tin mừng khắp thế gian.
+  Hãy
+  \override LyricText.extra-offset = #'(0 . 1)
+  đi rao giảng tin mừng khắp thế gian.
 }
 
 % Lời phiên khúc
@@ -136,7 +138,7 @@ notBePhu =
       \new NullVoice = nhacThamChieu \nhacDiepKhucSop
       \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #1
+            nonstaff-relatedstaff-spacing.padding = #2
           \override VerticalAxisGroup.
             nonstaff-unrelatedstaff-spacing.padding = #1
         }

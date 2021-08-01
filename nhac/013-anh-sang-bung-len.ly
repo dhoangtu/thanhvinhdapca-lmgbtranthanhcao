@@ -97,7 +97,9 @@ loiDiepKhuc = \lyricmode {
 
 loiDiepKhucKhac = \lyricmode {
   \set stanza = #"ĐK 2."
-  Chúa là Đấng cao cả trên khắp địa cầu
+  Chúa là Đấng cao cả trên khắp địa
+  \override LyricText.extra-offset = #'(0 . 0.5)
+  cầu
   là Vua hiển trị, là Vua chúng ta.
 }
 

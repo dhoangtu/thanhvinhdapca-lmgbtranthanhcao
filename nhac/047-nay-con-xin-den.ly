@@ -94,7 +94,9 @@ nhacPhienKhucBa = \relative c' {
 loiDiepKhuc = \lyricmode {
   Lạy Chúa, này con xin đến, này con xin đến,
   để thực thi Thánh ý Chúa.
-  Lạy Chúa, này con xin đến, này con xin đến,
+  Lạy Chúa, này con xin
+  \override LyricText.extra-offset = #'(0 . 1)
+  đến, này con xin đến,
   để thực thi Thánh ý Chúa.
 }
 
@@ -179,7 +181,7 @@ notBePhu =
       \new NullVoice = nhacThamChieu \nhacDiepKhucSop
       \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #1
+            nonstaff-relatedstaff-spacing.padding = #1.5
           \override VerticalAxisGroup.
             nonstaff-unrelatedstaff-spacing.padding = #1
         }

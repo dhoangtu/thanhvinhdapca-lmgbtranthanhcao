@@ -98,6 +98,7 @@ nhacPhienKhucBa = \relative c'' {
 loiDiepKhuc = \lyricmode {
   Lạy Chúa, Ngài là Đấng rất nhân hậu,
   và là Đấng rất khoan dung.
+  \override LyricText.extra-offset = #'(0 . 1)
   Lạy Chúa, Ngài là Đấng giàu lòng xót thương,
   và là Đấng rất từ bi.
 }
@@ -183,7 +184,7 @@ notBePhu =
       \new NullVoice = nhacThamChieu \nhacDiepKhucSop
       \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #1
+            nonstaff-relatedstaff-spacing.padding = #2
           \override VerticalAxisGroup.
             nonstaff-unrelatedstaff-spacing.padding = #1
         }

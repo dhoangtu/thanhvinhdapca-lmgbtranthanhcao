@@ -78,7 +78,9 @@ nhacPhienKhucBa = \relative c'' {
 loiDiepKhuc = \lyricmode {
   \override Lyrics.LyricText.font-series = #'bold
   Chúa một niềm nhân hậu từ bi,
-  giàu lòng thương xót thứ tha mọi lỗi lầm.
+  giàu
+  \override LyricText.extra-offset = #'(0 . -1)
+  lòng thương xót thứ tha mọi lỗi lầm.
 }
 
 % Lời phiên khúc
@@ -145,7 +147,7 @@ TongNhip = { \key f \major \time 2/4 }
     >>
     \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #0.7
+            nonstaff-relatedstaff-spacing.padding = #0.3
           \override VerticalAxisGroup.
             nonstaff-unrelatedstaff-spacing.padding = #1
         }

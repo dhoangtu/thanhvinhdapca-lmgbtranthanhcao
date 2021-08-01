@@ -88,8 +88,11 @@ nhacPhienKhucBa = \relative c' {
 
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
+  \override LyricText.extra-offset = #'(0 . -0.5)
   Lạy Chúa, xin tỏ ra lòng Ngài nhân ái.
-  Ơn Ngài cứu độ, ơn Ngài cứu độ xin ban tặng cho chúng con.
+  Ơn Ngài cứu
+  \override LyricText.extra-offset = #'(0 . 1)
+  độ, ơn Ngài cứu độ xin ban tặng cho chúng con.
 }
 
 % Lời phiên khúc

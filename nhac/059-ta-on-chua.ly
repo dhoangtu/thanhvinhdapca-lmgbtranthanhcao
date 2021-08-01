@@ -31,6 +31,8 @@ nhacPhienKhucMot = \relative c' {
   c2 ~ |
   c8
   \autoBeamOn
+  
+  \once \override NoteColumn.X-offset = 4
   c e c g4 \tuplet 3/2 { d8 f f } |
   e2 r4 c8 e |
   g4. a8 a f4 g8 |
@@ -58,13 +60,14 @@ nhacPhienKhucBa = \relative c' {
   a2 a8 d4 c8 |
   c2 r4 c8 a |
   g4. a8 d, d4 g8 |
-  \acciaccatura d8 g2 \tupletDown \tuplet 3/2 { \stemUp b4 a a \stemNeutral } |
+  \acciaccatura d8 g2 \tupletUp \tuplet 3/2 { \stemDown b4 a a \stemNeutral } |
   g2 \tupletUp \tuplet 3/2 { b4 c d } |
   c2 r \bar "||"
 }
 
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
+  \override LyricText.extra-offset = #'(0 . 1)
   Lạy Chúa, hạnh phúc thay được tạ ơn Chúa.
   Hạnh phúc thay được tạ ơn Ngài.
 }
@@ -141,7 +144,7 @@ TongNhip = {
     >>
     \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #1.2
+            nonstaff-relatedstaff-spacing.padding = #2.5
           \override VerticalAxisGroup.
             nonstaff-unrelatedstaff-spacing.padding = #1
         }

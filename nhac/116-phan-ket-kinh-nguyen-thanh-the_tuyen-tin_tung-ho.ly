@@ -30,6 +30,7 @@ loiKinhNguyenThanhThe = \lyricmode {
   \set stanza = \markup { "ĐÁP:" }
 
   \set stanza = \markup { "ĐÁP:" }
+  \override LyricHyphen.minimum-distance = #5
   A -- men, A -- men, A -- men.
 }
 
@@ -146,6 +147,7 @@ loiCauDapTungHo = \lyricmode {
       \override Score.SpacingSpanner.uniform-stretching = ##t
       \set Score.barAlways = ##t
       \set Score.defaultBarType = ""
+      ragged-last = ##t
     } 
   }
 

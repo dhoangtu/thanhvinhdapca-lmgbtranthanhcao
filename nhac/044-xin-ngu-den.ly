@@ -56,7 +56,7 @@ nhacPhienKhucHai = \relative c'' {
 nhacPhienKhucBa = \relative c'' {
   a8 g a4 g8 a c b a4 \breathe
   f8 d g c,4 f8 g f e4 (e8) \breathe
-  g a g4 g8 g a c c4 (c8) \breathe
+  g a g4 g8 g a c c4 (c8) \breathe \break
   a c c b d d4 c8 c b ([d]) c ([b]) a4 (a) \bar "||"
 }
 
@@ -243,7 +243,7 @@ notBePhu =
   \layout {
     \override Staff.TimeSignature.transparent = ##t
     \override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #3
+    \override Lyrics.LyricSpace.minimum-distance = #2
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
     \set Score.barAlways = ##t

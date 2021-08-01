@@ -91,6 +91,7 @@ nhacPhienKhucBa = \relative c'' {
 loiDiepKhuc = \lyricmode {
   \set stanza = #"ĐK 1."
   Hôm nay chúng ta được ánh sáng bừng lên chiếu soi.
+  \override LyricText.extra-offset = #'(0 . 1)
   Vì Chúa đã giáng trần, giáng trần cứu độ chúng ta.
 }
 

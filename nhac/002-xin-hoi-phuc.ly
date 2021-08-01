@@ -63,7 +63,9 @@ nhacPhienKhucBa = \relative c' {
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
   Lạy Chúa, xin hồi phục dân Ngài,
-  nguyện Thánh Nhan chiếu rọi, để cứu độ chúng con.
+  nguyện Thánh
+  \override LyricText.extra-offset = #'(0 . 1)
+  Nhan chiếu rọi, để cứu độ chúng con.
 }
 
 % Lời phiên khúc
@@ -150,7 +152,7 @@ notBePhu =
       \new NullVoice = nhacThamChieu \nhacDiepKhucSop
       \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #1.2
+            nonstaff-relatedstaff-spacing.padding = #1.5
           \override VerticalAxisGroup.
             nonstaff-unrelatedstaff-spacing.padding = #1
         }

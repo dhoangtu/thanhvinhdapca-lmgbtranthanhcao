@@ -53,7 +53,9 @@ nhacPhienKhucBa = \relative c'' {
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
   Chư dân, hãy ca tụng Chúa.
-  Thân lạy Chúa,
+  Thân lạy
+  \override LyricText.extra-offset = #'(0 . 1)
+  Chúa,
   hết thảy chư dân, hãy ca tụng Ngài.
 }
 
@@ -121,7 +123,7 @@ TongNhip = { \key c \major \time 2/4 }
     >>
     \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #1
+            nonstaff-relatedstaff-spacing.padding = #2.2
           \override VerticalAxisGroup.
             nonstaff-unrelatedstaff-spacing.padding = #1
         }

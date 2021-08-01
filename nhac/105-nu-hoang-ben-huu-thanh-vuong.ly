@@ -42,7 +42,7 @@ nhacPhienKhucBa = \relative c' {
 
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
-  "         Nữ" Hoàng, Nữ Hoàng bên hữu Thánh Vương,
+  "        Nữ" Hoàng, Nữ Hoàng bên hữu Thánh Vương,
   điểm trang lộng lẫy, toàn vàng ô -- phia.
 }
 

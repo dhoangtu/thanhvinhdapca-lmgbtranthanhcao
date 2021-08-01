@@ -51,7 +51,9 @@ nhacPhienKhucBa = \relative c'' {
 
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
-  Lạy Chúa, xin hãy nhớ, xin hãy nhớ lòng thương xót của Ngài.
+  Lạy Chúa, xin hãy nhớ, xin hãy nhớ lòng thương xót của
+  \override LyricText.extra-offset = #'(0 . 1)
+  Ngài.
   Nghĩa nặng với tình sâu, giờ đây xin nhớ lại.
 }
 

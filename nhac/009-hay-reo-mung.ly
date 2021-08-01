@@ -82,8 +82,10 @@ nhacPhienKhucBa = \relative c' {
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
   Hãy reo mừng và ca ngợi,
-  vì ở giữa ngươi có Đấng Thánh thật cao cả,
-  của Is -- ra -- el.
+  vì ở giữa ngươi có
+  \override LyricText.extra-offset = #'(0 . 0.5)
+  Đấng Thánh thật cao cả,
+  của "Is  -" "ra  -" el.
 }
 
 % Lời phiên khúc

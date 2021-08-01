@@ -31,10 +31,10 @@ nhacDiepKhucBas = \relative c' {
 
 % Nhạc phiên khúc
 nhacPhienKhucMot = \relative c' {
-  e8 a4 a8 g a a g ([e]) g (a) a4 d,8 e fs4 e8
+  e8 a4 a8 g a a g ([e]) g ([a]) a4 d,8 e fs4 e8
   cs e cs a4
   \tweak extra-offset #'(0 . 3.5) ^~ a \breathe
-  e'8 cs e g g4 a8 g16 (e) g8 (a) a4
+  e'8 cs e g g4 a8 g16 ([e]) g8 ([a]) a4
   g8 g b g a4 ~ a d,8 e fs a gs a4
   g8 \fermata e \fermata d4
   \tweak extra-offset #'(0 . 3.2) ^~ d \bar "||"
@@ -147,7 +147,7 @@ notBePhu =
       \new NullVoice = nhacThamChieu \nhacDiepKhucSop
       \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #1.5
+            nonstaff-relatedstaff-spacing.padding = #2
           \override VerticalAxisGroup.
             nonstaff-unrelatedstaff-spacing.padding = #1.5
         }
@@ -187,7 +187,7 @@ notBePhu =
     %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #1.5
     \override Score.SpacingSpanner.uniform-stretching = ##t
-    \override Score.SpacingSpanner packed-spacing = ##t
+    %\override Score.SpacingSpanner packed-spacing = ##t
     \set Score.barAlways = ##t
     \set Score.defaultBarType = ""
   } 

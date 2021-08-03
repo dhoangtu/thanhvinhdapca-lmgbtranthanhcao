@@ -30,7 +30,7 @@ nhacPhienKhuc = \relative c' {
   \alternative {
     {
       b4 b gs8 e |
-      a2
+      a2.
     }
     {
       b4. b8 gs e |
@@ -86,6 +86,20 @@ nhacDiepKhucBas = \relative c'' {
   cs2 r4
 }
 
+hopAmPhienKhucMot = \chords {
+  \skip 4
+  a2. e d b:m e a cs:m b:m fs:m e
+  e2. a
+  e2. a2
+}
+
+hopAmDiepKhucMot = \chords {
+  \skip 2.
+  a2. cs:m fs:m cs:m b:m \skip 2. d \skip 2. a
+  \skip 2. \skip 2.
+  cs:m b:m e ds fs:m e a
+}
+
 % Lời phiên khúc
 loiPhienKhucMot = \lyricmode {
   \set stanza = #"1."
@@ -110,7 +124,7 @@ loiPhienKhucHai = \lyricmode {
 loiDiepKhuc = \lyricmode {
   \set stanza = #"ĐK:"
   Mẹ hãy nhớ ban ơn thiêng giúp đời con nơi tha hương.
-  Dù cách xa nghìn trùng vẫn thương yêu đong đầy.
+  Dù cách xa nghìn trùng vẫn yêu thương đong đầy.
   Dù thời gian có phôi pha nhưng tình Mẹ thương vẫn bao la.
   Như mây bay trên ngàn.
   Như thông reo bên dòng suối nhỏ yêu thương.
@@ -141,6 +155,7 @@ loiDiepKhuc = \lyricmode {
 
 \score {
   \new ChoirStaff <<
+    \hopAmPhienKhucMot
     \new Staff = diepKhuc \with {
         \consists "Merge_rests_engraver"
         %\magnifyStaff #(magstep +1)
@@ -193,6 +208,7 @@ notBePhu =
 
 \score {
   \new ChoirStaff <<
+    \hopAmDiepKhucMot
     \new Staff = diepKhuc \with {
         \consists "Merge_rests_engraver"
         %\magnifyStaff #(magstep +1)

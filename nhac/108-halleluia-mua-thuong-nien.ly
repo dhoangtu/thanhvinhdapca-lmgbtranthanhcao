@@ -31,6 +31,14 @@ nhacPhienKhucMot = \relative c' {
   \tuplet 3/2 { d4 d b } d2 \bar "|."
 }
 
+hopAmPhienKhucMot = \chords {
+  d1 a b:m d
+  f:m g e:7 a
+  d b:m fs:m
+  b:m e:m a
+  g2 a2:7 d1 a2:7 d
+}
+
 % Lời phiên khúc
 loiPhienKhucMot = \lyricmode {
   Hal -- le -- lu -- ia Hal -- le -- lu -- ia Hal -- le -- lu -- ia.
@@ -75,6 +83,7 @@ TongNhip = {
 
 \score {
   \new ChoirStaff <<
+    \hopAmPhienKhucMot
     \new Staff = phienKhuc \with {
         %\magnifyStaff #(magstep +1)
       }
@@ -92,7 +101,7 @@ TongNhip = {
         \lyricsto beSop \loiPhienKhucMot
   >>
   \layout {
-    \override Lyrics.LyricText.font-series = #'bold
+    %\override Lyrics.LyricText.font-series = #'bold
     %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #1.4
     \override Score.BarNumber.break-visibility = ##(#f #f #f)

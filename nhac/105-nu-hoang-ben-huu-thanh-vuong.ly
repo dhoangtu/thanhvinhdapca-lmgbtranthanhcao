@@ -12,7 +12,12 @@
 
 % Nhạc điệp khúc
 nhacDiepKhuc = \relative c'' {
-  \partial 4 \tuplet 3/2 { c8 (d c) } |
+  \partial 4 \tuplet 3/2 {
+    \once \override NoteColumn.X-offset = 4
+    c8
+    (
+    \once \override NoteColumn.X-offset = 2
+    d c) } |
   a4. a8 g a bf c |
   a2 r8 g a bf |
   c4 r8 e, c4 g'8 (a) |
@@ -42,7 +47,7 @@ nhacPhienKhucBa = \relative c' {
 
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
-  "       Nữ" Hoàng, Nữ Hoàng bên hữu Thánh Vương,
+  "    Nữ" Hoàng, Nữ Hoàng bên hữu Thánh Vương,
   điểm trang lộng lẫy, toàn vàng ô -- phia.
 }
 

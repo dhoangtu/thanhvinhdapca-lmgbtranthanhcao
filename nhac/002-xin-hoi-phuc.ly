@@ -12,7 +12,7 @@
 
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c' {
-  r4 d4 |
+  \partial 4 d4 |
   a'2 |
   g8 e e fs |
   d4 d8 fs 
@@ -23,7 +23,7 @@ nhacDiepKhucSop = \relative c' {
 }
 
 nhacDiepKhucBas = \relative c' {
-  \skip 4 a'4 |
+  a'4 |
   d2 |
   b8 g g a |
   fs4 fs8 a |

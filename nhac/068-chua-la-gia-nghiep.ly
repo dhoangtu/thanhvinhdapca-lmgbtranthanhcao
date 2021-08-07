@@ -12,7 +12,10 @@
 
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c' {
-  \partial 4 d4 |
+  \partial 4
+  \once \override NoteColumn.X-offset = 5
+  d4 |
+  \once \override NoteColumn.X-offset = 5
   a'2 g8 a e fs |
   e4
   e8 e a a cs, d
@@ -69,7 +72,10 @@ nhacPhienKhucBa = \relative c'' {
 
 % Lời điệp khúc
 loiDiepKhucSop = \lyricmode {
-  Lạy Chúa, Ngài chính là gia
+  \tweak extra-offset #'(5 . 0)
+  Lạy
+  \tweak extra-offset #'(5 . 0)
+  Chúa, Ngài chính là gia
   \override LyricText.extra-offset = #'(0 . 1.2)
   nghiệp,
   là phần phúc đã dành cho con.

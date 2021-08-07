@@ -12,9 +12,11 @@
 
 % Nhạc điệp khúc
 nhacDiepKhuc = \relative c'' {
+  \once \override NoteColumn.X-offset = 3 <>
   c4. a8 |
   f g c, a |
   c4. c8 |
+  \once \override NoteColumn.X-offset = 1 <>
   d e a bf |
   g f4 g8 |
   f2 ( |

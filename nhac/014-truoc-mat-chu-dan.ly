@@ -12,7 +12,7 @@
 
 % Nhạc điệp khúc
 nhacDiepKhuc = \relative c'' {
-  \partial 4 c4 |
+  \partial 4. c4. |
   a8 d c b4 c8 |
   a4 c8 a4 b8 |
   b4 e,8 b' a b |

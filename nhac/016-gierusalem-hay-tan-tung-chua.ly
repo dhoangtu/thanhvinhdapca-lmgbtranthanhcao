@@ -3,7 +3,8 @@
 \include "english.ly"
 
 \header {
-  title = \markup { \fontsize #3 "Giêrusalem Hãy Tán Tụng Chúa" }
+  title = \markup { \raise #1 \fontsize #3 "Giêrusalem Hãy Tán Tụng Chúa" }
+  instrument = " "
   poet = "Tv. 147"
   composer = "Lm. GB Trần Thanh Cao"
   arranger = " "

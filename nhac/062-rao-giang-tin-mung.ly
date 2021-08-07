@@ -12,7 +12,9 @@
 
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c'' {
-  \partial 8 d8 |
+  \partial 8
+  \once \override NoteColumn.X-offset = 5
+  d8 |
   b b a b |
   g4. b8 |
   a g e g |
@@ -61,7 +63,7 @@ nhacPhienKhucHai = \relative c' {
 
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
-  Hãy đi rao giảng tin mừng.
+  "             Hãy" đi rao giảng tin mừng.
   Hãy
   \override LyricText.extra-offset = #'(0 . 1)
   đi rao giảng tin mừng khắp thế gian.
@@ -148,9 +150,10 @@ notBePhu =
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
     %\override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #5
+    \override Lyrics.LyricSpace.minimum-distance = #4
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
+    \override Score.SpacingSpanner packed-spacing = ##t
   }
 }
 

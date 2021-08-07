@@ -3,10 +3,10 @@
 \include "english.ly"
 
 \header {
-  title = \markup { \fontsize #3 "Nguồn Ánh Sáng" }
+  title = \markup { \raise #1 \fontsize #3 "Nguồn Ánh Sáng" }
   poet = "Tv. 26"
   composer = "Lm. GB Trần Thanh Cao"
-  %arranger = " "
+  arranger = " "
   tagline = ##f
 }
 
@@ -20,7 +20,7 @@ nhacDiepKhucSop = \relative c'' {
   a8 g g g |
   a4a8 d, |
   d4 c |
-  f2 ~ |
+  f2 ^~ |
   f4 r \bar "|."
 }
 
@@ -93,8 +93,9 @@ nhacPhienKhucBa = \relative c'' {
 loiDiepKhuc = \lyricmode {
   Chúa là nguồn ánh sáng, nguồn ánh sáng, nguồn ánh sáng.
   Là Đấng cứu độ tôi.
-  Tôi còn sợ gì ai,
-  tôi còn sợ gì ai.
+  Tôi còn sợ gì
+  \override LyricText.extra-offset = #'(0 . 0.5)
+  ai, tôi còn sợ gì ai.
 }
 
 % Lời phiên khúc

@@ -1,8 +1,15 @@
 		{\lhead[]{} \rhead{\rmfamily\bfseries\fontsize{14pt}{14pt}\selectfont\thepage} \includepdf[pagecommand={\thispagestyle{fancy}},pages=\thepage,noautoscale=true,offset=0.3cm -0.3cm]{bai-hat.pdf}}
 		{\lhead{\rmfamily\bfseries\fontsize{14pt}{14pt}\selectfont\thepage} \rhead[]{} \includepdf[pagecommand={\thispagestyle{fancy}},pages=\thepage,noautoscale=true,offset=0.3cm -0.3cm]{bai-hat.pdf}}
 
+
+\override Score.SpacingSpanner packed-spacing = ##t
+	
 \repeat unfold 13 { _ }
 
+_\markup { \rest #"8" }
+
+  \tweak extra-offset #'(0 . 3)
+  -\markup { \raise #5 \rest #"4" }
 
 \override LyricText.extra-offset = #'(0 . 1)
 
@@ -63,6 +70,8 @@ TongNhip = {
 \once \override Slur #'extra-offset = #'(x . y)
 
 \tweak extra-offset #'(0 . 3)
+
+_\markup { \lower #3.3 \halign #-0.3 \italic "(Intro)" }
 
 
   system-system-spacing = #'((basic-distance . 11.5)

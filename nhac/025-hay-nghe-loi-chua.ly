@@ -46,7 +46,9 @@ nhacPhienKhucMot = \relative c' {
   fs2 |
   r8 a b16 (a) cs,8 |
   e2 |
-  b8 cs16 (e) fs8 e |
+  b8 cs16 (
+  \once \override NoteColumn.X-offset = -3
+  e) fs8 e |
   fs4 \tuplet 3/2 { e8 fs (a) } |
   cs,4 e8 b' |
   b4 cs8 b |

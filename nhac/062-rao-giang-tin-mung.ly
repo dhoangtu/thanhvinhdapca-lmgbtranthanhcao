@@ -63,7 +63,7 @@ nhacPhienKhucHai = \relative c' {
 
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
-  "             Hãy" đi rao giảng tin mừng.
+  \tweak extra-offset #'(5 . 0) Hãy đi rao giảng tin mừng.
   Hãy
   \override LyricText.extra-offset = #'(0 . 1)
   đi rao giảng tin mừng khắp thế gian.

@@ -1,3 +1,5 @@
+\once \override NoteColumn.X-offset = 5 <>
+
 #(define afterGraceFraction (cons 1 4))
 
   \set Staff.keyAlterations = #`(((0 . 6) . ,NATURAL)

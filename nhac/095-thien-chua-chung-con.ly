@@ -12,7 +12,13 @@
 
 % Nhạc điệp khúc
 nhacDiepKhuc = \relative c' {
-  e8 a c \acciaccatura b8 c |
+  % thêm gam rỗng để dịch nốt và lời sang phải
+  \once \override NoteColumn.X-offset = 5 <>
+  e8 a
+  \once \override NoteColumn.X-offset = 3 <>
+  c
+  \once \override NoteColumn.X-offset = 2 <>
+  \slashedGrace { b8 (} c) |
   d e d4 |
   e8 a, c b |
   a4 b8 g |
@@ -149,7 +155,7 @@ TongNhip = { \key c \major \time 2/4 }
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
     %\override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #4.0
+    \override Lyrics.LyricSpace.minimum-distance = #2
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }

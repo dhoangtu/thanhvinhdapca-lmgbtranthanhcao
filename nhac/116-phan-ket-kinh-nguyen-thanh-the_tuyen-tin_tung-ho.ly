@@ -8,7 +8,14 @@
 
 % Nhạc phiên khúc
 nhacKinhNguyenThanhThe = \relative c'' {
-  \afterGrace c4 _({c8 [bf])} f g4 c8 ([d]) bf4 g8 c bf4 \breathe
+  #(define afterGraceFraction (cons 1 2))
+  \afterGrace c4 ^({
+    \autoBeamOff \stemDown
+    \override Flag.stroke-style = #"grace"
+    c8 bf)}
+  \autoBeamOn \stemNeutral
+  \revert Flag.stroke-style
+  f g4 c8 ([d]) bf4 g8 c bf4 \breathe
   g8 g bf f f g g f g f16 ([g]) bf4 \breathe
   g8 c a c \breathe
   g bf bf bf g bf f4 (g) \bar "||" \break

@@ -69,7 +69,10 @@ nhacPhienKhucBa = \relative c'' {
   c4 bf8 a |
   g4 a8 g |
   f4. a8 |
-  a4 \afterGrace c (d8) |
+  a4 \afterGrace c ({
+    \override Flag.stroke-style = #"grace"
+    d8)} |
+  \revert Flag.stroke-style
   d2 ~ |
   d4 r \bar "||"
 }

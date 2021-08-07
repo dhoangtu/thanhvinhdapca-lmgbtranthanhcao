@@ -28,8 +28,14 @@ nhacPhienKhucMot = \relative c' {
   \partial 4 c8 d |
   ef4. g8 g g |
   c,2 af'4 |
-  g8 r \afterGrace c2 ({\stemDown \tweak font-size #-3 d16 \tweak font-size #-3 c)} |
+  g8 r \afterGrace c2 ({
+    \autoBeamOff \stemDown
+    \override Flag.stroke-style = #"grace"
+    \tweak font-size #-3 d16
+    \tweak font-size #-3 c)} |
+  \revert Flag.stroke-style
   \stemNeutral
+  \autoBeamOn
   b!8 b a! b c4 |
   af8 g f af g4 |
   r8 f16 ef f8 f g ef |

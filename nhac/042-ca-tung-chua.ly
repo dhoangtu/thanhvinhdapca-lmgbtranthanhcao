@@ -39,7 +39,10 @@ nhacPhienKhucHai = \relative c'' {
   c8 a g g16 ([a]) g8 e g g4 \breathe
   e8 e g e d c d d4 \breathe
   a8 g b
-  \afterGrace d8 (\tweak font-size #-4 g)
+  \afterGrace d8 ({
+    \override Flag.stroke-style = #"grace"
+    \tweak font-size #-4 g)}
+  \revert Flag.stroke-style
   f e d c4 \bar "||"
 }
 

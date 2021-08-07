@@ -14,7 +14,11 @@
 nhacDiepKhuc = \relative c'' {
   #(define afterGraceFraction (cons 1 3))
   c4 a8 |
-  \autoBeamOff \afterGrace c4 _({d8 c)} f, \autoBeamOn |
+  \autoBeamOff \afterGrace c4 _({
+    \override Flag.stroke-style = #"grace"
+    d8 c)}
+  \revert Flag.stroke-style
+  f, \autoBeamOn |
   f4 a8 |
   \acciaccatura f8 a4. |
   g4 d8 |

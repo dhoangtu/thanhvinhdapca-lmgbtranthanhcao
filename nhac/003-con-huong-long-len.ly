@@ -12,7 +12,9 @@
 
 % Nhạc điệp khúc
 nhacDiepKhucSop= \relative c' {
-  \partial 4 d4 |
+  \partial 4
+  \once \override NoteColumn.X-offset = 3
+  d4 |
   a' a8 bf |
   g a a4 |
   a8 b g (a) |
@@ -58,11 +60,16 @@ nhacPhienKhucBa = \relative c' {
   e cs e a,4
   %\tweak extra-offset #'(0 . 3) ^(
   ~ a e'8 fs g4
-  e8 b' \fermata \afterGrace a \fermata (b) d,4 ~ d \bar "||"
+  e8 b' \fermata \afterGrace a \fermata ({
+    \override Flag.stroke-style = #"grace"
+  b)}
+  \revert Flag.stroke-style
+  d,4 ~ d \bar "||"
 }
 
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
+  \tweak extra-offset #'(3 . 0)
   Lạy Chúa, con hướng lòng con lên,
   con hướng lòng con lên cùng Chúa.
 }

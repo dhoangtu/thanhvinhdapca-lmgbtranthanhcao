@@ -56,7 +56,12 @@ nhacPhienKhucHai = \relative c' {
   d4 \tuplet 3/2 { a'8 bf g } |
   a4 r8 g16 f |
   e2 |
-  bf'8 g d' \afterGrace c _({d16 c)} |
+  bf'8 g d' \afterGrace c _({
+    \autoBeamOff
+    \override Flag.stroke-style = #"grace"
+    d16 c)} |
+  \autoBeamOn
+  \revert Flag.stroke-style
   f,2 ( |
   f4) r \bar "||"
 }

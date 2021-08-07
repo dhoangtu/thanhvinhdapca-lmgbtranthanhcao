@@ -18,7 +18,11 @@ nhacDiepKhucSop = \relative c'' {
   r4 \tuplet 3/2 { c8 c g' } |
   g4 \tuplet 3/2 { f8 f a } |
   a4 \tuplet 3/2 { g8 g d' } |
-  \afterGrace d4 (e8) d d |
+  \afterGrace d4 ({
+    \override Flag.stroke-style = #"grace"
+    e8)}
+  \revert Flag.stroke-style
+  d d |
   c2 ~ |
   c4 r \bar "|."
 }
@@ -55,8 +59,17 @@ nhacPhienKhucHai = \relative c'' {
 
 nhacPhienKhucBa = \relative c'' {
   g8 g af4 c8 f, g4 \breathe
-  d'8 \afterGrace e (d) a4 d8 \breathe
-  \afterGrace b (a) g4
+  d'8
+  \afterGrace e ({
+    \override Flag.stroke-style = #"grace"
+    d)}
+  \revert Flag.stroke-style
+  a4 d8 \breathe
+  \afterGrace b ({
+    \override Flag.stroke-style = #"grace"
+    a)}
+  \revert Flag.stroke-style
+  g4
   d'8 d b4 g8 d' c b c4 \bar "||"
 }
 

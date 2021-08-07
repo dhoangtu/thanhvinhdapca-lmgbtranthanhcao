@@ -52,7 +52,11 @@ nhacPhienKhucBa = \relative c'' {
   #(define afterGraceFraction (cons 1 4))
   g8 g g c c a d d4 \breathe
   c8 a c a b a b e,4 \breathe
-  e8 b' b a g g \afterGrace a (\tweak font-size #-4 b) d,4 \breathe
+  e8 b' b a g g \afterGrace a ({
+    \override Flag.stroke-style = #"grace"
+    \tweak font-size #-4 b)}
+  \revert Flag.stroke-style
+  d,4 \breathe
   d8 a' a a g fs fs a g4 \bar "||"
 }
 

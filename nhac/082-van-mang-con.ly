@@ -12,7 +12,9 @@
 
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c' {
-  \partial 4 e4 |
+  \partial 4
+  \once \override NoteColumn.X-offset = 3
+  e4 |
   b' g8 g |
   a a e g |
   g4 e8 e |
@@ -56,7 +58,8 @@ nhacPhienKhucBa = \relative c'' {
 
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
-  Lạy Chúa, vận mạng con chính Ngài nắm giữ,
+  \tweak extra-offset #'(3 . 0) Lạy
+  Chúa, vận mạng con chính Ngài nắm giữ,
   vận mạng con tay Ngài đỡ nâng.
 }
 
@@ -151,9 +154,10 @@ notBePhu =
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
     %\override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #4.0
+    \override Lyrics.LyricSpace.minimum-distance = #4
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
-    \override Score.SpacingSpanner.uniform-stretching = ##t
+    %\override Score.SpacingSpanner.uniform-stretching = ##t
+    \override Score.SpacingSpanner packed-spacing = ##t
   }
 }
 

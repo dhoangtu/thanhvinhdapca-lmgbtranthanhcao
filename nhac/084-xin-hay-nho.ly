@@ -38,7 +38,12 @@ nhacPhienKhucHai = \relative c' {
   d8 a' f d4 g8  bf g g g g a4 \breathe
   a8 cs4 a8 d c bf a4 \breathe
   a8 bf c a g d f4 \breathe
-  g8 f e bf' a4 bf8 a cs \afterGrace cs8 (d) d4 \breathe
+  g8 f e bf' a4 bf8 a cs
+  \afterGrace cs8 ({
+    \override Flag.stroke-style = #"grace"
+    d)}
+  \revert Flag.stroke-style
+  d4 \breathe
   a8 g bf g f e d4 \bar "||"
 }
 

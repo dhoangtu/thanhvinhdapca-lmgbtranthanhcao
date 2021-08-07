@@ -42,7 +42,10 @@ nhacPhienKhuc = \relative c'' {
   \partial 4 c8 g |
   g2 |
   g8 g e
-  \afterGrace d (e8) |
+  \afterGrace d ({
+    \override Flag.stroke-style = #"grace"
+    e8)} |
+  \revert Flag.stroke-style
   d2 |
   r8 e c e |
   f4 d8 f |
@@ -72,7 +75,10 @@ nhacPhienKhuc = \relative c'' {
   r8 d b d |
   g,4. c8 |
   e4
-  \afterGrace d (c8) |
+  \afterGrace d ({
+    \override Flag.stroke-style = #"grace"
+    c8)} |
+  \revert Flag.stroke-style
   c2 ~ |
   c4 r4 \bar "|." \break
   

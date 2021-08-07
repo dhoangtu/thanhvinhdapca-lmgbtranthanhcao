@@ -61,7 +61,11 @@ nhacPhienKhucMot = \relative c' {
 nhacPhienKhucHai = \relative c' {
   \partial 4 e8 d |
   fs4 a8. a16 |
-  g8 a \afterGrace e4 (a8) |
+  #(define afterGraceFraction (cons 1 2))
+  g8 a \afterGrace e4 ({
+    \override Flag.stroke-style = #"grace"
+    a8)} |
+  \revert Flag.stroke-style
   r8 a cs e |
   a, e g g |
   fs2 ~ |

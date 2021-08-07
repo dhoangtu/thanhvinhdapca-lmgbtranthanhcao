@@ -20,7 +20,10 @@ nhacDiepKhuc = \relative c' {
   a8 g f d |
   a'2 |
   #(define afterGraceFraction (cons 1 3))
-  e8 e g \afterGrace a (bf) |
+  e8 e g \afterGrace a ({
+    \override Flag.stroke-style = #"grace"
+    bf)} |
+  \revert Flag.stroke-style
   a2 |
   g8 f e g |
   f4. f8 |

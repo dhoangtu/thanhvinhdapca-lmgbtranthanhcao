@@ -69,10 +69,14 @@ nhacPhienKhucBa = \relative c'' {
 
 % Lời điệp khúc
 loiDiepKhucSop = \lyricmode {
-  Lạy Chúa, Ngài chính là gia nghiệp, là phần phúc đã dành cho con.
+  Lạy Chúa, Ngài chính là gia
+  \override LyricText.extra-offset = #'(0 . 1.2)
+  nghiệp,
+  là phần phúc đã dành cho con.
 }
 
 loiDiepKhucBas = \lyricmode {
+  \override LyricText.extra-offset = #'(0 . 1.2)
   (là phần phúc đời con.)
 }
 
@@ -162,7 +166,7 @@ notBePhu =
       \new NullVoice = nhacThamChieu \nhacDiepKhucSop
       \new Lyrics \with {
           \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #1.5
+            nonstaff-relatedstaff-spacing.padding = #2
           \override VerticalAxisGroup.
             nonstaff-unrelatedstaff-spacing.padding = #1
         }

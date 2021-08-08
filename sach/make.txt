@@ -1,4 +1,8 @@
+^\tweak control-points #'((-2 . 3) (-1 . 3.1) (0 . 3.2) (1 . 2.4)) ( <> )
+
 \once \override NoteColumn.X-offset = 5 <>
+
+\override Lyrics.LyricText.font-shape = #'italic
 
 #(define afterGraceFraction (cons 1 4))
 
@@ -20,8 +24,9 @@
 
 _\markup { \rest #"8" }
 
-  \tweak extra-offset #'(0 . 3)
-  -\markup { \raise #5 \rest #"4" }
+\tweak extra-offset #'(0 . 3)
+
+-\markup { \raise #5 \rest #"4" }
 
 \override LyricText.extra-offset = #'(0 . 1)
 

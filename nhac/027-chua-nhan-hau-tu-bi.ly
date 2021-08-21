@@ -90,7 +90,7 @@ loiPhienKhucMot = \lyricmode {
   Chúc tụng Chúa đi, hồn tôi hỡi.
   Chúc tụng danh Người bằng tất cả tâm can.
   Chúc tụng Chúa đi, hồn tôi hỡi.
-  Chớ khá quên mọi ân huệ của Người.
+  Chớ khả quên mọi ân huệ của Người.
 }
 
 loiPhienKhucHai = \lyricmode {

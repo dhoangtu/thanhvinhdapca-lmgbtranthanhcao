@@ -76,7 +76,7 @@ loiPhienKhucMot = \lyricmode {
   \set stanza = #"  (Nữ) 1."
   Cùng dâng lên tòa Chúa uy linh của lễ hy sinh nhiệm màu.
   \set stanza = #"  (Nam)"
-  Rươu thơm ngon và bánh tinh tuyền cùng khó nhọc của muôn người.
+  Rượu thơm ngon và bánh tinh tuyền cùng khó nhọc của muôn người.
 }
 
 loiPhienKhucHai = \lyricmode {

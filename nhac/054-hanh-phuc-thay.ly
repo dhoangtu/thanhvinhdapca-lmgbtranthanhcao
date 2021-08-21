@@ -12,6 +12,7 @@
 
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c'' {
+  <>^\markup { \halign #35 " " }
   \partial 4 g8 d' |
   c4 a8 d |
   d c e4 |
@@ -187,7 +188,7 @@ notBePhu =
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
     %\override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #3
+    \override Lyrics.LyricSpace.minimum-distance = #2.7
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }

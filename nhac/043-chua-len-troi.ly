@@ -198,7 +198,7 @@ notBePhu =
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
     %\override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #2
+    \override Lyrics.LyricSpace.minimum-distance = #1.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
     \override Score.SpacingSpanner packed-spacing = ##t

@@ -12,6 +12,7 @@
 
 % Nhạc điệp khúc
 nhacDiepKhuc = \relative c' {
+  \once \override NoteColumn.X-offset = 5 <>
   \partial 4 c4 |
   a' f8 g |
   c,4 d8 c |

@@ -1,6 +1,34 @@
+<>^\markup { \halign #35 " " }
+
+\once \override NoteColumn.X-offset = 1 <>
+\tweak extra-offset #'(1 . 0)
+
+layout
+    \context {
+      \Staff \RemoveEmptyStaves
+      \override VerticalAxisGroup.remove-first = ##t
+    }
+
+<<
+	{
+	  \voiceOne
+	  d2 |
+	}
+
+	\new Voice = "splitpart" {
+	  \voiceTwo
+	  a,2 |
+	}
+>>
+\oneVoice
+  
+\set Staff.printKeyCancellation = ##f
+
 ^\tweak control-points #'((-2 . 3) (-1 . 3.1) (0 . 3.2) (1 . 2.4)) ( <> )
 
 \once \override NoteColumn.X-offset = 5 <>
+
+<>^\markup { \fontsize #6 \box \bold A }
 
 \override Lyrics.LyricText.font-shape = #'italic
 

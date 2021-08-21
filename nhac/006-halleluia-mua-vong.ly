@@ -12,6 +12,7 @@
 
 % Nhạc điệp khúc
 nhacDiepKhuc = \relative c' {
+  <>^\markup { \halign #35 " " }
   \partial 4 \tuplet 3/2 { f8 f f } |
   a4 \tuplet 3/2 { a8 a c } |
   d2 |
@@ -88,7 +89,7 @@ TongNhip = { \key f \major \time 2/4 }
         \lyricsto beSop \loiDiepKhuc
   >>
   \layout {
-    \override Lyrics.LyricText.font-series = #'bold
+    %\override Lyrics.LyricText.font-series = #'bold
     %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #3.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)

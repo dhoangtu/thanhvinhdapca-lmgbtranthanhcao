@@ -85,6 +85,7 @@ loiTuyenTin = \lyricmode {
 
 % Câu đáp tung hô
 nhacCauDapTungHo = \relative c'' {
+  <>^\markup { \halign #40 " " }
   \partial 4. g8 bf f |
   g \breathe c f c |
   d4 \tuplet 3/2 { \stemUp c8 (d c) \stemNeutral } |

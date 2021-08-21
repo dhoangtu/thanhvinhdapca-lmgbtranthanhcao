@@ -12,6 +12,7 @@
 
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c'' {
+  <>^\markup { \halign #40 " " }
   \partial 4 a4 |
   d2 e8 d b a |
   g g4 e8 e4 a |

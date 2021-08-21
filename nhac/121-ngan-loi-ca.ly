@@ -11,7 +11,7 @@
 
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c'' {
-  r2 |
+  R2 |
   a8. a16 fs8 e |
   d2 |
   b'8. b16 a8 g |
@@ -28,7 +28,7 @@ nhacDiepKhucSop = \relative c'' {
 }
 
 nhacDiepKhucAlto = \relative c' {
-  r2 |
+  R2 |
   fs8. fs16 d8 cs |
   b2 |
   g'8. g16 fs8 e |
@@ -54,8 +54,7 @@ nhacDiepKhucBas = \relative c {
   cs e a4 ~ |
   a8 d, d e |
   fs4 r |
-  r2 |
-  r2 |
+  R2*2
   d4. d8 |
   a'2 ~ |
   a4 a8 a |
@@ -64,26 +63,18 @@ nhacDiepKhucBas = \relative c {
 
 % Nhạc phiên khúc
 nhacPhienKhuc = \relative c' {
-  \partial 4 d8 fs |
-  a4 a ~ |
-  a8 b d b |
-  a4. a8 |
-  e g a g |
-  fs2 ~ |
-  fs8 r d fs |
-  \phrasingSlurDashed a8 \(a4\) b8 |
-  d4 b8 a |
-  a4. a8 |
-  e g fs e |
-  d2 \bar "||"
+  \partial 4 d8 fs a a b d b
+  a a e g a g fs2
+  d8 fs a b d b a a a e g fs e d2 \bar "||"
 }
 
 % Lời điệp khúc
 loiDiepKhucSop = \lyricmode {
   Hãy hát lên ca mừng
   Hãy hát lên ca mừng,
-  mừng Thiên Chúa bài ca "mới (một bài ca mới)"
-  Ngài đã tác sinh muôn vật muôn loài
+  mừng Thiên Chúa bài ca "mới (một   bài     ca"
+  \once \override LyricText.self-alignment-X = #RIGHT
+  "mới)      Ngài" đã tác sinh muôn vật muôn loài
   và quyền phép công minh
   (chiếu soi mọi người) khắp mọi nơi.
 }
@@ -99,21 +90,27 @@ loiDiepKhucBas = \lyricmode {
 % Lời phiên khúc
 loiPhienKhucMot = \lyricmode {
   \set stanza = #"1."
-  Lòng con hân hoan bước tới thành cung dâng lời kính chúc Đức Chúa.
-  Để tung hô _ Danh Thánh Cha uy linh luôn bền vững đến muôn đời.
+  Lòng con hân hoan bước tới thành cung
+  dâng lời với hết tâm hồn.
+  Để tung hô danh thánh Chúa uy linh
+  luôn bền vững đến muôn đời.
 }
 
 loiPhienKhucHai = \lyricmode {
   \override Lyrics.LyricText.font-shape = #'italic
   \set stanza = #"2."
-  Tầng trời cao xanh tinh tú bao la vang lời kính chúc Đức Chúa.
-  Rừng cây âm u mây nước với sông sâu dâng lời kính tôn Cha hiền.
+  Tầng trời cao xanh tinh tú bao la
+  vang lời kính Chúa uy linh.
+  Rừng cây âm u mây nước sông sâu
+  dâng lời kính tôn Cha hiền.
 }
 
 loiPhienKhucBa = \lyricmode {
   \set stanza = #"3."
-  Họp nhau nơi đây liên kết một lòng dâng của lễ kính Đức Chúa.
-  Dù bao gian nguy xin Chúa khứng thương ban mưa nhuần thấm ơn tâm hồn.
+  Họp nhau nơi đây liên kết một lòng
+  dâng lời kính Chúa Ba Ngôi.
+  Dù bao gian nguy xin Chúa thương
+  ban mưa nhuần thấm ơn tâm hồn.
 }
 
 % Dàn trang
@@ -236,5 +233,7 @@ notBePhu =
     \override Lyrics.LyricSpace.minimum-distance = #2.0
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
+    \set Score.barAlways = ##t
+    \set Score.defaultBarType = ""
   } 
 }

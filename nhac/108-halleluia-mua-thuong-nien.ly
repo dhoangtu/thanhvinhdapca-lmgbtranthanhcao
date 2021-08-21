@@ -12,6 +12,7 @@
 
 % Nhạc phiên khúc
 nhacPhienKhucMot = \relative c' {
+  <>^\markup { \halign #40 " " }
   fs4. fs8 e4 fs |
   e4. e8 d4 e |
   d4. b8 d4 (e) |

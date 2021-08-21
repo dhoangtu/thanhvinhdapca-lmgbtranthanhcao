@@ -12,7 +12,7 @@
 
 % Nhạc điệp khúc
 nhacDiepKhuc = \relative c' {
-
+  <>^\markup { \halign #35 " " }
   \partial 4 e4 |
   a g8 f |
   e2 |
@@ -165,7 +165,7 @@ TongNhip = { \key c \major \time 2/4 }
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
     %\override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #3.5
+    \override Lyrics.LyricSpace.minimum-distance = #3
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }

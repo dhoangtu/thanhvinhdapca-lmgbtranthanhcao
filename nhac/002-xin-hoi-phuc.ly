@@ -12,6 +12,7 @@
 
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c' {
+  <>^\markup { \halign #40 " " }
   \partial 4 d4 |
   a'2 |
   g8 e e fs |
@@ -48,7 +49,7 @@ nhacPhienKhucHai = \relative c' {
   g8 a d,4 ~ d8 \breathe
   b d a4 a8 d fs d e4 ~ e8 \breathe
   a g g a a d, e fs4 \breathe
-  a8 g a ~ [a16] a8 b b16 b e,4 \breathe
+  a8 g a4 a8 b b16 b e,4 \breathe
   e8 e a4 \breathe
   cs,8 a e' fs d4 ~ d \bar "||"
 }
@@ -56,7 +57,7 @@ nhacPhienKhucHai = \relative c' {
 nhacPhienKhucBa = \relative c' {
   g'8 a g a a b e, g a4 \breathe
   g8 a g4 a8 a d, e e fs4 a8 g e g a cs b a4 ~ a8 \breathe
-  cs b a ~ [a16] cs8 cs a e'4 \breathe
+  cs b a4 cs8 cs a e'4 \breathe
   d16 fs e4 e8 d8 \fermata e \fermata d4 ~ d \bar "||"
 }
 

@@ -12,7 +12,7 @@
 
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c' {
-  %\autoBeamOff
+  <>^\markup { \halign #30 " " }
   \partial 4 e4 |
   c'2 |
   b8 c b c |

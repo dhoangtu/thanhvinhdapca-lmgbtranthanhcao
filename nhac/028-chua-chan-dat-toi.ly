@@ -12,7 +12,7 @@
 
 % Nhạc điệp khúc
 nhacDiepKhucBas = \relative c'' {
-  r2 |
+  R2 |
   d4 a8 b |
   a4 a8 a 
   b4 fs |
@@ -24,6 +24,7 @@ nhacDiepKhucBas = \relative c'' {
 }
 
 nhacDiepKhucSop = \relative c'' {
+  <>^\markup { \halign #40 " " }
   d4 a8 b |
   a4. a8 |
   fs (g) fs e |

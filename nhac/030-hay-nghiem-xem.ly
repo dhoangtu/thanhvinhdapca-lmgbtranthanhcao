@@ -12,7 +12,8 @@
 
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c'' {
-  r4 d8 a |
+  <>^\markup { \halign #45 " " }
+  \partial 4 d8 a |
   b4 a8 b |
   d,4 e |
   a2 ~ |
@@ -24,7 +25,7 @@ nhacDiepKhucSop = \relative c'' {
 }
 
 nhacDiepKhucBas = \relative c'' {
-  \skip 4. cs8 |
+  \skip 8 cs8 |
   d4 cs8 d |
   g,4 a |
   cs2 ~ |

@@ -13,6 +13,7 @@
 % Nhạc điệp khúc
 nhacDiepKhuc = \relative c'' {
   #(define afterGraceFraction (cons 1 3))
+  <>^\markup { \halign #40 " " }
   c4 a8 |
   \autoBeamOff \afterGrace c4 _({
     \override Flag.stroke-style = #"grace"

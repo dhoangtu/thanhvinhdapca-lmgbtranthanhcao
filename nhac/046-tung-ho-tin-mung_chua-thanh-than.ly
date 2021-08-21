@@ -12,6 +12,7 @@
 
 % Nhạc điệp khúc
 nhacDiepKhuc = \relative c' {
+  <>^\markup { \halign #40 " " }
   \partial 4 \tuplet 3/2 { d8 fs a } |
   b4 \tuplet 3/2 { b8 a fs } |
   a4 \tuplet 3/2 { fs8 e d } |
@@ -33,12 +34,12 @@ nhacDiepKhuc = \relative c' {
 
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
-  "Hal -" "lê -" "lu -" ia. "Hal -" "lê -" "lu -" ia.
-  "Hal -" "lê -" "lu -" ia. "Hal -" "lê -" "lu -" ia.
+  Hal -- lê -- lu -- ia. Hal -- lê -- lu -- ia.
+  Hal -- lê -- lu -- ia. Hal -- lê -- lu -- ia.
   Lạy Chúa Thánh Thần, xin ngự đến
   cho tâm hồn tín hữu được nhuần thấm muôn ơn.
   Và cháy lửa mến yêu, mến yêu Ngài.
-  "Hal -" "lê -" "lu -" ia.
+  Hal -- lê -- lu -- ia.
 }
 
 % Bố trí
@@ -84,10 +85,11 @@ loiDiepKhuc = \lyricmode {
         \lyricsto beSop \loiDiepKhuc
   >>
   \layout {
-    \override Lyrics.LyricText.font-series = #'bold
+    %\override Lyrics.LyricText.font-series = #'bold
     %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #2.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
+    \override LyricHyphen.minimum-distance = #2.0
   }
 }

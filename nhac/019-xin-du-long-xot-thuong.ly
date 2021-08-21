@@ -12,6 +12,7 @@
 
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c' {
+  <>^\markup { \halign #40 " " }
   \partial 4 d4 |
   bf' a8 f |
   d _(\once \override NoteColumn.X-offset = -4 f) g

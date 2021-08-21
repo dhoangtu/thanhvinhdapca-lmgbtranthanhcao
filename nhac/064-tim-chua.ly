@@ -12,6 +12,7 @@
 
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c'' {
+  <>^\markup { \halign #40 " " }
   d8 d c a |
   \acciaccatura c8 d2 |
   c8 a b a16 b |

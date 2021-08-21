@@ -12,6 +12,7 @@
 
 % Nhạc điệp khúc
 nhacDiepKhucSop= \relative c' {
+  <>^\markup { \halign #45 " " }
   \partial 4 e8. e16 |
   e4 \breathe e8. a16 |
   gs4 (fs) |
@@ -144,7 +145,7 @@ loiDiepKhucBas = \lyricmode {
     >>
   >>
   \layout {
-    \override Lyrics.LyricText.font-series = #'bold
+    %\override Lyrics.LyricText.font-series = #'bold
     %\override Lyrics.LyricText.font-size = #+2
     \override Lyrics.LyricSpace.minimum-distance = #2.5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)

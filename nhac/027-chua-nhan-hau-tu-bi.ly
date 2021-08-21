@@ -12,11 +12,10 @@
 
 % Nhạc điệp khúc
 nhacDiepKhuc = \relative c'' {
-  \once \override NoteColumn.X-offset = 3 <>
+  <>^\markup { \halign #40 " " }
   c4. a8 |
   f g c, a |
   c4. c8 |
-  \once \override NoteColumn.X-offset = 1 <>
   d e a bf |
   g f4 g8 |
   f2 ( |
@@ -158,7 +157,7 @@ TongNhip = { \key f \major \time 2/4 }
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
     %\override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #6
+    \override Lyrics.LyricSpace.minimum-distance = #5
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
   }

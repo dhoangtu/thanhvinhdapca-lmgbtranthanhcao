@@ -15,7 +15,9 @@ TongNhip = { \key c \major \time 2/4 }
 
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c'' {
-  \partial 4 g8 g |
+  \partial 4
+  <>^\markup { \halign #35 " " }
+  g8 g |
   c,4 e8. g16 |
   e8 g a4 |
   a8 g d'4 |

@@ -13,6 +13,7 @@
 % Nhạc phiên khúc
 nhacPhienKhuc = \relative c' {
   \tempo "Boston"
+  <>^\markup { \halign #45 " " }
   \repeat volta 2
   {
     \partial 4 cs8 d |

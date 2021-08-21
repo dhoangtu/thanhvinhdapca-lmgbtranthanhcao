@@ -12,6 +12,7 @@
 
 % Nhạc điệp khúc
 nhacDiepKhuc= \relative c' {
+  <>^\markup { \halign #35 " " }
   \partial 4. d8 e d |
   b4 g'8 a |
   g4 a |
@@ -60,9 +61,9 @@ nhacPhienKhucBa = \relative c'' {
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
   Toàn thể địa cầu hãy reo mừng Thiên Chúa
-  "Hal -" "lê -" "lu -" ia.
+  Hal -- lê -- lu -- ia.
   Trái đất hãy vui lên, hãy reo mừng Chúa ta
-  "Hal -" "lê -" "lu -" ia.
+  Hal -- lê -- lu -- ia.
 }
 
 % Lời phiên khúc
@@ -138,10 +139,11 @@ TongNhip = { \key g \major \time 2/4 }
   \layout {
     \override Lyrics.LyricText.font-series = #'bold
     %\override Lyrics.LyricText.font-size = #+2
-    \override Lyrics.LyricSpace.minimum-distance = #2
+    \override Lyrics.LyricSpace.minimum-distance = #1
     \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \override Score.SpacingSpanner.uniform-stretching = ##t
     \override Score.SpacingSpanner packed-spacing = ##t
+    \override LyricHyphen.minimum-distance = #2.0
   }
 }
 

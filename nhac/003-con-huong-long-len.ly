@@ -13,7 +13,7 @@
 % Nhạc điệp khúc
 nhacDiepKhucSop= \relative c' {
   \partial 4
-  \once \override NoteColumn.X-offset = 3
+  <>^\markup { \halign #45 " " }
   d4 |
   a' a8 bf |
   g a a4 |
@@ -69,7 +69,6 @@ nhacPhienKhucBa = \relative c' {
 
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
-  \tweak extra-offset #'(3 . 0)
   Lạy Chúa, con hướng lòng con lên,
   con hướng lòng con lên cùng Chúa.
 }

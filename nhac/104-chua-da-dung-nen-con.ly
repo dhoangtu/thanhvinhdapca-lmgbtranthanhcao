@@ -10,27 +10,56 @@
   tagline = ##f
 }
 
+% Đổi kích thước nốt cho bè phụ
+notBePhu =
+#(define-music-function (font-size music) (number? ly:music?)
+   (for-some-music
+     (lambda (m)
+       (if (music-is-of-type? m 'rhythmic-event)
+           (begin
+             (set! (ly:music-property m 'tweaks)
+                   (cons `(font-size . ,font-size)
+                         (ly:music-property m 'tweaks)))
+             #t)
+           #f))
+     music)
+   music)
+
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c' {
-  \partial 2 f4 g |
-  c4. c8 bf4 c |
-  c4. c8 f,4 g |
-  a c2 bf8 _(g) |
-  f4. f8 d4 f |
-  f g2 e8 _(d) |
-  c4. g'8 g e4 g8 |
-  f1 \bar "|."
-}
-
-nhacDiepKhucBas = \relative c' {
-  \partial 2 f4 g |
-  a4. a8 g4 a |
-  a4. a8 d,4 c |
-  f a2 g8 (e) |
-  f4. f8 d4 f |
-  d d2 c8 (bf) |
-  f4. c'8 c4 bf |
-  a1
+  <>^\markup { \halign #35 " " }
+  <<
+    {
+      \partial 2 f4 g |
+      c4. c8 bf4 c |
+      c4. c8 f,4 g |
+      a c2 bf8 _(g) |
+      f4. f8 d4 f |
+      f g2 e8 _(d) |
+      c4.
+    }
+    \notBePhu -2 {
+      \skip 2
+      a'4. a8 g4 a |
+      a4. a8 d,4 c |
+      f a2 g8 (e) |
+      \skip 1
+      d4 d2 c8 (bf) |
+      f4.
+    }
+  >>
+  <<
+    {
+      \voiceOne
+      g'8 g e4 g8 |
+      f1 \bar "|."
+    }
+    \notBePhu -2 \new Voice = "bePhu" {
+	    \voiceTwo
+      c8 c4 bf |
+      a1
+    }
+  >>
 }
 
 % Nhạc phiên khúc
@@ -142,22 +171,12 @@ loiPhienKhucBa = \lyricmode {
             nonstaff-unrelatedstaff-spacing.padding = #1
         }
         \lyricsto beSop \loiDiepKhucSop
-    >>
-    \new Staff \with {
-        \consists "Merge_rests_engraver"
-        %\magnifyStaff #(magstep +1)
-      }
-      <<
-      \new Voice = beBas {
-        \key f \major \time 2/2 \nhacDiepKhucBas
-      }
-      \new Lyrics \with {
-          \override VerticalAxisGroup.
-            nonstaff-relatedstaff-spacing.padding = #1
-          \override VerticalAxisGroup.
-            nonstaff-unrelatedstaff-spacing.padding = #1
+      \new Lyrics {
+        \override Lyrics.LyricText.font-shape = #'italic
+        \lyricsto bePhu {
+          Con xin cảm tạ.
         }
-        \lyricsto beBas \loiDiepKhucBas
+      }
     >>
   >>
   \layout {

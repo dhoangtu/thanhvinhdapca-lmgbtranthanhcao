@@ -11,7 +11,7 @@
 
 % Nhạc điệp khúc
 nhacDiepKhucSop = \relative c'' {
-  r2 |
+  R2 |
   r8 a a f16 _(c) |
   d4 f8 f |
   f4 g8 (a) |
@@ -32,7 +32,7 @@ nhacDiepKhucSop = \relative c'' {
 }
 
 nhacDiepKhucAlto = \relative c'' {
-  r2 |
+  R2 |
   r8 a a f16 _(c) |
   d4 d8 d |
   d4 e8 (d) 
@@ -53,6 +53,7 @@ nhacDiepKhucAlto = \relative c'' {
 }
 
 nhacDiepKhucBas = \relative c' {
+  <>^\markup { \halign #35 " " }
   d8 d c (a) |
   c4. a16 (g) |
   f4 a8 a |
@@ -104,9 +105,7 @@ nhacPhienKhucBas = \relative c {
   f4. d8 |
   a bf a d |
   cs r r4 |
-  r2 |
-  r2 |
-  r2 |
+  R2*3
   r8 a bf bf |
   a4. g8 |
   a (g) \tuplet 3/2 { f (g) f } |

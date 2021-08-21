@@ -12,6 +12,7 @@
 
 % Nhạc điệp khúc
 nhacDiepKhuc = \relative c' {
+  <>^\markup { \halign #35 " " }
   \override Score.SpacingSpanner.strict-grace-spacing = ##t
   \partial 2 e4 \tuplet 3/2 { g8 a g } |
   c2 r4 a8 e' |

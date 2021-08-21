@@ -12,6 +12,7 @@
 
 % Nhạc điệp khúc
 nhacDiepKhuc = \relative c' {
+  <>^\markup { \halign #40 " " }
   \partial 4 f8 d |
   f d c f |
   \acciaccatura f8 a4 \breathe bf8 a |

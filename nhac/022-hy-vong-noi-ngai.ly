@@ -28,8 +28,8 @@ nhacDiepKhucSop = \relative c' {
 
 nhacDiepKhucBas = \relative c' {
   %\autoBeamOff
-  \partial 4 e4 |
-  a2 |
+  \partial 4 \skip 4 |
+  a'2 |
   g8 a g a |
   f4 e8 f |
   c2 |

@@ -22,7 +22,7 @@ nhacDiepKhucSop = \relative c' {
   g4. g16 g |
   e8 g cs,4 |
   a8 e' fs e |
-  d2 ~ |
+  d2 ^~ |
   d4 r \bar "|."
 }
 
@@ -87,8 +87,11 @@ nhacPhienKhucBa = \relative c'' {
 
 % Lời điệp khúc
 loiDiepKhuc = \lyricmode {
+  \override LyricText.extra-offset = #'(0 . -1)
   Bờ sông Ba -- by -- lon,
-  ta ra ngồi nức nở mà tưởng nhớ Si -- on.
+  ta ra ngồi nức nở
+  \override LyricText.extra-offset = #'(0 . 0.5)
+  mà tưởng nhớ Si -- on.
   Bờ sông "Ba -" "by -" lon,
   ta ra ngồi nức nở mà tưởng nhớ Si -- on.
 }

@@ -22,7 +22,7 @@ nhacDiepKhucSop = \relative c' {
   g4. g16 g |
   e8 g cs,4 |
   a8 e' fs e |
-  d2 ^~ |
+  d2 ~ |
   d4 r \bar "|."
 }
 

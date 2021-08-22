@@ -204,7 +204,11 @@ Latex file
 - sua loi not nhac
 - table of content
 
+- setup ssh key
 
+git remote remove origin
+git remote set-url origin git@github.com:dhoangtu/thanhvinhdapca-lmgbtranthanhcao.git
+git push --set-upstream origin master
 
 
 /home/dhtu/bin/lilypond  --output=/home/dhtu/Desktop/CATH/thanhcalilypond/cadoanhienlinh-thanhvinhdapca/107-theo-anh-sao.pdf -dno-point-and-click --pdf /home/dhtu/Desktop/CATH/thanhcalilypond/cadoanhienlinh-thanhvinhdapca/107-theo-anh-sao.ly

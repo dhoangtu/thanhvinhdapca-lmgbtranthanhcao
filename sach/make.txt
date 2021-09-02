@@ -1,3 +1,31 @@
+\once \override Score.RehearsalMark.extra-offset = #'( -2 . 1.75 )
+\once \override Score.RehearsalMark.font-size = #5
+\mark \markup { \musicglyph #"scripts.coda" }
+
+\hide Staff.TimeSignature
+\once \hide Staff.TimeSignature
+\override Staff.TimeSignature.break-visibility = ##(#t #t #t)
+\override Staff.TimeSignature.transparent = ##t
+\omit Staff.TimeSignature
+
+c1
+\set Score.repeatCommands = #(list (list 'volta voltaAdLib) 'start-repeat)
+c4 b d e
+\set Score.repeatCommands = #'((volta #f) (volta "4.") end-repeat)
+f1
+\set Score.repeatCommands = #'((volta #f))
+
+\new Lyrics \lyricsto "melody" {
+  Not re -- peat -- ed.
+  <<
+    { The first time words. }
+    \new Lyrics {
+      \set associatedVoice = "melody"
+      Sec -- ond time words.
+    }
+  >>
+}
+
 <>^\markup { \halign #35 " " }
 
 \once \override NoteColumn.X-offset = 1 <>
@@ -28,6 +56,7 @@ layout
 
 \once \override NoteColumn.X-offset = 5 <>
 
+\override TextScript.padding = #3
 <>^\markup { \fontsize #6 \box \bold A }
 
 \override Lyrics.LyricText.font-shape = #'italic
@@ -57,6 +86,10 @@ _\markup { \rest #"8" }
 -\markup { \raise #5 \rest #"4" }
 
 \override LyricText.extra-offset = #'(0 . 1)
+
+\set PianoStaff.connectArpeggios = ##t
+  \new Staff {
+    <c e g c>4\arpeggio
 
 dropLyrics =
 {
@@ -95,8 +128,8 @@ raiseLyrics =
 \set Score.barAlways = ##t
 ragged-last = ##f
 
-  \once \override Score.RehearsalMark.font-size = #0.1
-  \mark \markup { \musicglyph #"scripts.segno" }
+\once \override Score.RehearsalMark.font-size = #0.1
+\mark \markup { \musicglyph #"scripts.segno" }
 
 
 %\markup { \vspace #0.5 }
@@ -125,6 +158,102 @@ _\markup { \lower #3.3 \halign #-0.3 \italic "(Intro)" }
   score-system-spacing = #'((basic-distance . 11.5)
                              (minimum-distance . 11.5)
                              (padding . 1))
+
+  
+\new Staff \relative c'' {
+  c4 b d c
+  <<
+    { c4 b d c }
+    \new Staff { e4 d f e }
+  >>
+  c4 b c2
+}
+
+
+\score {
+  <<
+    \new Staff \relative c'' {
+      c1 | c | c | c | c
+    }
+    \new StaffGroup \relative c'' {
+      \new Staff {
+        c1 | c
+        <<
+          {
+            c1 | d
+          }
+          \new Staff {
+            \once \omit Staff.TimeSignature
+            c1 | b
+          }
+        >>
+        c1
+      }
+    }
+  >>
+}
+
+ % cách 1: trong ChoirStaff
+    {
+      \skip 4
+      \repeat unfold 26 { \skip 2 }
+      <<
+        \new Staff \with {
+          alignAboveContext = #"3"
+          fontSize = #-2
+          \override StaffSymbol.staff-space = #(magstep -2)
+          \remove "Time_signature_engraver"
+        }
+        \relative {
+          r4 r8 c''
+          ^\markup { \fontsize #1 \bold "(Đàn)" }
+          |
+          a f16 f g8 g
+        }
+      >>
+    }
+
+  % cách 2
+  <<
+    {
+      \slashedGrace { a16 _(g } a2) ~ |
+      a4 r
+    }
+    {
+      \context Staff = "ossia" \with {
+        alignAboveContext = #"1"
+        \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 6))
+        %fontSize = #-2
+        %\override StaffSymbol.staff-space = #(magstep -2)
+        \remove "Time_signature_engraver"
+      } {
+          \startStaff
+          r4
+          _"Đàn"
+          r8 c |
+          a <f d>16 <f d> <g b,!>8 <g b,!>
+          \stopStaff
+      }
+    }
+  >>
+  
+  %{ % cách 3: khuông nhạc phụ không khớp nhịp với khuông nhạc chính
+  \slashedGrace { a16 _(g } a2) ~
+  <>^\markup { \hspace #-12 \score {
+    \new Staff \with {
+      \remove "Time_signature_engraver"
+      \magnifyStaff #2/3
+  } {
+    \clef treble \relative c'' {
+      \key f \major \time 2/4
+      r4 r8 c |
+      a f16 f g8 g
+    }
+  }
+  }}
+  a4 r
+  %}
+  
   
 \new Lyrics \with {
           \override VerticalAxisGroup.

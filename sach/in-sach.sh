@@ -46,16 +46,16 @@ do
 done
 
 # gộp những file PDF thành 1 file
-pdftk "${filelist[@]}" cat output bai-hat.pdf
+qpdf --empty --pages "${filelist[@]}" -- bai-hat.pdf
 #set -x
 # đánh số trang chẵn lẻ, chỉnh lệch trang chẵn lẻ
 pdflatex so-trang-chan-le.tex
 
 # thêm trang bìa
-pdftk bia-truoc-xanh.pdf blank-a4.pdf bia-truoc.pdf blank-a4.pdf \
+qpdf --empty --pages bia-truoc-xanh.pdf blank-a4.pdf bia-truoc.pdf blank-a4.pdf \
   bia-truoc-trong.pdf blank-a4.pdf loi-phi-lo.pdf blank-a4.pdf so-trang-chan-le.pdf blank-a4.pdf \
   muc-luc.pdf blank-a4.pdf bia-sau-trong.pdf \
-  bia-sau.pdf blank-a4.pdf bia-sau-xanh.pdf cat output thanhvinhdapca-lmgbtranthanhcao.pdf
+  bia-sau.pdf blank-a4.pdf bia-sau-xanh.pdf -- thanhvinhdapca-lmgbtranthanhcao.pdf
 
 # xóa những file tạm
 rm -rf ${GEN} bai-hat.pdf so-trang-chan-le.pdf *.aux *.log ${CONTENT}

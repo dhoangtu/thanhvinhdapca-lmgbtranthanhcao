@@ -55,7 +55,7 @@ nhacPhienKhucMot = \relative c' {
 loiPhienKhucMot = \lyricmode {
   Lạy Chúa "Giê -" su, xin Chúa tha tội chúng con.
   Xin gìn giữ chúng con khỏi lửa hỏa ngục.
-  Xin dìu dắt mọi linh hồn lên Thiêng Đàng,
+  Xin dìu dắt mọi linh hồn lên Thiên Đàng,
   nhất là những linh hồn cần Chúa thương xót hơn.
 }
 

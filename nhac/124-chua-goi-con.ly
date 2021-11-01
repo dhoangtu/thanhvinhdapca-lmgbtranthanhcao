@@ -120,7 +120,7 @@ loiDiepKhucSop = \lyricmode {
   Con theo chân Chúa.
   Chúa đã gọi con
   Con nghe theo tiếng Người
-  Con vững tâm theo đường lối Người
+  Con vững tâm trong đường lối Người
   chẳng chút lo gì
   chẳng chút "   lo   " gì.
 }
@@ -130,7 +130,7 @@ loiDiepKhucAlto = \lyricmode {
   Từ bỏ lưới thuyền cha mẹ
   Con theo chân Người theo chân
   Con nghe theo tiếng Người
-  Con vững tâm theo đường lối Người
+  Con vững tâm trong đường lối Người
   chẳng chút lo gì
   chẳng chút lo gì.
 }
@@ -148,7 +148,7 @@ loiDiepKhucBas = \lyricmode {
 % Lời phiên khúc
 loiPhienKhucMotSop = \lyricmode {
   \set stanza = #"1."
-  Đời bao giống tố con luôn kiên vững dưới đôi bàn tay Người.
+  Đời bao giông tố con luôn kiên vững dưới đôi bàn tay Người.
   Lòng con dâng lên Thiên Chúa khoan nhân
   bao tình mến yêu.
   Gà con nấp bóng dưới cánh

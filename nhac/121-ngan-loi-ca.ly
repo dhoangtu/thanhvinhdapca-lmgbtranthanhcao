@@ -90,7 +90,7 @@ loiDiepKhucBas = \lyricmode {
 % Lời phiên khúc
 loiPhienKhucMot = \lyricmode {
   \set stanza = #"1."
-  Lòng con hân hoan bước tới thành cung
+  Lòng con hân hoan bước tới thánh cung
   dâng lời với hết tâm hồn.
   Để tung hô danh thánh Chúa uy linh
   luôn bền vững đến muôn đời.
